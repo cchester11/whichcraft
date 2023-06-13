@@ -1,8 +1,19 @@
-html, body {
+html,
+body {
       overflow: hidden;
       height: 100%;
 }
 
 .navbar-custom {
-      background-color: yellow;
+      background-color: #FCFC69;
+      display: flex;
+      justify-content: flex-end;
+      padding-block: 5%;
+}
+
+.dropdown-menu {
+      margin-left: auto;
+      right: 0;
+      left: auto;
+      transform: translate(0, 40%);
 }
