@@ -4,11 +4,19 @@ body {
       height: 100%;
 }
 
+.header-img {
+      margin-left: 20px;
+}
+
 .navbar-custom {
-      background-color: #FCFC69;
+      background-color: #fcfc69;
       display: flex;
       justify-content: flex-end;
-      padding-block: 5%;
+      padding-block: 2%;
+}
+
+.navbar-custom .dropdown-toggle::after {
+      content: none !important;
 }
 
 .dropdown-menu {
