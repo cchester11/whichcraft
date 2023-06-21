@@ -1,13 +1,15 @@
+/* body and html  */
 html,
 body {
       overflow: hidden;
+      overflow-y: scroll;
       height: 100%;
 }
-
 body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background-image: linear-gradient(to bottom left, #fffbe5, #ffffff);
 }
 
 /* navbar settings */
@@ -30,6 +32,9 @@ body {
       left: auto;
       transform: translate(0, 40%);
 }
+.dropdown-item {
+      font-family: fantasy;
+}
 .header-center-piece {
       font-family: fantasy;
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
@@ -38,6 +43,7 @@ body {
 /* beer page settings */
 .card {
       border: none;
+      background-image: linear-gradient(to bottom left, #fffbe5, #ffffff);
 }
 .beer-title {
       font-family: fantasy;
@@ -69,5 +75,5 @@ footer {
       padding-block: 2%;
       background-color: #fcfc69;
       margin-top: auto;
-      background-image: linear-gradient(to left, #808080, #333333);
+      background-image: linear-gradient(to bottom right, #e2e25e, #71712f);
 }
