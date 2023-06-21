@@ -14,23 +14,24 @@ body {
 .header-img {
       margin-left: 20px;
 }
-
 .navbar-custom {
       background-color: #fcfc69;
       display: flex;
       justify-content: flex-end;
       padding-block: 2%;
 }
-
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
 }
-
 .dropdown-menu {
       margin-left: auto;
       right: 0;
       left: auto;
       transform: translate(0, 40%);
+}
+.header-center-piece {
+      font-family: fantasy;
+      text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
 }
 
 /* beer page settings */
