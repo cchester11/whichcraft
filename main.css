@@ -19,9 +19,11 @@ body {
 .navbar-custom {
       /* background-color: #fcfc69; */
       background-image: linear-gradient(to right, #e2e25e, #71712f);
+      /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
       justify-content: flex-end;
       padding-block: 2%;
+      color: white;
 }
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
@@ -31,6 +33,9 @@ body {
       right: 0;
       left: auto;
       transform: translate(0, 40%);
+}
+.dropdown-menu.show {
+      background-image: linear-gradient(to right, #e2e25e, #71712f)
 }
 .dropdown-item {
       font-family: fantasy;
@@ -75,5 +80,17 @@ footer {
       padding-block: 2%;
       background-color: #fcfc69;
       margin-top: auto;
-      background-image: linear-gradient(to bottom right, #e2e25e, #71712f);
+      /* background-image: linear-gradient(to bottom right, #e2e25e, #71712f); */
+      background-image: linear-gradient(to bottom right, #d8d8d8, #808080);
 }
+
+/*Filter styles*/
+.saturate { filter: saturate(0%); }
+.grayscale { filter: grayscale(100%); }
+.contrast { filter: contrast(160%); }
+.brightness { filter: brightness(0.5); }
+.blur { filter: blur(3px); }
+.invert { filter: invert(100%); }
+.sepia { filter: sepia(100%); }
+.huerotate { filter: hue-rotate(180deg); }
+.rss.opacity { filter: opacity(50%); }
