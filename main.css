@@ -51,6 +51,16 @@ body {
 .beer-description {
       font-family: fantasy;
 }
+.beer-facts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+.beer-fact {
+      border-bottom: 1px solid #e2e25e;
+      width: fit-content;
+}
 
 /* footer settings */
 footer {
