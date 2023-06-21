@@ -1,3 +1,11 @@
+/* root colors */
+:root {
+      --primary-color: #fff7d4;
+      --secondary-color: #ffd95a;
+      --tertiary-color: #c07f00;
+      --enhance-color: #4c3d3d;
+}
+
 /* body and html  */
 html,
 body {
@@ -9,7 +17,8 @@ body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background-image: linear-gradient(to bottom left, #fffbe5, #ffffff);
+      /* background-image: linear-gradient(to bottom left, var(--enhance-color), var(--secondary-color)); */
+      background-color: var(--primary-color);
 }
 
 /* navbar settings */
@@ -18,12 +27,13 @@ body {
 }
 .navbar-custom {
       /* background-color: #fcfc69; */
-      background-image: linear-gradient(to right, #e2e25e, #71712f);
+      background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
       justify-content: flex-end;
-      padding-block: 2%;
+      padding-block: 1%;
       color: white;
+      border-bottom: 1px solid black;
 }
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
@@ -35,7 +45,7 @@ body {
       transform: translate(0, 40%);
 }
 .dropdown-menu.show {
-      background-image: linear-gradient(to right, #e2e25e, #71712f)
+      background-image: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
 }
 .dropdown-item {
       font-family: fantasy;
@@ -48,7 +58,9 @@ body {
 /* beer page settings */
 .card {
       border: none;
-      background-image: linear-gradient(to bottom left, #fffbe5, #ffffff);
+      /* background-image: linear-gradient(to bottom left, var(--tertiary-color), var(--secondary-color)); */
+      background-color: var(--primary-color);
+      margin-bottom: 3%;
 }
 .beer-title {
       font-family: fantasy;
