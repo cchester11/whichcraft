@@ -4,6 +4,13 @@ body {
       height: 100%;
 }
 
+body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+}
+
+/* navbar settings */
 .header-img {
       margin-left: 20px;
 }
@@ -24,4 +31,23 @@ body {
       right: 0;
       left: auto;
       transform: translate(0, 40%);
+}
+
+/* beer page settings */
+.card {
+      border: none;
+}
+.beer-title {
+      font-family: fantasy;
+}
+.beer-style {
+      font-style: italic;
+      font-family: fantasy;
+}
+
+/* footer settings */
+footer {
+      padding-block: 2%;
+      background-color: #fcfc69;
+      margin-top: auto;
 }
