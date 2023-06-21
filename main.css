@@ -39,9 +39,15 @@ body {
 }
 .beer-title {
       font-family: fantasy;
+      border-bottom: 1px solid #e2e25e;
+      text-transform: uppercase;
 }
 .beer-style {
       font-style: italic;
+      text-transform: uppercase;
+      font-family: fantasy;
+}
+.beer-description {
       font-family: fantasy;
 }
 
