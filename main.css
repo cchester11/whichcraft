@@ -27,7 +27,7 @@ body {
 }
 .navbar-custom {
       /* background-color: #fcfc69; */
-      background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color));
+      background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
       justify-content: flex-end;
@@ -85,6 +85,11 @@ body {
 .beer-fact {
       border-bottom: 1px solid #e2e25e;
       width: fit-content;
+}
+
+/* newsletter page settings */
+.newsletter-header {
+      background-color: var(--tertiary-color);
 }
 
 /* footer settings */
