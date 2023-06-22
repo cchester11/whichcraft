@@ -88,8 +88,18 @@ body {
 }
 
 /* newsletter page settings */
-.newsletter-header {
-      background-color: var(--tertiary-color);
+.newsletter-nav-header {
+      font-family: fantasy; 
+      height: fit-content;
+}
+.newsletter-navbuttons-container {
+      display: flex;
+      flex-direction: row;
+}
+.newsletter-nav-button {
+      text-decoration: none;
+      color: inherit;
+      font-family: fantasy;
 }
 
 /* footer settings */
