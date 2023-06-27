@@ -101,6 +101,14 @@ body {
       color: inherit;
       font-family: fantasy;
 }
+.section-background-1 {
+      padding-block: 2%;
+      background-color: var(--primary-color);
+}
+.section-background-2 {
+      padding-block: 2%;
+      background-color: white;
+}
 .newsletter-section {
       font-family: fantasy;
       font-weight: bolder;
