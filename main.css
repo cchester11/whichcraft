@@ -101,6 +101,9 @@ body {
       color: inherit;
       font-family: fantasy;
 }
+.newsletter-section {
+      font-family: fantasy;
+}
 
 /* footer settings */
 footer {
