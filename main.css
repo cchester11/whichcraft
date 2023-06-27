@@ -62,9 +62,6 @@ body {
       background-color: var(--primary-color);
       margin-bottom: 3%;
 }
-.hero-image {
-      width: 100%;
-}
 .beer-menu-header {
       font-family: fantasy;
       border-bottom: 1px solid #e2e25e;
