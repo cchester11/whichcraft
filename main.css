@@ -103,6 +103,8 @@ body {
 }
 .newsletter-section {
       font-family: fantasy;
+      font-weight: bolder;
+      font-size: large;
 }
 
 /* footer settings */
