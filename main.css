@@ -115,7 +115,9 @@ body {
       font-size: large;
       line-height: 2.2;
 }
-
+.link-icon {
+      margin: 10%;
+}
 /* footer settings */
 footer {
       padding-block: 2%;
