@@ -21,11 +21,10 @@ body {
       background-color: var(--primary-color);
 }
 
-/* navbar settings */
-.header-img {
-      margin-left: 20px;
-}
+/* header settings */
 .navbar-custom {
+      position: fixed;
+      width: 100%;
       /* background-color: #fcfc69; */
       background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
@@ -38,6 +37,14 @@ body {
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
 }
+
+/* navbar settings */
+.newsletter-master {
+      margin-top: 100px;
+}
+.header-img {
+      margin-left: 20px;
+}
 .dropdown-menu {
       margin-left: auto;
       right: 0;
@@ -45,7 +52,7 @@ body {
       transform: translate(0, 40%);
 }
 .dropdown-menu.show {
-      background-image: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+      background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
 }
 .dropdown-item {
       font-family: fantasy;
