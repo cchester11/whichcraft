@@ -97,6 +97,9 @@ body {
 }
 
 /* newsletter page settings */
+.nav-buttons-master {
+      margin-right: 5%;
+}
 .newsletter-nav-header {
       font-family: fantasy; 
       height: fit-content;
