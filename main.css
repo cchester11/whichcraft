@@ -110,6 +110,9 @@ body {
       color: inherit;
       font-family: fantasy;
 }
+.per-newsletter {
+      border-top: solid 2px #e2e252;
+}
 .section-background-1 {
       padding-block: 2%;
       background-color: var(--primary-color);
@@ -127,6 +130,7 @@ body {
 .link-icon {
       margin: 10%;
 }
+
 /* footer settings */
 footer {
       padding-block: 2%;
