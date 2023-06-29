@@ -110,6 +110,12 @@ body {
       color: inherit;
       font-family: fantasy;
 }
+.newsletter-title {
+      font-family: fantasy;
+      border-bottom: 1px solid #e2e25e;
+      width: fit-content;
+      text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
+}
 .per-newsletter {
       border-top: solid 2px #e2e252;
 }
