@@ -23,7 +23,7 @@ body {
 
 /* header settings */
 .navbar-custom {
-      position: fixed;
+      /* position: fixed; */
       width: 100%;
       /* background-color: #fcfc69; */
       background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
