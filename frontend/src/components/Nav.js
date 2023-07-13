@@ -5,12 +5,13 @@ export default function Nav () {
       return (
             <nav className="navbar navbar-expand-lg navbar-custom mb-5">
                   <div className="container-fluid">
-                        <a className="navbar-brand" href="#">
+                        <a className="navbar-brand">
                               <img
                                     className="header-img"
                                     src="https://www.whichcraft.com/wp-content/uploads/2022/06/WhichCraftLogoATX.png"
                                     width="120px"
                                     height="120px"
+                                    alt=""
                               />
                         </a>
                         <div className="d-flex flex-column col-8">
@@ -24,6 +25,7 @@ export default function Nav () {
                                     className="link-icon"
                                     href="https://www.facebook.com/WhichCraftMueller/"
                                     target="_blank"
+                                    rel="noreferrer"
                               >
                                     <img
                                           src="./images/facebook.png"
@@ -37,6 +39,7 @@ export default function Nav () {
                                     className="link-icon"
                                     href="https://www.instagram.com/whichcraftatx/?hl=en"
                                     target="_blank"
+                                    rel="noreferrer"
                               >
                                     <img
                                           src="./images/instagram.png"
@@ -75,6 +78,7 @@ export default function Nav () {
                                                       src="./menu.png"
                                                       width="30px"
                                                       height="30px"
+                                                      alt=""
                                                 />
                                           </a>
                                           <ul className="dropdown-menu">
