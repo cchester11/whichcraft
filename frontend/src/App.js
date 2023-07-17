@@ -1,8 +1,12 @@
 import Nav from "./components/Nav";
+import Newsletter from "./components/NewsLetter";
 
 function App() {
   return (
-    <Nav />
+    <div>
+      <Nav />
+      <Newsletter />
+    </div>
   );
 }
 
