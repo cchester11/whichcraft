@@ -28,7 +28,7 @@ export default function Nav () {
                                     rel="noreferrer"
                               >
                                     <img
-                                          src="./images/facebook.png"
+                                          src="images/facebook.png"
                                           alt="Facebook"
                                           className="social-icon"
                                           height="30px"
@@ -42,7 +42,7 @@ export default function Nav () {
                                     rel="noreferrer"
                               >
                                     <img
-                                          src="./images/instagram.png"
+                                          src="images/instagram.png"
                                           alt="Instagram"
                                           className="social-icon"
                                           height="30px"
@@ -75,7 +75,7 @@ export default function Nav () {
                                                 aria-expanded="false"
                                           >
                                                 <img
-                                                      src="./menu.png"
+                                                      src="images/menu.png"
                                                       width="30px"
                                                       height="30px"
                                                       alt=""
