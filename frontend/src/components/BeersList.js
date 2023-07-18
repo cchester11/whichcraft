@@ -6,7 +6,7 @@ export default function BeersList() {
             <div class="container text-center beer-menu">
                   <div class="row">
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 belching beaver brewing branded
@@ -17,7 +17,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/stout-beer.png"
+                                                      src="images/stout-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
@@ -56,7 +56,7 @@ export default function BeersList() {
                               </div>
                         </div>
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 wise acre tiny bomb
@@ -65,7 +65,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/regular-beer.png"
+                                                      src="images/regular-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
@@ -105,7 +105,7 @@ export default function BeersList() {
                               </div>
                         </div>
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 zilker cowboy candy
@@ -114,7 +114,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/regular-beer.png"
+                                                      src="images/regular-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
@@ -155,7 +155,7 @@ export default function BeersList() {
                   </div>
                   <div class="row">
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 belching beaver brewing branded
@@ -166,7 +166,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/stout-beer.png"
+                                                      src="images/stout-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
@@ -205,7 +205,7 @@ export default function BeersList() {
                               </div>
                         </div>
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 wise acre tiny bomb
@@ -214,7 +214,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/regular-beer.png"
+                                                      src="images/regular-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
@@ -254,7 +254,7 @@ export default function BeersList() {
                               </div>
                         </div>
                         <div class="col-4 mt-3">
-                              <div class="card" style="width: 18rem">
+                              <div class="card" style={{ width: "18rem" }}>
                                     <div class="card-body">
                                           <h5 class="card-title beer-title">
                                                 zilker cowboy candy
@@ -263,7 +263,7 @@ export default function BeersList() {
                                                 class="card-subtitle mb-2 text-body-secondary beer-style"
                                           >
                                                 <img
-                                                      src="./images/regular-beer.png"
+                                                      src="images/regular-beer.png"
                                                       height="40px"
                                                       width="30px"
                                                 />
