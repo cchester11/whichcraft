@@ -6,7 +6,15 @@
                   "abv": "14.25%",
                   "IBU": "12",
                   "Beer Number": "#24",
-                  "Additional Notes": "Super delicious cinnamon vibes"
+                  "AdditionalNotes": "Super delicious cinnamon vibes"
+            },
+            "2": {
+                  "title": "wise acre tiny bomb",
+                  "style": "pilsner",
+                  "abv": "4.5%",
+                  "IBU": "39",
+                  "Beer Number": "#8",
+                  "AdditionalNotes": "This beer is made with German & American malt and is spiked with 50lbs of local wild flower honey."
             }
       }
 }
