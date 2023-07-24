@@ -1,20 +1,10 @@
 {
       "beer": {
-            "1": {
-                  "title": "belching beaver brewing branded & barreled mexican chocolate cake",
-                  "style": "Imperial Stout",
-                  "abv": "14.25%",
-                  "IBU": "12",
-                  "Beer Number": "#24",
-                  "AdditionalNotes": "Super delicious cinnamon vibes"
-            },
-            "2": {
-                  "title": "wise acre tiny bomb",
-                  "style": "pilsner",
-                  "abv": "4.5%",
-                  "IBU": "39",
-                  "Beer Number": "#8",
-                  "AdditionalNotes": "This beer is made with German & American malt and is spiked with 50lbs of local wild flower honey."
+            "#1": {
+                  "beer": "pilsner"
             }
+      },
+      "food": {
+
       }
 }
