@@ -23,6 +23,30 @@
                   "IBU": "11",
                   "Beer Number": "#13",
                   "AdditionalNotes": "Expect lots of fruity flavors"
+            },
+            {
+                  "title": "Blue Owl Bobs Great Porter",
+                  "style": "Porter American",
+                  "abv": "5.5%",
+                  "IBU": "n/a",
+                  "Beer Number": "#3",
+                  "AdditionalNotes": "Smooth with enjoyable flavors of chocolate"
+            },
+            {
+                  "title": "St Arnold Art Car",
+                  "style": "American IPA",
+                  "abv": "7.2%",
+                  "IBU": "55",
+                  "Beer Number": "#11",
+                  "AdditionalNotes": "Bitter citrus to sweet"
+            },
+            {
+                  "title": "St Arnold Tarnation",
+                  "style": "Strong Ale",
+                  "abv": "9%",
+                  "IBU": "n/a",
+                  "Beer Number": "#16",
+                  "AdditionalNotes": "Four malts and four hops in the malty strong ale"
             }
       ],
       "food": []
