@@ -15,6 +15,14 @@
                   "IBU": "9",
                   "Beer Number": "#23",
                   "AdditionalNotes": "This beer is made with honey and wild flower."
+            },
+            {
+                  "title": "zilker cowboy candy",
+                  "style": "Pale Ale American",
+                  "abv": "5%",
+                  "IBU": "11",
+                  "Beer Number": "#13",
+                  "AdditionalNotes": "Expect lots of fruity flavors"
             }
       ],
       "food": []
