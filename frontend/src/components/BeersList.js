@@ -3,12 +3,15 @@ import '../stylesheets/main.css';
 import axios from "axios";
 
 export default function BeersList() {
-      // grab all data from backend using axios
-      // map beer data into the rows below
+      // global variable to house the response
+      let beers;
+
       async function getBeers() {
             try {
-                  const response = await axios.get('beers/allbeers');
-                  console.log(response);
+                  const response = await axios.get('http://localhost:3001/beer/allbeers');
+                  console.log(response.data);
+
+                  // beers = set data
             } catch (error) {
                   console.error(error);
             }
@@ -18,7 +21,8 @@ export default function BeersList() {
       return (
             <div className="container text-center beer-menu">
                   <div className="row">
-                        <div>Hello</div>
+                        <div className="">Hello</div>
+                        {/* map data into cards */}
                   </div>
             </div>
       )
