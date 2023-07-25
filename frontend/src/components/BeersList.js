@@ -7,7 +7,7 @@ export default function BeersList() {
       // map beer data into the rows below
       async function getBeers() {
             try {
-                  const response = await axios.get('/beers/allbeers');
+                  const response = await axios.get('beers/allbeers');
                   console.log(response);
             } catch (error) {
                   console.error(error);
