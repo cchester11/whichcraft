@@ -17,6 +17,7 @@ export default function NewsLettersContainer () {
                               <img
                                     className="container newsletter-section d-flex justify-content-center"
                                     src="./images/newsletter-header.png"
+                                    alt=""
                               />
 
                               <div
@@ -38,6 +39,7 @@ export default function NewsLettersContainer () {
                               <img
                                     className="container newsletter-section d-flex justify-content-center"
                                     src="./images//newsletter-img-3.png"
+                                    alt=""
                               />
                               <div
                                     className="container newsletter-section d-flex justify-content-center mt-5"
@@ -54,6 +56,7 @@ export default function NewsLettersContainer () {
                               <img
                                     className="container newsletter-section d-flex justify-content-center"
                                     src="./images/newsletter-img-2.png"
+                                    alt=""
                               />
                               <div
                                     className="container newsletter-section d-flex justify-content-center mt-5"
@@ -109,6 +112,7 @@ export default function NewsLettersContainer () {
                               <img
                                     className="container newsletter-section d-flex justify-content-center"
                                     src="./images/image-10.png"
+                                    alt=""
                               />
 
                               <div
