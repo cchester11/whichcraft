@@ -7,6 +7,14 @@
                   "IBU": "12",
                   "Beer Number": "#24",
                   "AdditionalNotes": "Super delicious cinnamon vibes"
+            },
+            {
+                  "title": "wise acre tiny bomb",
+                  "style": "Pilsner",
+                  "abv": "10%",
+                  "IBU": "9",
+                  "Beer Number": "#23",
+                  "AdditionalNotes": "This beer is made with honey and wild flower."
             }
       ],
       "food": []
