@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const seedBeer = require('./seedBeer')
+const seedBeer = require('./beers')
 
 router.use('/beer', seedBeer)
 
