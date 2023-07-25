@@ -9,9 +9,13 @@ export default function BeersList() {
       async function getBeers() {
             try {
                   const response = await axios.get('http://localhost:3001/beer/allbeers');
-                  console.log(response.data);
+                  beers = response.data
+                  
+                  for(let i = 0; i < beers.length; i ++) {
+                        let curr = beers[i]
 
-                  // beers = set data
+                        console.log(curr)
+                  }
             } catch (error) {
                   console.error(error);
             }
