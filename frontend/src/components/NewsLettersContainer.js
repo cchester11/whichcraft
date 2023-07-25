@@ -3,24 +3,24 @@ import '../stylesheets/main.css';
 
 export default function NewsLettersContainer () {
       return (
-            <div class="container-fluid newsletter-master ml-3 mr-3">
+            <div className="container-fluid newsletter-master ml-3 mr-3">
                   <div
                         id="entry-1"
-                        class="container per-newsletter mt-4 ml-2 ml-2 d-flex flex-column justify-content-center"
+                        className="container per-newsletter mt-4 ml-2 ml-2 d-flex flex-column justify-content-center"
                   >
                         <div
-                              class="container-fluid d-flex justify-content-center"
+                              className="container-fluid d-flex justify-content-center"
                         >
-                              <h1 class="newsletter-title m-4">Hocus Pocus!</h1>
+                              <h1 className="newsletter-title m-4">Hocus Pocus!</h1>
                         </div>
-                        <div class="container section-background-1">
+                        <div className="container section-background-1">
                               <img
-                                    class="container newsletter-section d-flex justify-content-center"
+                                    className="container newsletter-section d-flex justify-content-center"
                                     src="./images/newsletter-header.png"
                               />
 
                               <div
-                                    class="container newsletter-section d-flex justify-content-center mt-5"
+                                    className="container newsletter-section d-flex justify-content-center mt-5"
                               >
                                     <h7>
                                           Pair a Plain, Rosemary, or Cinnamon
@@ -34,13 +34,13 @@ export default function NewsLettersContainer () {
                                     </h7>
                               </div>
                         </div>
-                        <div class="container section-background-2">
+                        <div className="container section-background-2">
                               <img
-                                    class="container newsletter-section d-flex justify-content-center"
+                                    className="container newsletter-section d-flex justify-content-center"
                                     src="./images//newsletter-img-3.png"
                               />
                               <div
-                                    class="container newsletter-section d-flex justify-content-center mt-5"
+                                    className="container newsletter-section d-flex justify-content-center mt-5"
                               >
                                     <h7>
                                           Happy Hour starts at 4 and lasts for
@@ -50,13 +50,13 @@ export default function NewsLettersContainer () {
                                     </h7>
                               </div>
                         </div>
-                        <div class="container section-background-1">
+                        <div className="container section-background-1">
                               <img
-                                    class="container newsletter-section d-flex justify-content-center"
+                                    className="container newsletter-section d-flex justify-content-center"
                                     src="./images/newsletter-img-2.png"
                               />
                               <div
-                                    class="container newsletter-section d-flex justify-content-center mt-5"
+                                    className="container newsletter-section d-flex justify-content-center mt-5"
                               >
                                     <h7>
                                           Saloon Door Kemah Suprema- American
@@ -96,23 +96,23 @@ export default function NewsLettersContainer () {
                   </div>
                   <div
                         id="entry-2"
-                        class="container per-newsletter mt-4 ml-2 ml-2 d-flex flex-column justify-content-center"
+                        className="container per-newsletter mt-4 ml-2 ml-2 d-flex flex-column justify-content-center"
                   >
                         <div
-                              class="container-fluid d-flex justify-content-center"
+                              className="container-fluid d-flex justify-content-center"
                         >
-                              <h1 class="newsletter-title m-4">
+                              <h1 className="newsletter-title m-4">
                                     Love is in the Air!
                               </h1>
                         </div>
-                        <div class="container section-background-1">
+                        <div className="container section-background-1">
                               <img
-                                    class="container newsletter-section d-flex justify-content-center"
+                                    className="container newsletter-section d-flex justify-content-center"
                                     src="./images/image-10.png"
                               />
 
                               <div
-                                    class="container newsletter-section d-flex justify-content-center mt-5"
+                                    className="container newsletter-section d-flex justify-content-center mt-5"
                               >
                                     <h7>
                                           Lorem ipsum dolor sit amet consectetur
@@ -124,9 +124,9 @@ export default function NewsLettersContainer () {
                                     </h7>
                               </div>
                         </div>
-                        <div class="container section-background-2">
+                        <div className="container section-background-2">
                               <div
-                                    class="container newsletter-section d-flex justify-content-center mt-5"
+                                    className="container newsletter-section d-flex justify-content-center mt-5"
                               >
                                     <h7>
                                           Pinthouse Training Bines- This IPA
