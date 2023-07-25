@@ -4,9 +4,13 @@ const path = require('path');
 
 function seedBeerController (req, res) {
       let beerPath = path.join(__dirname, '../data/data.json');
-      let data = JSON.stringify(req.body);
+      let beerBody = req.body
 
-      fs.writeFile(beerPath, data, () => {
+      data.beer.push(beerBody)
+
+      let send = JSON.stringify(data)
+
+      fs.writeFile(beerPath, send, () => {
             console.log(`${data} sent to json storage`)
       })
 

@@ -1,10 +1,13 @@
 {
-      "beer": {
-            "#1": {
-                  "beer": "pilsner"
+      "beer": [
+            {
+                  "title": "belching beaver brewing branded & barreled mexican chocolate cake",
+                  "style": "Imperial Stout",
+                  "abv": "14.25%",
+                  "IBU": "12",
+                  "Beer Number": "#24",
+                  "AdditionalNotes": "Super delicious cinnamon vibes"
             }
-      },
-      "food": {
-
-      }
+      ],
+      "food": []
 }
