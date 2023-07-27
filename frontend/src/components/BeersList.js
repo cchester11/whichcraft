@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../stylesheets/main.css';
 import axios from "axios";
 
 export default function BeersList() {
       // global variable to house the response
-      let beers;
+      const [ beers, setBeers ] = useState([]);
 
       async function getBeers() {
             try {
                   const response = await axios.get('http://localhost:3001/beer/allbeers');
-                  beers = response.data
-                  
-                  for(let i = 0; i < beers.length; i ++) {
-                        let curr = beers[i]
-
-                        console.log(curr)
-                  }
+                  console.log(response.data)
             } catch (error) {
                   console.error(error);
             }
       }
 
-      getBeers()
+      useEffect(() => {
+            getBeers()
+      }, [])
+      
       return (
             <div className="container text-center beer-menu">
                   <div className="row">
-                        <div className="">Hello</div>
-                        {/* map data into cards */}
+                        {beers.map((beer, index) => (
+                              <div className="card" key={index} value={beer}>
+                                    <h5>{beer}</h5>
+                              </div>
+                        ))}
                   </div>
             </div>
       )
