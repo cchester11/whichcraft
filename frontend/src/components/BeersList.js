@@ -26,7 +26,7 @@ export default function BeersList() {
                         ])
                   }
 
-                  console.log(entries)
+                  setBeers(entries)
             } catch (error) {
                   console.error(error);
             }
@@ -35,15 +35,20 @@ export default function BeersList() {
       useEffect(() => {
             getBeers()
       }, [])
+
+      useEffect(() => {
+            console.log("beers state", beers)
+      }, [beers])
       
       return (
             <div className="container text-center beer-menu">
                   <div className="row">
-                        {beers.map((beer, index) => (
+                        {/* {beers.map((beer, index) => (
                               <div className="card" key={index} value={beer}>
                                     <h5>{beer}</h5>
                               </div>
-                        ))}
+                        ))} */}
+                        <h1>Beers</h1>
                   </div>
             </div>
       )
