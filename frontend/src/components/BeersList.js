@@ -9,7 +9,24 @@ export default function BeersList() {
       async function getBeers() {
             try {
                   const response = await axios.get('http://localhost:3001/beer/allbeers');
-                  console.log(response.data)
+                  let beerObs = response.data
+
+                  let entries = []
+
+                  for(let i = 0; i < beerObs.length; i ++) {
+                        let curr = beerObs[i]
+
+                        entries.push([
+                              curr.title, 
+                              curr.style,
+                              curr.abv,
+                              curr.IBU,
+                              curr.beerNumber,
+                              curr.AdditionalNotes
+                        ])
+                  }
+
+                  console.log(entries)
             } catch (error) {
                   console.error(error);
             }

@@ -5,7 +5,7 @@
                   "style": "Imperial Stout",
                   "abv": "14.25%",
                   "IBU": "12",
-                  "Beer Number": "#24",
+                  "beerNumber": "#24",
                   "AdditionalNotes": "Super delicious cinnamon vibes"
             },
             {
@@ -13,7 +13,7 @@
                   "style": "Pilsner",
                   "abv": "10%",
                   "IBU": "9",
-                  "Beer Number": "#23",
+                  "beerNumber": "#23",
                   "AdditionalNotes": "This beer is made with honey and wild flower."
             },
             {
@@ -21,7 +21,7 @@
                   "style": "Pale Ale American",
                   "abv": "5%",
                   "IBU": "11",
-                  "Beer Number": "#13",
+                  "beerNumber": "#13",
                   "AdditionalNotes": "Expect lots of fruity flavors"
             },
             {
@@ -29,7 +29,7 @@
                   "style": "Porter American",
                   "abv": "5.5%",
                   "IBU": "n/a",
-                  "Beer Number": "#3",
+                  "beerNumber": "#3",
                   "AdditionalNotes": "Smooth with enjoyable flavors of chocolate"
             },
             {
@@ -37,7 +37,7 @@
                   "style": "American IPA",
                   "abv": "7.2%",
                   "IBU": "55",
-                  "Beer Number": "#11",
+                  "beerNumber": "#11",
                   "AdditionalNotes": "Bitter citrus to sweet"
             },
             {
@@ -45,7 +45,7 @@
                   "style": "Strong Ale",
                   "abv": "9%",
                   "IBU": "n/a",
-                  "Beer Number": "#16",
+                  "beerNumber": "#16",
                   "AdditionalNotes": "Four malts and four hops in the malty strong ale"
             }
       ],
