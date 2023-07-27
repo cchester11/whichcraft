@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function BeersList() {
       // global variable to house the response
-      const [ beers, setBeers ] = useState([]);
+      const [beers, setBeers] = useState([]);
 
       async function getBeers() {
             try {
@@ -13,11 +13,11 @@ export default function BeersList() {
 
                   let entries = []
 
-                  for(let i = 0; i < beerObs.length; i ++) {
+                  for (let i = 0; i < beerObs.length; i++) {
                         let curr = beerObs[i]
 
                         entries.push([
-                              curr.title, 
+                              curr.title,
                               curr.style,
                               curr.abv,
                               curr.IBU,
@@ -39,13 +39,55 @@ export default function BeersList() {
       useEffect(() => {
             console.log("beers state", beers)
       }, [beers])
-      
+
       return (
             <div className="container text-center beer-menu">
                   <div className="row">
                         {beers.map((beer, index) => (
-                              <div className="card" key={index} value={beer}>
-                                    <p>{beer[0]}</p>
+                              <div className="card" key={index} value={beer} style={{ width: "18rem" }}>
+                                    <div className="card-body">
+                                          <h5 className="card-title beer-title">
+                                                {beer[0]}
+                                          </h5>
+                                          <h6
+                                                className="card-subtitle mb-2 text-body-secondary beer-style"
+                                          >
+                                                <img
+                                                      src="images/stout-beer.png"
+                                                      height="40px"
+                                                      width="30px"
+                                                      alt=""
+                                                />
+                                                {beer[1]}
+                                          </h6>
+                                          <div
+                                                className="container beer-facts mt-3 mb-3"
+                                          >
+                                                <p
+                                                      className="card-text fw-lighter beer-fact"
+                                                >
+                                                      {beer[2]}
+                                                </p>
+                                                <p
+                                                      className="card-text fw-lighter beer-fact"
+                                                >
+                                                      {beer[3]}
+                                                </p>
+                                                <p
+                                                      className="card-text fw-lighter beer-fact"
+                                                >
+                                                      {beer[4]}
+                                                </p>
+                                          </div>
+                                          <p
+                                                className="card-text fw-lighter beer-description"
+                                          >
+                                                {beer[5]}
+                                          </p>
+                                          <a href="/" className="btn btn-warning"
+                                          >Untappd</a
+                                          >
+                                    </div>
                               </div>
                         ))}
                   </div>
