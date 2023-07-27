@@ -43,12 +43,11 @@ export default function BeersList() {
       return (
             <div className="container text-center beer-menu">
                   <div className="row">
-                        {/* {beers.map((beer, index) => (
+                        {beers.map((beer, index) => (
                               <div className="card" key={index} value={beer}>
-                                    <h5>{beer}</h5>
+                                    <p>{beer[0]}</p>
                               </div>
-                        ))} */}
-                        <h1>Beers</h1>
+                        ))}
                   </div>
             </div>
       )
