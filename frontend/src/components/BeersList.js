@@ -87,8 +87,7 @@ export default function BeersList() {
                                                 {beer[5]}
                                           </p>
                                           <a href="/" className="btn btn-warning"
-                                          >Untappd</a
-                                          >
+                                          >Untappd</a>
                                     </div>
                               </div>
                         ))}
