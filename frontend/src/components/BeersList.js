@@ -8,7 +8,7 @@ export default function BeersList() {
 
       async function getBeers() {
             try {
-                  const response = await axios.get('http://localhost:3001/beer/allbeers');
+                  const response = await axios.get('http://localhost:3001/beers/allbeers');
                   let beerObs = response.data
 
                   let entries = []
