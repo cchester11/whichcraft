@@ -47,6 +47,14 @@
                   "IBU": "n/a",
                   "beerNumber": "#16",
                   "AdditionalNotes": "Four malts and four hops in the malty strong ale"
+            },
+            {
+                  "title": "Blue Owl Spirit Animal",
+                  "style": "Sour Ale",
+                  "abv": "5%",
+                  "IBU": "12",
+                  "beerNumber": "#5",
+                  "AdditionalNotes": "Spirit Animal offers a light and tart addition to a wonderful tasting ale"
             }
       ],
       "food": [],

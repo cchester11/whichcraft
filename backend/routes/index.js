@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const newsLetterRoutes = require('./newsletters');
-const seedBeer = require('./beers');
+const beerRoutes = require('./beers');
 
 router.use('/newsletters', newsLetterRoutes);
-router.use('/beer', seedBeer);
+router.use('/beers', beerRoutes);
 
 module.exports = router;
