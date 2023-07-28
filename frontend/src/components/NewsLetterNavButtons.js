@@ -5,6 +5,7 @@ export default function NewsLetterNavButtons() {
       return (
             <nav
                   className="d-flex justify-content-end mt-1 nav-buttons-master align-items-center"
+                  id="newsLetterNav"
             >
                   <ul className="newsletter-navbuttons-container">
                         <ul>

@@ -85,7 +85,7 @@ export default function Nav () {
                                                 <li>
                                                       <a
                                                             className="dropdown-item"
-                                                            href="#"
+                                                            href="#newsLetterNav"
                                                             >Newsletter</a
                                                       >
                                                 </li>
