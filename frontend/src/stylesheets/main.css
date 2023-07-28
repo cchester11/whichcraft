@@ -102,6 +102,9 @@ body {
       border-bottom: 1px solid #e2e25e;
       width: fit-content;
 }
+.list-group-item {
+      background-color: var(--primary-color);
+}
 
 /* newsletter page settings */
 .nav-buttons-master {

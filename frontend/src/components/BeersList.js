@@ -63,21 +63,23 @@ export default function BeersList() {
                                           <div
                                                 className="container beer-facts mt-3 mb-3"
                                           >
-                                                <p
-                                                      className="card-text fw-lighter beer-fact"
-                                                >
-                                                      {beer[2]}
-                                                </p>
-                                                <p
-                                                      className="card-text fw-lighter beer-fact"
-                                                >
-                                                      {beer[3]}
-                                                </p>
-                                                <p
-                                                      className="card-text fw-lighter beer-fact"
-                                                >
-                                                      {beer[4]}
-                                                </p>
+                                                <ul className="list-group list-group-flush">
+                                                      <li
+                                                            className="list-group-item fw-lighter beer-fact"
+                                                      >
+                                                            {beer[2]}
+                                                      </li>
+                                                      <li
+                                                            className="list-group-item fw-lighter beer-fact"
+                                                      >
+                                                            {beer[3]}
+                                                      </li>
+                                                      <li
+                                                            className="list-group-item fw-lighter beer-fact"
+                                                      >
+                                                            {beer[4]}
+                                                      </li>
+                                                </ul>
                                           </div>
                                           <p
                                                 className="card-text fw-lighter beer-description"
