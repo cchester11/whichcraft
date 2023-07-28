@@ -49,5 +49,15 @@
                   "AdditionalNotes": "Four malts and four hops in the malty strong ale"
             }
       ],
-      "food": []
+      "food": [],
+      "newsLetters": [
+            {
+                  "title": "St Arnold Tarnation",
+                  "style": "Strong Ale",
+                  "abv": "9%",
+                  "IBU": "n/a",
+                  "Beer Number": "#16",
+                  "AdditionalNotes": "Four malts and four hops in the malty strong ale"
+            }
+      ]
 }
