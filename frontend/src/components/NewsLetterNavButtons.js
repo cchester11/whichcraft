@@ -24,19 +24,19 @@ export default function NewsLetterNavButtons() {
                         <ul>
                               <a
                                     className="newsletter-nav-button btn btn-outline-warning"
-                                    href="#"
+                                    href="#entry-3"
                               >3</a>
                         </ul>
                         <ul>
                               <a
                                     className="newsletter-nav-button btn btn-outline-warning"
-                                    href="#"
+                                    href="#entry-4"
                               >4</a>
                         </ul>
                         <ul>
                               <a
                                     className="newsletter-nav-button btn btn-outline-warning"
-                                    href="#"
+                                    href="#entry-5"
                               >5</a>
                         </ul>
                   </ul>
