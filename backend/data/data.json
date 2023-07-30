@@ -60,12 +60,8 @@
       "food": [],
       "newsLetters": [
             {
-                  "title": "St Arnold Tarnation",
-                  "style": "Strong Ale",
-                  "abv": "9%",
-                  "IBU": "n/a",
-                  "Beer Number": "#16",
-                  "AdditionalNotes": "Four malts and four hops in the malty strong ale"
+                  "heading": "Hocus Pocus",
+                  "paragraph": "Pair a Plain, Rosemary, or Cinnamon Raisin bagel with a cream cheese or chive schmear for a tasty breakfast on-the-go, or  grab our new White Cheddar and Prosciutto Grilled Cheese! We're slinging these bad boys all day from 8am until the hour before closing time."
             }
       ]
 }
