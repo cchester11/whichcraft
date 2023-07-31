@@ -11,7 +11,7 @@ export default function NewsLettersContainer () {
       return (
             <div cassName="container-fluid newsletter-master ml-3 mr-3">
                   // for each entry
-                  <div id="entry-1" className="container per-newsletter mt-4 ml-2 ">
+                  <div id="entry-1" className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
                         
                   </div>
             </div>

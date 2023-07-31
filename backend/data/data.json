@@ -61,7 +61,24 @@
       "newsLetters": [
             {
                   "heading": "Hocus Pocus",
-                  "paragraph": "Pair a Plain, Rosemary, or Cinnamon Raisin bagel with a cream cheese or chive schmear for a tasty breakfast on-the-go, or  grab our new White Cheddar and Prosciutto Grilled Cheese! We're slinging these bad boys all day from 8am until the hour before closing time."
+                  "paragraph-1": "Pair a Plain, Rosemary, or Cinnamon Raisin bagel with a cream cheese or chive schmear for a tasty breakfast on-the-go, or  grab our new White Cheddar and Prosciutto Grilled Cheese! We're slinging these bad boys all day from 8am until the hour before closing time.",
+                  "paragraph-2": "Happy Hour starts at 4 and last for the entire duration of the game. Look for the Longhorns logo on the draft board to take $3 off!",
+                  "heading-2": "New and Returning Beers This Week",
+                  "list-item-1": "Saloon Door Kemah Suprema - American light lager, crisp and refreshing.",
+                  "list-item-2": "4.7% Bear King Monkey Bridge Hefe - This style has a distinct banana character with hints of clove, a dry finish, full mouth feel, and high carbonation.",
+                  "list-item-3": "5.8% Belching Beaver No Worries IPA - Strata, Galaxy, Mosiac, Citra, and Amarillo hops all lend their characteristics to this delightful West Coast IPA.",
+                  "list-item-4": "6.2% BrewDog USA Hellcat IPA - BrewDog USA partners with Iron Maiden to create a fiesty India Pale Lager, citrus-forward with an especially complex balance of malts and hops.",
+                  "list-item-5": "6% Pinthouse Island Kitty - A truly tropical IPA with a full body, some underlying hop character, and notes of juicy pineapple, tropical fruit, coconut, and nutmeg.",
+                  "list-item-6": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
+            },
+            {
+                  "heading": "Love is in the Air",
+                  "paragraph-1": "Almost 5 o'clock already...finding yourself lost in the first daydream of the week? Well don't rush home to make your bed, we've happy going til 6 instead(like we do everyday)! If you're the kind of person that's always yearning for your Funday, don't wait til Sunday. We're always stocked up with things to make your dreams come true.",
+                  "paragraph-2": "For wine news this week, I'd like to take the time and highlight Soto Vino. This winemaking duo is currently working out of the facilities of the Austin Winery by way of San Antonio, but have roots learning the trade at Pedernales & William Chris Vineyards. Their first offering we have in store is 21 Sauvage. These hand harvested Mourvedre grapes from Salt Lick Vineyards have gone through full carbonic maceration and finish fermentation in stainless til bottling time. Consider this your 100% Texan take on Beajolais Noveau. Chil a bottle down and feel its powers chill you out.",
+                  "heading-2": "New and Returning Beers This Week",
+                  "list-item-1": "Texas Keeper Cider Noir - Cider Noir is made from 100% Northern Spy apples double fermented with extra dark belgian candi, pecans and orange peel. Belgian candi, made from beet and date sugar, is a classic component of Dubbel and Trippel Ales. Dark fruit and toasted bread notes from the candi combine with ripe pear from the Spy. A hint of pecan and orange round out this stout cider. 11.1% ABV",
+                  "list-item-2": "Martin House Cookies & Cream - Cookie Dough Stout 6.2% ABV & Rich Cream Ale.",
+                  "list-item-3": "Founders Frootwood - They took a crisp, light-bodied cherry ale and hid it away in oak barrels that have held both bourbon and maple syrup. After a lengthy stint, it emerged a changed beer, blanketed in notes of warm vanilla and earthy sweetness. The wood proves itself the star of this beer, adding depth and taming the tart cherry while the maple imposes a velvety texture that lingers for not a moment too long. 8% ABV"
             }
       ]
 }
