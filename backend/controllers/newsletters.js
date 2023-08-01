@@ -2,6 +2,26 @@ const data = require('../data/data.json');
 const fs = require('fs');
 const path = require('path');
 
+// need some error checking in here
+
+function getAllNewsLetters (req, res) {
+      const newsLetterPath = path.join(__dirname, "../data/data.json")
+
+      fs.readFile(newsLetterPath, 'utf8', (err, data) => {
+            if(err) {
+                  res.json({
+                        message: "Unsuccessful request",
+                        error: err
+                  })
+            } 
+
+            res.json({
+                  message: "Successful request",
+                  data: JSON.parse(data)
+            })
+      })
+};
+
 function addNewsLetter (req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
@@ -19,4 +39,4 @@ function addNewsLetter (req, res) {
       })
 };
 
-module.exports = addNewsLetter;
+module.exports = { getAllNewsLetters ,addNewsLetter };

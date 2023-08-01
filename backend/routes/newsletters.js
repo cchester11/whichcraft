@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const addNewsLetter = require('../controllers/newsletters');
+const { addNewsLetter, getAllNewsLetters } = require('../controllers/newsletters');
 
 router.post('/addnewsletter', addNewsLetter);
+router.get('/allnewsletters', getAllNewsLetters);
 
 module.exports = router;
