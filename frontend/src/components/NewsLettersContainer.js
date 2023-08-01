@@ -3,13 +3,23 @@ import '../stylesheets/main.css';
 import axios from 'axios';
 
 export default function NewsLettersContainer() {
-      const [newsletters, setNewsLetters] = useState([])
+      // const [newsletters, setNewsLetters] = useState([])
 
       async function grabNewsLetters() {
             try {
                   const response = await axios.get("http://localhost:3001/newsletters/allnewsletters")
-                  
-                  console.log(response.data.data.newsLetters)
+                  let newsLetterObs = response.data.data.newsLetters
+                  let entries = []
+
+                  for(let i = 0; i < newsLetterObs.length; i ++) {
+                        let curr = newsLetterObs[i]
+
+                        entries.push([
+                              curr
+                        ])
+                  }
+
+                  console.log(entries)
             } catch (error) {
                   return {
                         Error: error
