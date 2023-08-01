@@ -175,7 +175,11 @@
                         "paragraph-1": {
                               "element": "paragraph",
                               "text": "Selene Beaujolais Nouveau 2021 - From the winemakers: '2021 was a year that wouldn't stop. First we had the frost, which hit all of our parcels. We have 6 Hectares now, with a fairly small production. After the frost we had 6 hectares with almost no production. In April we decided to purchase some fruit in advance from some nice organic plots nearby; there was no way we would have coped otherwise. Then there was the rain... It was very wet, meaning lots of disease. We had so much work to do in the vineyards, but we were working with biodynamics and this really helped the health of what we were working with."
-                        } 
+                        },
+                        "paragraph-2": {
+                              "element": "paragraph",
+                              "text": "The Carignan and Zinfandel comes from the Venturi Vineyard and Hawk Eye Ranch in Mendocino with a small addition (7%) of extended masceration Moscato and Colombard included to make the fruit aromas pop out of the glass."
+                        }
                   },
                   "wine-item-2": {
                         "paragraph-1": {
