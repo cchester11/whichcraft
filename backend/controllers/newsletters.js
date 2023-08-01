@@ -16,7 +16,6 @@ function getAllNewsLetters (req, res) {
             } 
 
             res.json({
-                  message: "Successful request",
                   data: JSON.parse(data)
             })
       })
