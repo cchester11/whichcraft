@@ -1,9 +1,9 @@
 /* root colors */
 :root {
-      --primary-color: #fff7d4;
-      --secondary-color: #ffd95a;
-      --tertiary-color: #c07f00;
-      --enhance-color: #4c3d3d;
+      --primary-color: #071952;
+      --secondary-color: #0B666A;
+      --tertiary-color: #35A29F;
+      --enhance-color: #97FEED;
 }
 
 /* body and html  */
@@ -18,14 +18,14 @@ body {
       display: flex;
       flex-direction: column;
       /* background-image: linear-gradient(to bottom left, var(--enhance-color), var(--secondary-color)); */
-      background-color: var(--primary-color);
+      /* background-color: var(--primary-color); */
+      background-color: white;
 }
 
 /* header settings */
 .navbar-custom {
       /* position: fixed; */
       width: 100%;
-      /* background-color: #fcfc69; */
       background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
@@ -66,7 +66,7 @@ body {
 .card {
       border: none;
       /* background-image: linear-gradient(to bottom left, var(--tertiary-color), var(--secondary-color)); */
-      background-color: var(--primary-color);
+      background-color: var(--tertiary-color);
       margin-bottom: 3%;
 }
 .hero-image {
@@ -74,13 +74,13 @@ body {
 }
 .beer-menu-header {
       font-family: fantasy;
-      border-bottom: 1px solid #e2e25e;
+      border-bottom: 1px solid var(--secondary-color);
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
       width: fit-content;
 }
 .beer-title {
       font-family: fantasy;
-      border-bottom: 1px solid #e2e25e;
+      border-bottom: 1px solid var(--secondary-color);
       text-transform: uppercase;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
@@ -99,11 +99,11 @@ body {
       justify-content: center;
 }
 .beer-fact {
-      border-bottom: 1px solid #e2e25e;
+      border-bottom: 1px solid var(--secondary-color);
       width: fit-content;
 }
 .list-group-item {
-      background-color: var(--primary-color);
+      background-color: var(--tertiary-color);
 }
 
 /* newsletter page settings */
@@ -125,16 +125,16 @@ body {
 }
 .newsletter-title {
       font-family: fantasy;
-      border-bottom: 1px solid #e2e25e;
+      border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
 .per-newsletter {
-      border-top: solid 2px #e2e252;
+      border-top: solid 2px var(--secondary-color);
 }
 .section-background-1 {
       padding-block: 2%;
-      background-color: var(--primary-color);
+      background-color: var(--tertiary-color);
 }
 .section-background-2 {
       padding-block: 2%;
@@ -153,10 +153,10 @@ body {
 /* footer settings */
 footer {
       padding-block: 2%;
-      background-color: #fcfc69;
+      background-color: var(--secondary-color);
       margin-top: auto;
       /* background-image: linear-gradient(to bottom right, #e2e25e, #71712f); */
-      background-image: linear-gradient(to bottom right, #d8d8d8, #808080);
+      background-image: linear-gradient(to bottom right, var(--secondary-color), var(--tertiary-color));
 }
 
 /*Filter styles*/
