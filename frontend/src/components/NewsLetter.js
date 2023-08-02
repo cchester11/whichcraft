@@ -1,13 +1,14 @@
 import React from "react";
 import '../stylesheets/main.css';
 import NewsLetterNavButtons from "./NewsLetterNavButtons";
-import NewsLettersContainer from "./NewsLettersContainer";
+// import NewsLettersContainer from "./NewsLettersContainer";
+import TestNewsLetters from "./NewsLettersTestContainer";
 
 export default function Newsletter() {
       return (
             <div>
                   <NewsLetterNavButtons />
-                  <NewsLettersContainer />
+                  <TestNewsLetters />
             </div>
       )
 }
