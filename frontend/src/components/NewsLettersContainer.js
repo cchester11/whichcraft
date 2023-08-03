@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState ,useEffect } from "react";
 import '../stylesheets/main.css';
 import axios from 'axios';
 
 export default function NewsLettersContainer() {
-      // const [newsletters, setNewsLetters] = useState([])
+      const [newsletters, setNewsLetters] = useState([])
 
       async function grabNewsLetters() {
             try {
@@ -19,7 +19,7 @@ export default function NewsLettersContainer() {
                         ])
                   }
 
-                  console.log(entries)
+                  setNewsLetters(entries)
             } catch (error) {
                   return {
                         Error: error
@@ -30,6 +30,10 @@ export default function NewsLettersContainer() {
       useEffect(() => {
             grabNewsLetters()
       }, [])
+
+      useEffect(() => {
+            console.log('newsletters: ', newsletters)
+      }, [newsletters])
 
       return (
             <div className="container-fluid newsletter-master ml-3 mr-3">

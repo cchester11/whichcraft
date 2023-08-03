@@ -37,7 +37,7 @@ export default function BeersList() {
       }, [])
 
       useEffect(() => {
-            console.log("beers state", beers)
+            console.log("beers: ", beers)
       }, [beers])
 
       return (
