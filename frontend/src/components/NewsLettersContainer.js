@@ -36,10 +36,17 @@ export default function NewsLettersContainer() {
       }, [newsletters])
 
       return (
+            // master container for all newsletters
             <div className="container-fluid newsletter-master ml-3 mr-3">
-                  <div id="entry-1" className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
-
-                  </div>
+                  {/* grab newsletters state and run map function to grab each large newsletter object */}
+                  {newsletters.map((newsletter, index) => (
+                        // container that will hold each large newsletter object
+                        <div id="entry-1" key={index} className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
+                              {/* from here use a function like the one below to access each property of the newsletter
+                              run a loop preferably that will assign each property an element */}
+                              {newsletter.forEach(item => { console.log(item)})}
+                        </div>
+                  ))}
             </div>
       )
 };
