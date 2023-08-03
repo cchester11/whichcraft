@@ -1,9 +1,9 @@
 /* root colors */
 :root {
-      --primary-color: #071952;
-      --secondary-color: #0B666A;
-      --tertiary-color: #35A29F;
-      --enhance-color: #97FEED;
+      --primary-color: #362FD9;
+      --secondary-color: #3C84AB;
+      --tertiary-color: #85CDFD;
+      --enhance-color: #DEFCF9;
 }
 
 /* body and html  */
@@ -26,7 +26,7 @@ body {
 .navbar-custom {
       /* position: fixed; */
       width: 100%;
-      background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
+      background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--secondary-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
       justify-content: flex-end;
@@ -63,10 +63,13 @@ body {
 }
 
 /* beer page settings */
+.beer-menu {
+      background-color: var(--secondary-color);
+}
 .card {
       border: none;
       /* background-image: linear-gradient(to bottom left, var(--tertiary-color), var(--secondary-color)); */
-      background-color: var(--tertiary-color);
+      background-color: var(--secondary-color);
       margin-bottom: 3%;
 }
 .hero-image {
@@ -74,13 +77,13 @@ body {
 }
 .beer-menu-header {
       font-family: fantasy;
-      border-bottom: 1px solid var(--secondary-color);
+      border-bottom: 1px solid var(--tertiary-color);
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
       width: fit-content;
 }
 .beer-title {
       font-family: fantasy;
-      border-bottom: 1px solid var(--secondary-color);
+      border-bottom: 1px solid var(--tertiary-color);
       text-transform: uppercase;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
@@ -99,11 +102,11 @@ body {
       justify-content: center;
 }
 .beer-fact {
-      border-bottom: 1px solid var(--secondary-color);
+      border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
 }
 .list-group-item {
-      background-color: var(--tertiary-color);
+      background-color: var(--secondary-color);
 }
 
 /* newsletter page settings */
@@ -130,11 +133,11 @@ body {
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
 .per-newsletter {
-      border-top: solid 2px var(--secondary-color);
+      border-top: solid 2px var(--tertiary-color);
 }
 .section-background-1 {
       padding-block: 2%;
-      background-color: var(--tertiary-color);
+      background-color: var(--secondary-color);
 }
 .section-background-2 {
       padding-block: 2%;
