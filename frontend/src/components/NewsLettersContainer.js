@@ -45,7 +45,9 @@ export default function NewsLettersContainer() {
                               {/* from here use a function like the one below to access each property of the newsletter
                               run a loop preferably that will assign each property an element */}
                               {newsletter.map((item) => (
-                                    <div>example</div>
+                                    <div>
+                                          <p>hello</p>
+                                    </div>
                               ))}
                         </div>
                   ))}
