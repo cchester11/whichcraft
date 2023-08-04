@@ -3,7 +3,10 @@ import '../stylesheets/main.css';
 import axios from 'axios';
 
 export default function NewsLettersContainer() {
+      // state for the entire newletter json object storing all newsletter data
       const [newsletters, setNewsLetters] = useState([])
+      // the state for each newsletter being rendered. Repopulated each map cycle
+      const [letter, setLetter] = useState([])
 
       async function grabNewsLetters() {
             try {
