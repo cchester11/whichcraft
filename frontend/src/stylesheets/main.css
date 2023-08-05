@@ -54,11 +54,7 @@ body {
 .dropdown-menu.show {
       background-image: linear-gradient(to right, var(--secondary-color), var(--tertiary-color), var(--secondary-color));
 }
-.dropdown-item {
-      font-family: fantasy;
-}
 .header-center-piece {
-      font-family: fantasy;
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
 }
 
@@ -76,13 +72,11 @@ body {
       margin-top: 3%;
 }
 .beer-menu-header {
-      font-family: fantasy;
       border-bottom: 1px solid var(--tertiary-color);
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
       width: fit-content;
 }
 .beer-title {
-      font-family: fantasy;
       border-bottom: 1px solid var(--tertiary-color);
       text-transform: uppercase;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
@@ -90,10 +84,8 @@ body {
 .beer-style {
       font-style: italic;
       text-transform: uppercase;
-      font-family: fantasy;
 }
 .beer-description {
-      font-family: fantasy;
 }
 .beer-facts {
       display: flex;
@@ -113,8 +105,7 @@ body {
 .nav-buttons-master {
       margin-right: 5%;
 }
-.newsletter-nav-header {
-      font-family: fantasy; 
+.newsletter-nav-header { 
       height: fit-content;
 }
 .newsletter-navbuttons-container {
@@ -124,10 +115,8 @@ body {
 .newsletter-nav-button {
       text-decoration: none;
       color: inherit;
-      font-family: fantasy;
 }
 .newsletter-title {
-      font-family: fantasy;
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
@@ -144,7 +133,6 @@ body {
       background-color: white;
 }
 .newsletter-section {
-      font-family: fantasy;
       font-weight: bolder;
       font-size: large;
       line-height: 2.2;
