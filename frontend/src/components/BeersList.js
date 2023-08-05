@@ -41,7 +41,7 @@ export default function BeersList() {
       }, [beers])
 
       return (
-            <div className="container text-center beer-menu">
+            <div className="container-fluid text-center beer-menu">
                   <div className="row d-flex justify-content-center">
                         {beers.map((beer, index) => (
                               <div className="card m-2" key={index} value={beer} style={{ width: "18rem" }}>
