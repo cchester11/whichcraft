@@ -45,8 +45,10 @@ export default function NewsLettersContainer() {
                   {newsletters.map((newsletter, index) => (
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
-                              {/* from here use a function like the one below to access each property of the newsletter
-                              run a loop preferably that will assign each property an element */}
+                              {/* 
+                              from here use a function like the one below to access each property of the newsletter
+                              run a loop preferably that will assign each property an element. However, before completing the map method I need to use a forloop to store each newsletter property in a newsletter array
+                               */}
                               {newsletter.map((item) => (
                                     <div>
                                           <p>hello</p>
