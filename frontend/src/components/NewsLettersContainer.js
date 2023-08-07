@@ -37,7 +37,12 @@ export default function NewsLettersContainer() {
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
-                                    console.log(property, value)
+                                    <div key={property}>
+                                          {value.element === "heading" && <h2>{value.text}</h2>}
+                                          {value.element === "paragraph" && <p>{value.text}</p>}
+                                          {value.element === "sub-heading" && <h3>{value.text}</h3>}
+                                          {value.element === "list" && <li>{value.text}</li>}
+                                    </div>
                               ))}
                         </div>
                   ))}
