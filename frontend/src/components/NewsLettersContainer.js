@@ -23,7 +23,7 @@ export default function NewsLettersContainer() {
 
       useEffect(() => {
             grabNewsLetters()
-      }, [])
+      })
 
       useEffect(() => {
             console.log(newsletters)

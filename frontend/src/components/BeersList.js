@@ -67,17 +67,17 @@ export default function BeersList() {
                                                       <li
                                                             className="list-group-item fw-lighter beer-fact"
                                                       >
-                                                            {beer[2]}
+                                                            ABV: {beer[2]}
                                                       </li>
                                                       <li
                                                             className="list-group-item fw-lighter beer-fact"
                                                       >
-                                                            {beer[3]}
+                                                            IBU: {beer[3]}
                                                       </li>
                                                       <li
                                                             className="list-group-item fw-lighter beer-fact"
                                                       >
-                                                            {beer[4]}
+                                                            Tap Number: {beer[4]}
                                                       </li>
                                                 </ul>
                                           </div>
