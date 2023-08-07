@@ -43,9 +43,21 @@ export default function NewsLettersContainer() {
                                                       <h1 className="newsletter-title m-4">{value.text}</h1>
                                                 </div>
                                           }
-                                          {value.element === "paragraph" && <p>{value.text}</p>}
-                                          {value.element === "sub-heading" && <h3>{value.text}</h3>}
-                                          {value.element === "list" && <li>{value.text}</li>}
+                                          {value.element === "paragraph" && 
+                                                <div className="container newsletter-section d-flex justify-content-center mt-5">
+                                                      <h7>{value.text}</h7>
+                                                </div>
+                                          }
+                                          {value.element === "sub-heading" && 
+                                                <div className="container-fluid d-flex justify-content-center">
+                                                      <h3 className="newsletter-title m-4">{value.text}</h3>
+                                                </div>
+                                          }
+                                          {value.element === "list" && 
+                                                <ul className="list-group list-group-flush">
+                                                      <li className="list-group-item fw-lighter">{value.text}</li>
+                                                </ul>
+                                          }
                                     </div>
                               ))}
                         </div>
