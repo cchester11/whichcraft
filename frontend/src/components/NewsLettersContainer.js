@@ -25,10 +25,6 @@ export default function NewsLettersContainer() {
             grabNewsLetters()
       })
 
-      useEffect(() => {
-            console.log(newsletters)
-      }, [newsletters])
-
       return (
             // master container for all newsletters
             <div className="container-fluid newsletter-master ml-3 mr-3">
