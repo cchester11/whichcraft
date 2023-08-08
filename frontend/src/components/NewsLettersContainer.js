@@ -13,7 +13,7 @@ export default function NewsLettersContainer() {
 
                   setNewsLetters(newsLetterObs)
 
-                  console.log(newsletters)
+                  console.log('request sent')
             } catch (error) {
                   return {
                         Error: error
@@ -23,7 +23,7 @@ export default function NewsLettersContainer() {
 
       useEffect(() => {
             grabNewsLetters()
-      })
+      }, [newsletters])
 
       return (
             // master container for all newsletters
@@ -33,25 +33,36 @@ export default function NewsLettersContainer() {
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-4 ml-2 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
+                                    // console.log('property:' + property, 'value:' + value)
                                     <div key={property}>
-                                          {value.element === "heading" && 
+                                          {value.element === "heading" &&
                                                 <div className="container-fluid d-flex justify-content-center">
                                                       <h1 className="newsletter-title m-4">{value.text}</h1>
                                                 </div>
                                           }
-                                          {value.element === "paragraph" && 
+                                          {value.element === "paragraph" &&
                                                 <div className="container newsletter-section d-flex justify-content-center mt-5">
-                                                      <h7>{value.text}</h7>
+                                                      <p>{value.text}</p>
                                                 </div>
                                           }
-                                          {value.element === "sub-heading" && 
+                                          {value.element === "sub-heading" &&
                                                 <div className="container-fluid d-flex justify-content-center">
                                                       <h3 className="newsletter-title m-4">{value.text}</h3>
                                                 </div>
                                           }
-                                          {value.element === "list" && 
+                                          {value.element === "list" &&
                                                 <ul className="list-group list-group-flush">
                                                       <li className="list-group-item fw-lighter">{value.text}</li>
+                                                </ul>
+                                          }
+                                          {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" && 
+                                                <ul className="list-group list-group-flush">
+                                                      <li className="list-group-item fw-lighter">{value.paragraph1.text}</li>
+                                                </ul>
+                                          }
+                                          {property.startsWith("wine-item") && value.paragraph2.element === "paragraph" && 
+                                                <ul className="list-group list-group-flush">
+                                                      <li className="list-group-item fw-lighter">{value.paragraph2.text}</li>
                                                 </ul>
                                           }
                                     </div>
