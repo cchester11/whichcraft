@@ -52,17 +52,17 @@ export default function NewsLettersContainer() {
                                           }
                                           {value.element === "list" &&
                                                 <ul className="list-group list-group-flush">
-                                                      <li className="list-group-item fw-lighter">{value.text}</li>
+                                                      <li className="list-group-item mt-2 fw-lighter">{value.text}</li>
                                                 </ul>
                                           }
                                           {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" && 
                                                 <ul className="list-group list-group-flush">
-                                                      <li className="list-group-item fw-lighter">{value.paragraph1.text}</li>
+                                                      <li className="list-group-item mt-2 fw-lighter">{value.paragraph1.text}</li>
                                                 </ul>
                                           }
                                           {property.startsWith("wine-item") && value.paragraph2.element === "paragraph" && 
                                                 <ul className="list-group list-group-flush">
-                                                      <li className="list-group-item fw-lighter">{value.paragraph2.text}</li>
+                                                      <li className="list-group-item mt-2 fw-lighter">{value.paragraph2.text}</li>
                                                 </ul>
                                           }
                                     </div>
