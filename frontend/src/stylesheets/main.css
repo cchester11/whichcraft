@@ -1,10 +1,25 @@
 /* root colors */
+/* current set up */
 :root {
       --primary-color: #362FD9;
       --secondary-color: #3C84AB;
       --tertiary-color: #85CDFD;
       --enhance-color: #DEFCF9;
 }
+/* cool second place */
+/* :root {
+      --primary-color: #6096B4;
+      --secondary-color: #93BFCF;
+      --tertiary-color: #BDCDD6;
+      --enhance-color: #EEE9DA;
+} */
+/* cool third place */
+/* :root {
+      --primary-color: #001C30;
+      --secondary-color: #176B87;
+      --tertiary-color: #64CCC5;
+      --enhance-color: #DAFFFB;
+} */
 
 /* body and html  */
 html,
