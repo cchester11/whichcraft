@@ -112,8 +112,6 @@ body {
 .beer-fact {
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
-}
-.list-group-item {
       background-color: var(--secondary-color);
 }
 
@@ -136,6 +134,9 @@ body {
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
+}
+.news-letter-item {
+      background-color: var(--enhance-color);
 }
 .per-newsletter {
       border-top: solid 2px var(--tertiary-color);

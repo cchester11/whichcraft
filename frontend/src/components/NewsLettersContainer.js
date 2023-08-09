@@ -52,20 +52,20 @@ export default function NewsLettersContainer() {
                                           }
                                           {value.element === "list" &&
                                                 <ul className="list-group list-group-flush">
-                                                      <span className="per-newsletter container-fluid mt-2"></span>
-                                                      <li className="list-group-item mt-2 fw-lighter rounded-start">{value.text}</li>
+                                                      <span className="per-newsletter container mt-2"></span>
+                                                      <li className="list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.text}</li>
                                                 </ul>
                                           }
                                           {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" && 
                                                 <ul className="list-group list-group-flush">
-                                                      <span className="per-newsletter container-fluid mt-2"></span>
-                                                      <li className="list-group-item mt-2 fw-lighter rounded-start">{value.paragraph1.text}</li>
+                                                      <span className="per-newsletter container mt-2"></span>
+                                                      <li className="list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.paragraph1.text}</li>
                                                 </ul>
                                           }
                                           {property.startsWith("wine-item") && value.paragraph2.element === "paragraph" && 
                                                 <ul className="list-group list-group-flush">
-                                                      <span className="per-newsletter container-fluid mt-2"></span>
-                                                      <li className="list-group-item mt-2 fw-lighter rounded-start">{value.paragraph2.text}</li>
+                                                      <span className="per-newsletter container mt-2"></span>
+                                                      <li className="list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.paragraph2.text}</li>
                                                 </ul>
                                           }
                                     </div>
