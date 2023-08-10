@@ -25,6 +25,9 @@ function addNewsLetter (req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
       let newsLetter = req.body
+      console.log(newsLetter)
+      // run conditional here to check the body
+      // if passes then run the below push to the data.json file and the subsequent rewrite of the file
 
       data.newsLetters.push(newsLetter)
 
