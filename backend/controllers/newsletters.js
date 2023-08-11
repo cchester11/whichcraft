@@ -2,19 +2,20 @@ const data = require('../data/data.json');
 const test_data = require('../data/test_data.json');
 const fs = require('fs');
 const path = require('path');
+const checkHeading = require('../helpers/checkHeading');
 
 // need some error checking in here
 
-function getAllNewsLetters (req, res) {
+function getAllNewsLetters(req, res) {
       const newsLetterPath = path.join(__dirname, "../data/data.json")
 
       fs.readFile(newsLetterPath, 'utf8', (err, data) => {
-            if(err) {
+            if (err) {
                   res.json({
                         message: "Unsuccessful request",
                         error: err
                   })
-            } 
+            }
 
             res.json({
                   data: JSON.parse(data)
@@ -22,7 +23,7 @@ function getAllNewsLetters (req, res) {
       })
 };
 
-function addNewsLetter (req, res) {
+function addNewsLetter(req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
       let newsLetter = req.body
@@ -41,41 +42,28 @@ function addNewsLetter (req, res) {
       })
 };
 
-function addTestNewsLetter (req, res) {
+function addTestNewsLetter(req, res) {
       const newsLetterPath = path.join(__dirname, '../data/test_data.json')
 
       let newsLetter = req.body
-      
-      // error handling here
-      // 1. need to check that the heading property has an element value of heading
-      console.log(newsLetter.heading)
-      if(!newsLetter.heading) {
+
+      try {
+            checkHeading(newsLetter)
+
+            test_data.newsletters.push(newsLetter)
+
+            fs.writeFileSync(newsLetterPath, JSON.stringify(test_data), () => {
+                  console.log('Test letter sent to test data storage file')
+            })
+
             res.json({
-                  message: "Please provide a heading for your newsletter entry"
+                  message: "Successful post"
+            })
+      } catch (error) {
+            res.status(400).json({
+                  error: error.message
             })
       }
-
-      if(newsLetter.heading.element != 'heading') {
-            res.json({
-                  message: "Please select the 'heading' option as the element choice for your heading property."
-            })
-      }
-
-      if(typeof newsLetter.heading.text != 'string') {
-            res.json({ 
-                  message: "Please use text for the heading text entry."
-            })
-      }
-
-      test_data.newsletters.push(newsLetter)
-
-      fs.writeFile(newsLetterPath, JSON.stringify(test_data), () => {
-            console.log('Test letter sent to test data storage file')
-      })
-
-      res.json({
-            message: "Successful post"
-      })
 }
 
-module.exports = { getAllNewsLetters ,addNewsLetter, addTestNewsLetter };
+module.exports = { getAllNewsLetters, addNewsLetter, addTestNewsLetter };
