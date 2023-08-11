@@ -2,7 +2,7 @@ const data = require('../data/data.json');
 const test_data = require('../data/test_data.json');
 const fs = require('fs');
 const path = require('path');
-const checkHeading = require('../helpers/checkHeading');
+const { checkHeading, checkAllProperties } = require('../helpers/checkNewsLetter');
 
 // need some error checking in here
 
@@ -49,6 +49,7 @@ function addTestNewsLetter(req, res) {
 
       try {
             checkHeading(newsLetter)
+            checkAllProperties(newsLetter)
 
             test_data.newsletters.push(newsLetter)
 
