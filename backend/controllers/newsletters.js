@@ -1,4 +1,5 @@
 const data = require('../data/data.json');
+const test_data = require('../data/test_data.json');
 const fs = require('fs');
 const path = require('path');
 
@@ -25,14 +26,13 @@ function addNewsLetter (req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
       let newsLetter = req.body
-      console.log(newsLetter)
       // run conditional here to check the body
       // if passes then run the below push to the data.json file and the subsequent rewrite of the file
 
       data.newsLetters.push(newsLetter)
 
       fs.writeFile(newsLetterPath, JSON.stringify(data), () => {
-            console.log(`${newsletter} sent to stroage.`)
+            console.log(`Newsletter successfully sent to stroage.`)
       })
 
       res.json({
@@ -41,4 +41,19 @@ function addNewsLetter (req, res) {
       })
 };
 
-module.exports = { getAllNewsLetters ,addNewsLetter };
+function addTestNewsLetter (req, res) {
+      const newsLetterPath = path.join(__dirname, '../data/test_data.json')
+
+      let newsLetter = req.body
+      test_data.newsletters.push(newsLetter)
+
+      fs.writeFile(newsLetterPath, JSON.stringify(test_data), () => {
+            console.log('Test letter sent to test data storage file')
+      })
+
+      res.json({
+            message: "Successful post"
+      })
+}
+
+module.exports = { getAllNewsLetters ,addNewsLetter, addTestNewsLetter };
