@@ -55,6 +55,18 @@ function addTestNewsLetter (req, res) {
             })
       }
 
+      if(newsLetter.heading.element != 'heading') {
+            res.json({
+                  message: "Please select the 'heading' option as the element choice for your heading property."
+            })
+      }
+
+      if(typeof newsLetter.heading.text != 'string') {
+            res.json({ 
+                  message: "Please use text for the heading text entry."
+            })
+      }
+
       test_data.newsletters.push(newsLetter)
 
       fs.writeFile(newsLetterPath, JSON.stringify(test_data), () => {
