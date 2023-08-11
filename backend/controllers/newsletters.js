@@ -45,6 +45,16 @@ function addTestNewsLetter (req, res) {
       const newsLetterPath = path.join(__dirname, '../data/test_data.json')
 
       let newsLetter = req.body
+      
+      // error handling here
+      // 1. need to check that the heading property has an element value of heading
+      console.log(newsLetter.heading)
+      if(!newsLetter.heading) {
+            res.json({
+                  message: "Please provide a heading for your newsletter entry"
+            })
+      }
+
       test_data.newsletters.push(newsLetter)
 
       fs.writeFile(newsLetterPath, JSON.stringify(test_data), () => {
