@@ -19,12 +19,12 @@ function checkAllProperties (param) {
                   value: value
             })
 
-            if(value.element != 'heading' || value.element != 'sub-heading' || value.element != 'list' || value.element != 'paragraph') {
-                  console.log(value.element)
-                  throw new Error("You have attempted to provide an entry with a property other than those listed as choices.")
+            if (value.element !== 'heading' && value.element !== 'sub-heading' && value.element !== 'list' && value.element !== 'paragraph') {
+                  console.log(value.element);
+                  throw new Error("You have attempted to provide an entry with a property other than those listed as choice.")
             }
 
-            if(typeof value.text != 'string') {
+            if(typeof value.text !== 'string') {
                   console.log(value.text)
                   throw new Error("Please use text for text entries -- no numbers or images.")
             }
