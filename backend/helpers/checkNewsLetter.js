@@ -19,6 +19,15 @@ function checkAllProperties (param) {
                   value: value
             })
 
+            if(value.element === 'wine-item-1' && value.element === 'wine-item-2') {
+                  if(typeof value.paragraph1.text !== 'string' || typeof value.paragraph2.text !== 'string') {
+                        console.log("error here: " + value.paragraph1.text,"error here: " + value.paragraph2.text)
+                        throw new Error("Please use text for text entries within wine-item -- no numbers or images.")
+                  }
+
+                  return;
+            }
+
             if (value.element !== 'heading' && value.element !== 'sub-heading' && value.element !== 'list' && value.element !== 'paragraph') {
                   console.log(value.element);
                   throw new Error("You have attempted to provide an entry with a property other than those listed as choice.")
