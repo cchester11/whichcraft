@@ -19,7 +19,7 @@ function checkAllProperties (param) {
                   value: value
             })
 
-            if(value.element !== 'heading' && value.element !== 'sub-heading' && value.element !== 'list' && value.element !== 'paragraph') {
+            if(value.element != 'heading' || value.element != 'sub-heading' || value.element != 'list' || value.element != 'paragraph') {
                   console.log(value.element)
                   throw new Error("You have attempted to provide an entry with a property other than those listed as choices.")
             }
