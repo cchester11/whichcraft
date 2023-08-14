@@ -4,8 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { checkHeading, checkAllProperties } = require('../helpers/checkNewsLetter');
 
-// need some error checking in here
-
 function getAllNewsLetters(req, res) {
       const newsLetterPath = path.join(__dirname, "../data/data.json")
 
@@ -27,19 +25,25 @@ function addNewsLetter(req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
       let newsLetter = req.body
-      // run conditional here to check the body
-      // if passes then run the below push to the data.json file and the subsequent rewrite of the file
 
-      data.newsLetters.push(newsLetter)
+      try {
+            checkHeading(newsLetter)
+            checkAllProperties(newsLetter)
 
-      fs.writeFile(newsLetterPath, JSON.stringify(data), () => {
-            console.log(`Newsletter successfully sent to stroage.`)
-      })
+            data.newsLetters.push(newsLetter)
 
-      res.json({
-            message: "Successful Request",
-            newsletter: newsLetter
-      })
+            fs.writeFile(newsLetterPath, JSON.stringify(data), () => {
+                  console.log(`Newsletter successfully sent to stroage.`)
+            })
+
+            res.json({
+                  message: "Successful Post",
+            })
+      } catch (error) {
+            res.status(400).json({
+                  error: error.message
+            })
+      }
 };
 
 function addTestNewsLetter(req, res) {
