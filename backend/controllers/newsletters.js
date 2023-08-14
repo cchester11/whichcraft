@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { checkHeading, checkAllProperties } = require('../helpers/checkNewsLetter');
 
+// get request for all newsletters 
 function getAllNewsLetters(req, res) {
       const newsLetterPath = path.join(__dirname, "../data/data.json")
 
@@ -21,6 +22,7 @@ function getAllNewsLetters(req, res) {
       })
 };
 
+// post request to add new newsletter
 function addNewsLetter(req, res) {
       const newsLetterPath = path.join(__dirname, '../data/data.json')
 
@@ -45,7 +47,7 @@ function addNewsLetter(req, res) {
             })
       }
 };
-
+// post request for test newsletters to test storage file
 function addTestNewsLetter(req, res) {
       const newsLetterPath = path.join(__dirname, '../data/test_data.json')
 
@@ -71,4 +73,13 @@ function addTestNewsLetter(req, res) {
       }
 }
 
-module.exports = { getAllNewsLetters, addNewsLetter, addTestNewsLetter };
+// delete request to delete a newsletter
+function deleteNewsLetter (req, res) {
+      console.log(req.body)
+
+      res.json({
+            message: "delete request successful"
+      })
+}
+
+module.exports = { getAllNewsLetters, addNewsLetter, addTestNewsLetter, deleteNewsLetter };
