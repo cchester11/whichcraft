@@ -87,8 +87,6 @@ function deleteNewsLetter(req, res) {
                               if(value.heading.text === title)
                               console.log(value.heading.text)
                         }
-
-                        return;
                   })
                   // rewrite the file
 
@@ -96,11 +94,6 @@ function deleteNewsLetter(req, res) {
                   // send back error message if something went wrong
 
                   //send back a message if all good
-                  res.json({
-                        message: "delete request successful"
-                  })
-
-                  return;
             } else {
                   res.json({
                         message: `There was no data found in the request sent -- empty body`
