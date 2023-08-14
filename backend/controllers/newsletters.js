@@ -74,12 +74,33 @@ function addTestNewsLetter(req, res) {
 }
 
 // delete request to delete a newsletter
-function deleteNewsLetter (req, res) {
-      console.log(req.body)
+function deleteNewsLetter(req, res) {
+      try {
+            console.log(req.body.title)
+            let title = req.body.title
 
-      res.json({
-            message: "delete request successful"
-      })
+            if(req.body) {
+                  // locate newsletter by the title and remove it from the newsletter array
+
+                  // rewrite the file
+
+                  // check for errors 
+                  // send back error message if something went wrong
+
+                  //send back a message if all good
+                  res.json({
+                        message: "delete request successful"
+                  })
+            }
+
+            res.json({
+                  message: `Could not find a newsletter with that title`
+            })
+      } catch (error) {
+            res.status(400).json({
+                  error: error.message
+            })
+      }
 }
 
 module.exports = { getAllNewsLetters, addNewsLetter, addTestNewsLetter, deleteNewsLetter };
