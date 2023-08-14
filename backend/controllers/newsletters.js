@@ -76,12 +76,20 @@ function addTestNewsLetter(req, res) {
 // delete request to delete a newsletter
 function deleteNewsLetter(req, res) {
       try {
-            console.log(req.body.title)
-            let title = req.body.title
+            let title = req.body.title;
 
             if(req.body) {
+                  let newsLetters = data.newsLetters;
                   // locate newsletter by the title and remove it from the newsletter array
+                  Object.entries(newsLetters).map(([property, value]) => {
+                        console.log(property)
+                        if(value.heading) {
+                              if(value.heading.text === title)
+                              console.log(value.heading.text)
+                        }
 
+                        return;
+                  })
                   // rewrite the file
 
                   // check for errors 
@@ -91,11 +99,13 @@ function deleteNewsLetter(req, res) {
                   res.json({
                         message: "delete request successful"
                   })
-            }
 
-            res.json({
-                  message: `Could not find a newsletter with that title`
-            })
+                  return;
+            } else {
+                  res.json({
+                        message: `There was no data found in the request sent -- empty body`
+                  })
+            }
       } catch (error) {
             res.status(400).json({
                   error: error.message
