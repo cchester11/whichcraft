@@ -78,22 +78,25 @@ function deleteNewsLetter(req, res) {
       try {
             let title = req.body.title;
 
-            if(req.body) {
+            if (req.body) {
                   let newsLetters = data.newsLetters;
                   // locate newsletter by the title and remove it from the newsletter array
-                  Object.entries(newsLetters).map(([property, value]) => {
-                        console.log(property)
-                        if(value.heading) {
-                              if(value.heading.text === title)
-                              console.log(value.heading.text)
+                  for (const [property, value] of Object.entries(newsLetters)) {
+                        if (value.heading && value.heading.text === title) {
+                              console.log(value.heading.text);
+                              // check for errors 
+                              // send back error message if something went wrong
+                              
+                              // remove letter
+                              // rewrite the json file
+                              break;
                         }
-                  })
-                  // rewrite the file
-
-                  // check for errors 
-                  // send back error message if something went wrong
+                  }
 
                   //send back a message if all good
+                  res.json({
+                        message: "Successful delete request"
+                  })
             } else {
                   res.json({
                         message: `There was no data found in the request sent -- empty body`
