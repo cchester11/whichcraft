@@ -83,10 +83,10 @@ function deleteNewsLetter(req, res) {
                   // locate newsletter by the title and remove it from the newsletter array
                   for (const [property, value] of Object.entries(newsLetters)) {
                         if (value.heading && value.heading.text === title) {
-                              console.log(value.heading.text);
                               // check for errors 
-                              // send back error message if something went wrong
-                              
+                              if(value.heading.text === title) {
+                                    console.log(value.heading.text);
+                              }
                               // remove letter
                               // rewrite the json file
                               break;
