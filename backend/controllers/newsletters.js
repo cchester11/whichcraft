@@ -85,10 +85,12 @@ function deleteNewsLetter(req, res) {
                         if (value.heading && value.heading.text === title) {
                               // check for errors 
                               if(value.heading.text === title) {
-                                    console.log(value.heading.text);
+                                    // remove letter
+                                    // rewrite the json file
+                                    for(key in data.newsLetters) {
+                                          console.log(key)
+                                    }
                               }
-                              // remove letter
-                              // rewrite the json file
                               break;
                         }
                   }
