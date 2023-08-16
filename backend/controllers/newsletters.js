@@ -77,6 +77,7 @@ function addTestNewsLetter(req, res) {
 function deleteNewsLetter(req, res) {
       try {
             let title = req.body.title;
+            let matchFound = false;
 
             if (req.body) {
                   let newsLetters = data.newsLetters;
@@ -84,21 +85,30 @@ function deleteNewsLetter(req, res) {
                   for (const [property, value] of Object.entries(newsLetters)) {
                         if (value.heading && value.heading.text === title) {
                               // check for errors 
-                              if(value.heading.text === title) {
+                              if (value.heading.text === title) {
                                     // remove letter
+                                    delete data.newsLetters[property]
+                                    let updatedData = data
+                                    // switch matchFound to true
+                                    matchFound = true;
+
                                     // rewrite the json file
-                                    for(key in data.newsLetters) {
-                                          console.log(key)
-                                    }
+                                    fs.writeFile
                               }
                               break;
                         }
                   }
 
-                  //send back a message if all good
-                  res.json({
-                        message: "Successful delete request"
-                  })
+                  if(matchFound) {
+                        //send back a message if all good
+                        res.json({
+                              message: "Successful delete request"
+                        })
+                  } else {
+                        res.json({
+                              message: "Could not find a matching title."
+                        })
+                  }
             } else {
                   res.json({
                         message: `There was no data found in the request sent -- empty body`
