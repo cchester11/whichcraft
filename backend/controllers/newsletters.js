@@ -80,6 +80,7 @@ function deleteNewsLetter(req, res) {
       try {
             let title = req.body.title;
             let matchFound = false;
+            let newsletter_title;
 
             if (req.body) {
                   let newsLetters = data.newsLetters;
@@ -88,24 +89,26 @@ function deleteNewsLetter(req, res) {
                         if (value.heading && value.heading.text === title) {
                               // check for errors 
                               if (value.heading.text === title) {
-                                    let newsletter_title = value.heading.text
+                                    newsletter_title = value.heading.text
+
                                     // remove letter
                                     delete data.newsLetters[property]
-                                    let updatedData = data
 
                                     // switch matchFound to true
                                     matchFound = true;
-
-                                    // rewrite the json file
-                                    fs.writeFile(newsLetterPath, JSON.stringify(updatedData), 'utf8', () => {
-                                          console.log('Newsletter with title ' + newsletter_title + ' deleted and file overwritten')
-                                    })
                               }
                               break;
                         }
                   }
 
                   if(matchFound) {
+                        let updatedData = data
+                        
+                        // rewrite the json file
+                        fs.writeFile(newsLetterPath, JSON.stringify(updatedData), 'utf8', () => {
+                              console.log('Newsletter with title ' + newsletter_title + ' deleted and file overwritten')
+                        })
+
                         //send back a message if all good
                         res.json({
                               message: "Successful delete request"
