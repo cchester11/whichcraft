@@ -101,9 +101,14 @@ function deleteNewsLetter(req, res) {
                         }
                   }
 
-                  if(matchFound) {
-                        let updatedData = data
-                        
+                  if (matchFound) {
+                        const updatedData = {
+                              ...data,
+                              newsLetters: Object.fromEntries(
+                                    Object.entries(data.newsLetters).filter(([_, value]) => value !== null)
+                              )
+                        };
+
                         // rewrite the json file
                         fs.writeFile(newsLetterPath, JSON.stringify(updatedData), 'utf8', () => {
                               console.log('Newsletter with title ' + newsletter_title + ' deleted and file overwritten')
