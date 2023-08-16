@@ -75,6 +75,8 @@ function addTestNewsLetter(req, res) {
 
 // delete request to delete a newsletter
 function deleteNewsLetter(req, res) {
+      const newsLetterPath = path.join(__dirname, '../data/data.json')
+
       try {
             let title = req.body.title;
             let matchFound = false;
@@ -86,14 +88,18 @@ function deleteNewsLetter(req, res) {
                         if (value.heading && value.heading.text === title) {
                               // check for errors 
                               if (value.heading.text === title) {
+                                    let newsletter_title = value.heading.text
                                     // remove letter
                                     delete data.newsLetters[property]
                                     let updatedData = data
+
                                     // switch matchFound to true
                                     matchFound = true;
 
                                     // rewrite the json file
-                                    fs.writeFile
+                                    fs.writeFile(newsLetterPath, JSON.stringify(updatedData), 'utf8', () => {
+                                          console.log('Newsletter with title ' + newsletter_title + ' deleted and file overwritten')
+                                    })
                               }
                               break;
                         }
