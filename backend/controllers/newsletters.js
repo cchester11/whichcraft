@@ -102,7 +102,6 @@ function deleteNewsLetter(req, res) {
                   }
 
                   if (matchFound) {
-                        console.log({...data})
                         const updatedData = {
                               ...data,
                               newsLetters: Object.fromEntries(
