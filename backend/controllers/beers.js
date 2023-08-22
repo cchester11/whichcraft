@@ -45,5 +45,13 @@ function seedBeerController(req, res) {
 }
 
 // delete request single beer
+function deleteBeer (req, res) {
+      // the request will have a body
+      // in the body will be the title of the beer
+      // console.log the body to check and see how the body presents the title
+      // sift through the beer objects and delete the one with the matching title
+      // rewrite the json file
+      // return the user a response
+}
 
 module.exports = { getAllBeers, seedBeerController };
