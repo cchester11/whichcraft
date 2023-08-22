@@ -49,9 +49,22 @@ function deleteBeer (req, res) {
       // the request will have a body
       // in the body will be the title of the beer
       // console.log the body to check and see how the body presents the title
+      if(req.body) {
+            console.log(req.body)
+      }
       // sift through the beer objects and delete the one with the matching title
+      let beers = data.beer
+      Object.entries(beers).map(([property, value]) => {
+            if(value.title === req.body.title) {
+                  console.log(value.title)
+            }
+      })
       // rewrite the json file
       // return the user a response
+      res.json({
+            message: "The body has been logged. Good request"
+      })
+
 }
 
-module.exports = { getAllBeers, seedBeerController };
+module.exports = { getAllBeers, seedBeerController, deleteBeer };
