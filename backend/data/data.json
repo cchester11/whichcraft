@@ -71,6 +71,38 @@
                   "IBU": "25",
                   "beerNumber": "#5",
                   "AdditionalNotes": "Meanwhile Pilsner offers a sharp and crisp quality with notes of apple."
+            },
+            {
+                  "title": "ABP Fire Eagle",
+                  "style": "IPA American",
+                  "abv": "6%",
+                  "IBU": "14",
+                  "beerNumber": "#17",
+                  "AdditionalNotes": "The Fire Eagle is ABP's premiere IPA with bitter taste and an American body."
+            },
+            {
+                  "title": "ABP Peacemaker",
+                  "style": "Pilsner",
+                  "abv": "5%",
+                  "IBU": "4",
+                  "beerNumber": "#7",
+                  "AdditionalNotes": "ABP's easy going, very crisp and qualified pilsner."
+            },
+            {
+                  "title": "Vista Brewing Dark Skies",
+                  "style": "Dark Lager",
+                  "abv": "5%",
+                  "IBU": "4",
+                  "beerNumber": "#19",
+                  "AdditionalNotes": "Don't let the dark color of this beer fool you. It's very smooth and ready for any hot day."
+            },
+            {
+                  "title": "Blue Owl Cherry Bomb",
+                  "style": "Stout",
+                  "abv": "8%",
+                  "IBU": "n/a",
+                  "beerNumber": "#24",
+                  "AdditionalNotes": "The Cherry Bomb is my favorite stout. It's packed with a sweet chocolatey and cherry flavor while it still holds a robustly bold body of a stout."
             }
       ],
       "food": [],
