@@ -2,10 +2,12 @@ const data = require('../data/data.json');
 const fs = require('fs');
 const path = require('path');
 
+// get request all beers
 function getAllBeers(req, res) {
       res.json(data.beer)
 }
 
+// post request single beer
 function seedBeerController(req, res) {
       let beerPath = path.join(__dirname, '../data/data.json');
       let beerBody = req.body
@@ -41,5 +43,7 @@ function seedBeerController(req, res) {
             throw new Error(error)
       }
 }
+
+// delete request single beer
 
 module.exports = { getAllBeers, seedBeerController };
