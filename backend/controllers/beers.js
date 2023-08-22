@@ -17,7 +17,7 @@ function seedBeerController(req, res) {
             if (beerBody) {
                   Object.entries(beerBody).map(([property, value]) => {
                         beerProperties.push(property)
-                        if(typeof value !== 'string') {
+                        if (typeof value !== 'string') {
                               return 'A string is required as the value type for this input.'
                         }
                   })
@@ -45,26 +45,47 @@ function seedBeerController(req, res) {
 }
 
 // delete request single beer
-function deleteBeer (req, res) {
-      // the request will have a body
-      // in the body will be the title of the beer
-      // console.log the body to check and see how the body presents the title
-      if(req.body) {
-            console.log(req.body)
-      }
-      // sift through the beer objects and delete the one with the matching title
-      let beers = data.beer
-      Object.entries(beers).map(([property, value]) => {
-            if(value.title === req.body.title) {
-                  console.log(value.title)
-            }
-      })
-      // rewrite the json file
-      // return the user a response
-      res.json({
-            message: "The body has been logged. Good request"
-      })
+function deleteBeer(req, res) {
+      let beerTitle;
+      let beers = data.beer;
+      let match = false;
+      const filePath = path.join(__dirname, '../data/data.json')
 
+      try {
+            if (req.body) {
+                  console.log(req.body)
+
+                  Object.entries(beers).map(([property, value]) => {
+                        if (value.title === req.body.title) {
+                              console.log(value.title)
+                              beerTitle = value.title
+
+                              delete beers[property]
+
+                              match = true;
+                        }
+                  })
+
+                  if (match) {
+                        fs.writeFile(filePath, JSON.stringify(data), () => {
+                              console.log('Updated data')
+                        })
+                        res.json({
+                              message: `The body has been logged. Good request. Title ${beerTitle} has been deleted.`
+                        })
+                  } else {
+                        res.json({
+                              message: "No beer in the database with a matching title"
+                        })
+                  }
+            } else {
+                  res.json({
+                        error: "No body provided in request"
+                  })
+            }
+      } catch (error) {
+            throw new Error(error)
+      }
 }
 
 module.exports = { getAllBeers, seedBeerController, deleteBeer };

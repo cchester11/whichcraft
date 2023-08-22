@@ -96,14 +96,7 @@
                   "beerNumber": "#19",
                   "AdditionalNotes": "Don't let the dark color of this beer fool you. It's very smooth and ready for any hot day."
             },
-            {
-                  "title": "Blue Owl Cherry Bomb",
-                  "style": "Stout",
-                  "abv": "8%",
-                  "IBU": "n/a",
-                  "beerNumber": "#24",
-                  "AdditionalNotes": "The Cherry Bomb is my favorite stout. It's packed with a sweet chocolatey and cherry flavor while it still holds a robustly bold body of a stout."
-            }
+            null
       ],
       "food": [],
       "newsLetters": {
