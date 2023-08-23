@@ -69,7 +69,9 @@ function deleteBeer(req, res) {
                   if (match) {
                         const updatedData = {
                               ...data,
-                              beers: Object.fromEntries(Object.entries(beers).filter(([_, value]) => value !== null))
+                              beers: Object.fromEntries(
+                                    Object.entries(data.beer).filter(([_, value]) => value !== null)
+                              )
                         }
                         fs.writeFile(filePath, JSON.stringify(updatedData), () => {
                               console.log('Updated data')
