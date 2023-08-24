@@ -47,9 +47,10 @@ function seedBeerController(req, res) {
 // delete request single beer
 function deleteBeer(req, res) {
       let beerTitle;
-      let beers = data.beer;
       let match = false;
       const filePath = path.join(__dirname, '../data/data.json')
+      let jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+      let beers = jsonData.beer;
 
       try {
             if (req.body) {
@@ -67,13 +68,15 @@ function deleteBeer(req, res) {
                   })
 
                   if (match) {
-                        const updatedData = {
-                              ...data,
-                              beer: Object.fromEntries(
-                                    Object.entries(data.beer).filter(([_, value]) => value !== null)
+                        const updatedBeers = {
+                              beers: Object.fromEntries(
+                                    Object.entries(beers).filter(([_, value]) => value !== null)
                               )
                         }
-                        fs.writeFile(filePath, JSON.stringify(updatedData), () => {
+
+                        beers = updatedBeers;
+
+                        fs.writeFile(filePath, JSON.stringify(jsonData), () => {
                               console.log('Updated data')
                         })
                         res.json({

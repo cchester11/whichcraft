@@ -1,6 +1,6 @@
 {
-      "beer": {
-            "0": {
+      "beer": [
+            {
                   "title": "belching beaver brewing branded & barreled mexican chocolate cake",
                   "style": "Imperial Stout",
                   "abv": "14.25%",
@@ -8,7 +8,7 @@
                   "beerNumber": "#24",
                   "AdditionalNotes": "Super delicious cinnamon vibes"
             },
-            "1": {
+            {
                   "title": "wise acre tiny bomb",
                   "style": "Pilsner",
                   "abv": "10%",
@@ -16,7 +16,7 @@
                   "beerNumber": "#23",
                   "AdditionalNotes": "This beer is made with honey and wild flower."
             },
-            "2": {
+            {
                   "title": "zilker cowboy candy",
                   "style": "Pale Ale American",
                   "abv": "5%",
@@ -24,7 +24,7 @@
                   "beerNumber": "#13",
                   "AdditionalNotes": "Expect lots of fruity flavors"
             },
-            "3": {
+            {
                   "title": "Blue Owl Bobs Great Porter",
                   "style": "Porter American",
                   "abv": "5.5%",
@@ -32,7 +32,7 @@
                   "beerNumber": "#3",
                   "AdditionalNotes": "Smooth with enjoyable flavors of chocolate"
             },
-            "4": {
+            {
                   "title": "St Arnold Art Car",
                   "style": "American IPA",
                   "abv": "7.2%",
@@ -40,7 +40,7 @@
                   "beerNumber": "#11",
                   "AdditionalNotes": "Bitter citrus to sweet"
             },
-            "5": {
+            {
                   "title": "St Arnold Tarnation",
                   "style": "Strong Ale",
                   "abv": "9%",
@@ -48,7 +48,7 @@
                   "beerNumber": "#16",
                   "AdditionalNotes": "Four malts and four hops in the malty strong ale"
             },
-            "6": {
+            {
                   "title": "Blue Owl Spirit Animal",
                   "style": "Sour Ale",
                   "abv": "5%",
@@ -56,7 +56,7 @@
                   "beerNumber": "#5",
                   "AdditionalNotes": "Spirit Animal offers a light and tart addition to a wonderful tasting ale"
             },
-            "7": {
+            {
                   "title": "Blue Owl Little Boss",
                   "style": "Sour Ale",
                   "abv": "5%",
@@ -64,7 +64,7 @@
                   "beerNumber": "#5",
                   "AdditionalNotes": "Little Boss offers a light and tart addition to a wonderful tasting ale"
             },
-            "8": {
+            {
                   "title": "Meanwhile Pils",
                   "style": "Pilsner",
                   "abv": "5%",
@@ -72,7 +72,7 @@
                   "beerNumber": "#5",
                   "AdditionalNotes": "Meanwhile Pilsner offers a sharp and crisp quality with notes of apple."
             },
-            "9": {
+            {
                   "title": "ABP Fire Eagle",
                   "style": "IPA American",
                   "abv": "6%",
@@ -80,7 +80,7 @@
                   "beerNumber": "#17",
                   "AdditionalNotes": "The Fire Eagle is ABP's premiere IPA with bitter taste and an American body."
             },
-            "10": {
+            {
                   "title": "ABP Peacemaker",
                   "style": "Pilsner",
                   "abv": "5%",
@@ -88,7 +88,7 @@
                   "beerNumber": "#7",
                   "AdditionalNotes": "ABP's easy going, very crisp and qualified pilsner."
             },
-            "11": {
+            {
                   "title": "Vista Brewing Dark Skies",
                   "style": "Dark Lager",
                   "abv": "5%",
@@ -96,10 +96,10 @@
                   "beerNumber": "#19",
                   "AdditionalNotes": "Don't let the dark color of this beer fool you. It's very smooth and ready for any hot day."
             }
-      },
+      ],
       "food": [],
-      "newsLetters": {
-            "0": {
+      "newsLetters": [
+            {
                   "heading": { "element": "heading", "text": "Hocus Pocus" },
                   "paragraph-1": {
                         "element": "paragraph",
@@ -174,7 +174,7 @@
                         "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
-            "1": {
+            {
                   "heading": {
                         "element": "heading",
                         "text": "Love is in the Air"
@@ -228,7 +228,7 @@
                         }
                   }
             },
-            "2": {
+            {
                   "heading": { "element": "heading", "text": "Summer Time!" },
                   "paragraph-1": {
                         "element": "paragraph",
@@ -293,7 +293,7 @@
                         "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
-            "3": {
+            {
                   "heading": { "element": "heading", "text": "Winter Time!" },
                   "paragraph-1": {
                         "element": "paragraph",
@@ -358,7 +358,7 @@
                         "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
-            "4": {
+            {
                   "heading": { "element": "heading", "text": "Test Article" },
                   "paragraph-1": {
                         "element": "paragraph",
@@ -431,5 +431,5 @@
                         "text": "Saloon Door Kemah Suprema - Walser Alpine Lager owes its inspiration to the crisp mountain lagers of the Swiss Appenzell. Rich golden in color with a delicately balanced profile of German Pilser malt, two varieties of Munich malt, and Spelt. Hopped with choice Hersbrucker, Tettnanger & Hallertau Tradition - meadow herbs and subtle spicy floral elements. 4.8% ABV"
                   }
             }
-      }
+      ]
 }
