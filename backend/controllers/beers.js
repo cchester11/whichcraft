@@ -69,7 +69,7 @@ function deleteBeer(req, res) {
                   if (match) {
                         const updatedData = {
                               ...data,
-                              beers: Object.fromEntries(
+                              beer: Object.fromEntries(
                                     Object.entries(data.beer).filter(([_, value]) => value !== null)
                               )
                         }
