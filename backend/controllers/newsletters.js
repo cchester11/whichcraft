@@ -23,15 +23,14 @@ function getAllNewsLetters(req, res) {
 
 // post request to add new newsletter
 function addNewsLetter(req, res) {
-      const newsLetterPath = path.join(__dirname, '../data/data.json')
-
-      let newsLetter = req.body
-
       try {
+            const newsLetterPath = path.join(__dirname, '../data/data.json')
+            let newsLetter = req.body
+            let newsLetters = data.newsLetters;
             checkHeading(newsLetter)
             checkAllProperties(newsLetter)
 
-            data.newsLetters.push(newsLetter)
+            newsLetters.push(newsLetter)
 
             fs.writeFile(newsLetterPath, JSON.stringify(data), () => {
                   console.log(`Newsletter successfully sent to stroage.`)
