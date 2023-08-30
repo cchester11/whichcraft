@@ -25,20 +25,12 @@ function deleteBeer(req, res) {
                   })
 
                   if (match) {
-                        const updatedBeers = [
+                        const updatedBeers =
                               Object.fromEntries(
                                     Object.entries(beers).filter(([_, value]) => value !== null)
                               )
-                        ]
 
                         beers = updatedBeers;
-
-                        // run a loop through beer array now and use delete operator to delete any null values
-                        Object.entries(beers).map(([_, value]) => {
-                              if(value === null) {
-                                    delete beers[value]
-                              }
-                        })
 
                         fs.writeFile(filePath, JSON.stringify(jsonData), () => {
                               console.log('Updated data')
