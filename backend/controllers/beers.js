@@ -48,52 +48,51 @@ function seedBeerController(req, res) {
 function deleteBeer(req, res) {
       let beerTitle;
       let match = false;
-      const filePath = path.join(__dirname, '../data/data.json')
-      let jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+      const filePath = path.join(__dirname, '../data/data.json');
+      let jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
       let beers = jsonData.beer;
 
       try {
             if (req.body) {
-                  console.log(req.body)
+                  console.log(req.body);
 
                   Object.entries(beers).map(([property, value]) => {
                         if (value.title === req.body.title) {
-                              console.log(value.title)
-                              beerTitle = value.title
+                              console.log(value.title);
+                              beerTitle = value.title;
 
-                              delete beers[property]
+                              // Set the element to null instead of deleting it
+                              jsonData.beer[property] = null;
 
                               match = true;
                         }
-                  })
+                  });
 
                   if (match) {
-                        const updatedBeers = {
-                              beers: Object.fromEntries(
-                                    Object.entries(beers).filter(([_, value]) => value !== null)
-                              )
-                        }
+                        // Filter out the null elements and create a new array
+                        const updatedBeers = jsonData.beer.filter((beer) => beer !== null);
 
-                        beers = updatedBeers;
+                        jsonData.beer = updatedBeers;
 
                         fs.writeFile(filePath, JSON.stringify(jsonData), () => {
-                              console.log('Updated data')
-                        })
+                              console.log('Updated data');
+                        });
+
                         res.json({
                               message: `The body has been logged. Good request. Title ${beerTitle} has been deleted.`
-                        })
+                        });
                   } else {
                         res.json({
                               message: "No beer in the database with a matching title"
-                        })
+                        });
                   }
             } else {
                   res.json({
                         error: "No body provided in request"
-                  })
+                  });
             }
       } catch (error) {
-            throw new Error(error)
+            throw new Error(error);
       }
 }
 
