@@ -21,7 +21,7 @@ function deleteNewsLetter(req, res) {
                                     newsletter_title = value.heading.text
 
                                     // remove letter
-                                    delete test_data.newsLetters[property]
+                                    test_data.newsLetters[property] = null;
 
                                     // switch matchFound to true
                                     matchFound = true;
@@ -31,15 +31,14 @@ function deleteNewsLetter(req, res) {
                   }
 
                   if (matchFound) {
-                        const updatedData = {
-                              ...test_data,
-                              newsLetters: Object.fromEntries(
-                                    Object.entries(test_data.newsLetters).filter(([_, value]) => value !== null)
-                              )
-                        };
+                        const updatedNewsLetters = test_data.newsLetters.filter((newsletter) => {
+                              return newsletter !== null;
+                        });
+
+                        test_data.newsLetters = updatedNewsLetters;
 
                         // rewrite the json file
-                        fs.writeFile(newsLetterPath, JSON.stringify(updatedData), 'utf8', () => {
+                        fs.writeFile(newsLetterPath, JSON.stringify(test_data), 'utf8', () => {
                               console.log('Newsletter with title ' + newsletter_title + ' deleted and file overwritten')
                         })
 
