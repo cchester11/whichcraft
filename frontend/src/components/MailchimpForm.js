@@ -6,6 +6,8 @@ export default function MailchimpForm() {
             // Mailchimp script
             window.fnames = new Array();
             window.ftypes = new Array();
+            let fnames = window.fnames;
+            let ftypes = window.ftypes;
             fnames[0] = 'EMAIL';
             ftypes[0] = 'email';
             fnames[1] = 'FNAME';
