@@ -7,33 +7,33 @@ export default function NewsletterSubscription() {
             <div id="mc_embed_shell">
                   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
                         <div id="mc_embed_signup">
-                              <form action="https://WhichCraftBeerStore.us3.list-manage.com/subscribe/post?u=95437aa3de50f93eeb7f90adc&amp;id=38b77e0567&amp;f_id=00dac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                              <form action="https://WhichCraftBeerStore.us3.list-manage.com/subscribe/post?u=95437aa3de50f93eeb7f90adc&amp;id=38b77e0567&amp;f_id=00dac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
                                     <div id="mc_embed_signup_scroll"><h2>Subscribe To Our Newsletter</h2>
-                                          <div class="mc-field-group">
-                                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                                          <div className="mc-field-group">
+                                                <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span>
                                                 </label>
                                                 <input 
-                                                      type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" 
+                                                      type="email" name="EMAIL" className="required email" id="mce-EMAIL" required="" placeholder="example@gmail.com" 
                                                 />
-                                                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                                                <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
                                           </div>
-                                          <div id="mce-responses" class="clear">
-                                                <div class="response" id="mce-error-response" style={{display: 'none'}}>
+                                          <div id="mce-responses" className="clear">
+                                                <div className="response" id="mce-error-response" style={{display: 'none'}}>
 
                                                 </div>
-                                                <div class="response" id="mce-success-response" style={{display: 'none'}}>
+                                                <div className="response" id="mce-success-response" style={{display: 'none'}}>
 
                                                 </div>
                                           </div>
                                           <div aria-hidden="true" style={{position: 'absolute', left: '-5000px'}}>
                                                 <input 
-                                                      type="text" name="b_95437aa3de50f93eeb7f90adc_38b77e0567" tabindex="-1" value="" 
+                                                      type="text" name="b_95437aa3de50f93eeb7f90adc_38b77e0567" tabIndex="-1" defaultValue="" 
                                                 />
                                           </div>
-                                          <div class="clear">
+                                          <div className="clear">
                                                 <input 
-                                                      type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" 
-                                                      />
+                                                      type="submit" name="subscribe" id="mc-embedded-subscribe" className="button" value="Subscribe" 
+                                                />
                                           </div>
                                     </div>
                               </form>

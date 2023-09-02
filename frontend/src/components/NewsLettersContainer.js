@@ -10,10 +10,11 @@ export default function NewsLettersContainer() {
             try {
                   const response = await axios.get("http://localhost:3001/newsletters/allnewsletters")
                   let newsLetterObs = response.data.data.newsLetters
+                  console.log('request sent')
 
                   setNewsLetters(newsLetterObs)
 
-                  console.log('request sent')
+                  return;
             } catch (error) {
                   return {
                         Error: error
@@ -23,7 +24,7 @@ export default function NewsLettersContainer() {
 
       useEffect(() => {
             grabNewsLetters()
-      }, [newsletters])
+      }, [])
 
       return (
             // master container for all newsletters
