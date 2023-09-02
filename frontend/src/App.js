@@ -1,16 +1,14 @@
-import Nav from "./components/Nav";
-import Newsletter from "./components/NewsLetter";
-import Beers from "./components/Beers";
-import Footer from "./components/Footer";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div>
-      <Nav />
-      <Beers />
-      <Newsletter />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' Component={Main} />
+      </Switch>
+    </Router>
   );
 }
 
