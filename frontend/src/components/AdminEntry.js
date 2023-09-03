@@ -1,6 +1,21 @@
 import React from "react";
+import axios from "axios";
 
 export default function AdminEntry() {
+      const [username, setUsername] = useState('')
+      const [password, setPassword] = useState('')
+
+      const handleLogin = (event, username, password) => {
+            event.preventDefault()
+
+            axios.post('/api/admin/login', {
+                  username: username,
+                  password: password
+            }, () => {
+                  console.log(Response)
+            })
+      }
+
       return (
             <div className="container d-flex flex-column" style={{ width:'40%' }}>
                   <div className="mb-3">
@@ -11,7 +26,7 @@ export default function AdminEntry() {
                         <label htmlFor="password_login" className="form-label">Password</label>
                         <input type="password" className="form-control" id="password_login" placeholder="password" />
                   </div>
-                  <button type="submit" className="btn btn-large btn-primary">Login</button>
+                  <button type="submit" className="btn btn-large btn-primary" onSubmit={handleLogin()}>Login</button>
             </div>
       )
 };
