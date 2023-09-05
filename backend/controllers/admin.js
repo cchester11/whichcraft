@@ -5,3 +5,5 @@ const path = require('path');
 const loginAuth = (req, res) => {
       console.log(req.body)
 };
+
+module.exports = loginAuth;
