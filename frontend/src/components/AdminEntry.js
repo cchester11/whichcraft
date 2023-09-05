@@ -23,7 +23,14 @@ export default function AdminEntry() {
                   password: password
             })
 
-            console.log(response.data.data)
+            let usr = response.data.data.username;
+            let pword = response.data.data.password;
+
+            if(username === usr && pword === password) {
+                  console.log(true)
+            } else {
+                  console.log(false)
+            }
       };
 
       return (
