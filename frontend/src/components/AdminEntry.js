@@ -23,7 +23,13 @@ export default function AdminEntry() {
                   password: password
             })
 
-            console.log(response.data)
+            let authStatus = response.data.loggedIn;
+            
+            if(authStatus === true) {
+                  window.alert('Logged In')
+            } else {
+                  window.alert('Not Logged In')
+            }
       };
 
       return (
