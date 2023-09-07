@@ -6,16 +6,25 @@ const loginAuth = (req, res) => {
 
       try {
             const adminData = fs.readFileSync(filePath, 'utf-8')
+            const authCredentials = JSON.parse(adminData);
 
-            console.log(req.body)
+            const authenticatedUsername = authCredentials.username;
+            const authenticatedPassword = authCredentials.password;
 
-            const response = JSON.parse(adminData);
-            console.log(req.body);
+            if(authenticatedUsername === req.body.username && authenticatedPassword === req.body.password) {
+                  res.json({
+                        message: "Attempted login successful",
+                        date: new Date,
+                        loggedIn: true
+                  })
+            } else {
+                  res.json({
+                        message: "Attempted login unsuccessful",
+                        date: new Date,
+                        loggedIn: false
+                  })
+            }
 
-            res.json({
-                  message: "Response",
-                  data: response
-            })
       }
       catch (error) {
             res.status(500).json({
