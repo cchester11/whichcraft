@@ -35,14 +35,29 @@ const createAdmin = async (req, res) => {
       }
 };
 
-
-const loginAuth = (req, res) => {
+const loginAuth = async (req, res) => {
       try {
-            const authUsername = process.env.ADMIN_USERNAME;
-            const authPassword = process.env.ADMIN_PASSWORD;
+            const filePath = path.join(__dirname, '../data/admin.json');
+
+            const request_body = {
+                  username: req.body.username,
+                  password: req.body.password
+            };
+            let creds = [];
+
+            // authUsername and authPassword will be the pulled values from adminjson
+            const data = fs.readFileSync(filePath, 'utf-8');
+
+            creds.push(JSON.parse(data))
+
+            let authUsrname = creds[0].username;
+            let authPassword = creds[0].password;
+
+            let authenticateUsrname = await bcrypt.compare(request_body.username, authUsrname);
+            let authenticatePassword = await bcrypt.compare(request_body.password, authPassword);
+
             if (
-                  authUsername === req.body.username &&
-                  authPassword === req.body.password
+                  authenticateUsrname && authenticatePassword
             ) {
                   res.json({
                         message: 'Attempted login successful',
