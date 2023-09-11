@@ -29,7 +29,7 @@ export default function AdminEntry() {
             let authStatus = response.data.loggedIn;
             
             if(authStatus === true) {
-                  navigate('/')
+                  navigate('/workshop')
             } else {
                   document.location.reload()
             }
