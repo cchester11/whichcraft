@@ -6,20 +6,8 @@ const loginAuth = async (req, res) => {
             const authUsername = await bcrypt.hash(process.env.ADMIN_USERNAME, 10);
             const authPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
 
-            const bcryptUsernameCheck = await bcrypt.compare(req.body.username, authUsername, (err, result) => {
-                  if (err) {
-                        return err
-                  } else {
-                        return result
-                  }
-            });
-            const bcryptPasswordCheck = await bcrypt.compare(req.body.password, authPassword, (err, result) => {
-                  if (err) {
-                        return err
-                  } else {
-                        return result
-                  }
-            })
+            const bcryptUsernameCheck = await bcrypt.compare(req.body.username, authUsername);
+            const bcryptPasswordCheck = await bcrypt.compare(req.body.password, authPassword);
 
             if (
                   bcryptUsernameCheck === true &&  bcryptPasswordCheck === true
