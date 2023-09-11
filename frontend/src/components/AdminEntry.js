@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function AdminEntry() {
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
+
+      const navigate = useNavigate();
 
       const handleUsername = (event) => {
             const inputVal = event.target.value
@@ -26,9 +29,9 @@ export default function AdminEntry() {
             let authStatus = response.data.loggedIn;
             
             if(authStatus === true) {
-                  window.alert('Logged In')
+                  navigate('/')
             } else {
-                  window.alert('Not Logged In')
+                  document.location.reload()
             }
       };
 
