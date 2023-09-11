@@ -7,14 +7,21 @@ const createAdmin = async (req, res) => {
       try {
             const filePath = path.join(__dirname, '../data/admin.json');
 
-            const request_username = req.body.username;
-            const request_password = req.body.password;
+            const request_body = {
+                  username: req.body.username,
+                  password: req.body.password
+            };
 
             // Hash the username and password using async/await
-            const username = await bcrypt.hash(request_username, 10);
-            const password = await bcrypt.hash(request_password, 10);
+            const username = await bcrypt.hash(request_body.username, 10);
+            const password = await bcrypt.hash(request_body.password, 10);
 
-            console.log(username, password);
+            const newAdmin = {
+                  username: username,
+                  password: password
+            }
+
+            fs.writeFileSync(filePath, JSON.stringify(newAdmin), 'utf-8')
 
             res.json({
                   message: "Response",
