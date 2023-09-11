@@ -3,21 +3,8 @@ const bcrypt = require('bcrypt');
 
 const loginAuth = async (req, res) => {
       try {
-            const authUsername = await bcrypt.hash(process.env.ADMIN_USERNAME, 10, (err, hash) => {
-                  if (err) {
-                        return err
-                  } else {
-                        return hash
-                  }
-            })
-            const authPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10, (err, hash) => {
-                  if (err) {
-                        return err
-                  } else {
-                        return hash
-                  }
-            });
-            console.log(authPassword)
+            const authUsername = await bcrypt.hash(process.env.ADMIN_USERNAME, 10);
+            const authPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
 
             const bcryptUsernameCheck = await bcrypt.compare(req.body.username, authUsername, (err, result) => {
                   if (err) {
