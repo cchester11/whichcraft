@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
 import AdminLogin from './components/AdminLogin';
 import AdminWorkshop from './components/AdminWorkshop';
-import PrivateRoutes from './components/PrivateRoutes';
+import PrivateRoutes from './utilities/PrivateRoutes';
 
 function App() {
   const [authStatus, setAuthStatus] = useState(false);
