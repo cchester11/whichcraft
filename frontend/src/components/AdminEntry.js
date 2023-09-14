@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function AdminEntry() {
+export default function AdminEntry(props) {
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
 
@@ -29,6 +29,7 @@ export default function AdminEntry() {
             let authStatus = response.data.loggedIn;
             
             if(authStatus === true) {
+                  props.setAuthStatus(authStatus);
                   navigate('/workshop')
             } else {
                   document.location.reload()

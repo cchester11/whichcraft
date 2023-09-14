@@ -3,11 +3,11 @@ import '../stylesheets/main.css';
 import AdminEntry from "./AdminEntry";
 import AdminHeader from "./AdminHeader";
 
-export default function AdminLogin() {
+export default function AdminLogin(props) {
       return (
             <div>
                   <AdminHeader />
-                  <AdminEntry />
+                  <AdminEntry setAuthStatus={props.setAuthStatus} />
             </div>
       )
 }
