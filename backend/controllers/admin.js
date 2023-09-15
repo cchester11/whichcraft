@@ -59,6 +59,15 @@ const loginAuth = async (req, res) => {
             if (
                   authenticateUsrname && authenticatePassword
             ) {
+                  const tokenPath = path.join(__dirname, '../data/token.json');
+                  let adminToken = await bcrypt.genSalt(10)
+
+                  let token = {
+                        adminToken: adminToken
+                  }
+
+                  fs.writeFileSync(tokenPath, JSON.stringify(token), 'utf-8')
+
                   res.json({
                         message: 'Attempted login successful',
                         date: new Date(),
