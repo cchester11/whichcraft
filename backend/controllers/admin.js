@@ -72,6 +72,7 @@ const loginAuth = async (req, res) => {
                         message: 'Attempted login successful',
                         date: new Date(),
                         loggedIn: true,
+                        adminToken: adminToken
                   });
             } else {
                   res.json({
