@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
+import axios from "axios";
 
 // I think the next step is to do some work here. When the admin's page reloads on workshop, this component will be read by the  browser.
 // So I will need to
@@ -9,6 +10,11 @@ import { useNavigate, Outlet } from "react-router-dom";
 // 4. If false, run the useEffect. If true, set auth.token to true and redirect to outlet
 export default function PrivateRoutes (props) {
       const navigate = useNavigate();
+      const adminToken = localStorage.getItem('adminToken')
+
+      let auth = {
+            "token": false
+      };
 
       useEffect(() => {
             if(!props.authStatus) {
@@ -16,9 +22,11 @@ export default function PrivateRoutes (props) {
             }
       }, [navigate, props.authStatus]);
 
-      let auth = {
-            "token": false
-      };
+      if(adminToken) {
+            axios.post('http://localhost:3001/admin/credentialcheck')
+            // check the data results key. It should return  true or false
+            // change the value of auth.token accordingly
+      }
 
       if(props.authStatus) {
             auth.token = true
