@@ -8,7 +8,7 @@ import axios from "axios";
 // 2. If so, then send axios request with adminToken to server.
 // 3. Will need to write a server api controller that can accept verification request and send back a true or false
 // 4. If false, run the useEffect. If true, set auth.token to true and redirect to outlet
-export default function PrivateRoutes (props) {
+export default async function PrivateRoutes (props) {
       const navigate = useNavigate();
       const adminToken = localStorage.getItem('adminToken')
 
@@ -23,8 +23,9 @@ export default function PrivateRoutes (props) {
       }, [navigate, props.authStatus]);
 
       if(adminToken) {
-            axios.post('http://localhost:3001/admin/credentialcheck')
+            const response = await axios.post('http://localhost:3001/admin/authstatus');
             // check the data results key. It should return  true or false
+            console.log(response.data.tokens)
             // change the value of auth.token accordingly
       }
 
