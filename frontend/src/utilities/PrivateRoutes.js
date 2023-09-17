@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 // I think the next step is to do some work here. When the admin's page reloads on workshop, this component will be read by the  browser.
 // So I will need to
@@ -8,9 +8,12 @@ import axios from "axios";
 // 2. If so, then send axios request with adminToken to server.
 // 3. Will need to write a server api controller that can accept verification request and send back a true or false
 // 4. If false, run the useEffect. If true, set auth.token to true and redirect to outlet
+
+// ** something goes wrong when pulling  the token from local storage into the file. React doesnt like its data type or form
 export default async function PrivateRoutes (props) {
       const navigate = useNavigate();
-      const adminToken = localStorage.getItem('adminToken')
+      const getAdminToken = localStorage.getItem('adminToken')
+      let adminToken = [];
 
       let auth = {
             "token": false
@@ -22,12 +25,8 @@ export default async function PrivateRoutes (props) {
             }
       }, [navigate, props.authStatus]);
 
-      if(adminToken) {
-            const response = await axios.post('http://localhost:3001/admin/authstatus');
-            // check the data results key. It should return  true or false
-            console.log(response.data.tokens)
-            // change the value of auth.token accordingly
-      }
+      adminToken.push(getAdminToken)
+      console.log(adminToken)
 
       if(props.authStatus) {
             auth.token = true
