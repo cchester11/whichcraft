@@ -11,13 +11,13 @@ import { useNavigate, Outlet } from "react-router-dom";
 
 // ** something goes wrong when pulling  the token from local storage into the file. React doesnt like its data type or form
 export default async function PrivateRoutes (props) {
-      const navigate = useNavigate();
-      const getAdminToken = localStorage.getItem('adminToken')
-      let adminToken = [];
-
       let auth = {
             "token": false
       };
+
+      const navigate = useNavigate();
+      const getAdminToken = localStorage.getItem('adminToken')
+      let adminToken = []; 
 
       useEffect(() => {
             if(!props.authStatus) {
