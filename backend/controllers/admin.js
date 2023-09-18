@@ -91,17 +91,17 @@ const loginAuth = async (req, res) => {
 const checkAuthStatus = async (req, res) => {
       const tokenPath = path.join(__dirname, '../data/token.json');
       const grabServerToken = fs.readFileSync(tokenPath, 'utf-8');
-      const clientToken = req.body.adminToken;
-      let tokens = [];
+      const clientToken = req.body.clientToken;
+      const adminToken = JSON.parse(grabServerToken);
+      let tokens = {
+            clientToken: clientToken,
+            adminToken: adminToken.adminToken
+      };
 
-      tokens.push(JSON.parse(grabServerToken))
-      tokens.push({
-            clientToken: clientToken
-      })
+      console.log(tokens.clientToken)
+      console.log(tokens.adminToken)
 
-      res.json({
-            tokens: tokens
-      })
+      res.json(tokens)
 };
 
 module.exports = { createAdmin, loginAuth, checkAuthStatus };

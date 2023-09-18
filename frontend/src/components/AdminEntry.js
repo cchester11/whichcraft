@@ -27,10 +27,10 @@ export default function AdminEntry(props) {
             })
 
             const authStatus = response.data.loggedIn;
-            const adminToken = response.data.adminToken
+            const clientToken = response.data.adminToken
 
             if(authStatus === true) {
-                  localStorage.setItem('adminToken', adminToken)
+                  localStorage.setItem('clientToken', clientToken)
 
                   props.setAuthStatus(authStatus);
                   navigate('/workshop')
