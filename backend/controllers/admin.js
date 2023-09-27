@@ -120,5 +120,40 @@ const checkAuthStatus = async (req, res) => {
       }
 };
 
+const destroyAuth = async (req, res) => {
+      try {
+            const clientToken = req.body.clientToken;
+            const tokenPath = path.join(__dirname, '../data/token.json');
+            const grabServerToken = fs.readFileSync(tokenPath, 'utf-8');
+            const adminToken = JSON.parse(grabServerToken).adminToken;
 
-module.exports = { createAdmin, loginAuth, checkAuthStatus };
+            if(!clientToken || !adminToken) {
+                  return res.status(400).json({ 
+                        message: "Insufficient tokens"
+                  })
+            }
+
+            let compare = await bcrypt.compare(adminToken, clientToken)
+
+            if(compare == true) {
+                  // delete serverside token
+
+                  res.status(201).json({
+                        message: "Successful request. Token destroyed.",
+                        match: true
+                  })
+            } else {
+                  res.status(400).json({
+                        message: "Tokens do not match. Invalid request."
+                  })
+            }
+      } catch (error) {
+            console.error('Error destroying auth token: ' + error);
+            return res.status(500).json({ 
+                  message: 'Error destroying auth token',
+                  error: error 
+      })
+      }
+};
+
+module.exports = { createAdmin, loginAuth, checkAuthStatus, destroyAuth };
