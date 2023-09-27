@@ -21,6 +21,8 @@ export default function AdminEntry(props) {
       };
 
       const handleLogin = async (username, password) => {
+            // send a request to the login endpoint
+            // endpoint checks for a good match and sends back a response
             const response = await axios.post('http://localhost:3001/admin/login', {
                   username: username,
                   password: password
@@ -29,6 +31,9 @@ export default function AdminEntry(props) {
             const authStatus = response.data.loggedIn;
             const clientToken = response.data.adminToken
 
+            // if login request is good the response sends a loggedIn property of true and a token
+            // store encrypted token in local storage
+            // set authStatus to true to access workshop
             if(authStatus === true) {
                   localStorage.setItem('clientToken', clientToken)
 

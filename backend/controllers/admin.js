@@ -2,6 +2,7 @@ require('dotenv').config({ path: '../.env' })
 const bcrypt = require('bcrypt');
 const path = require('path');
 const fs = require('fs');
+const generateToken = require('../helpers/generateToken');
 
 const createAdmin = async (req, res) => {
       try {
@@ -60,7 +61,10 @@ const loginAuth = async (req, res) => {
                   authenticateUsrname && authenticatePassword
             ) {
                   const tokenPath = path.join(__dirname, '../data/token.json');
-                  let adminToken = await bcrypt.genSalt(10)
+                  let adminToken = generateToken(15)
+
+                  //encrypt the token
+                  const clientSideToken = await bcrypt.hash(adminToken, 10)
 
                   let token = {
                         adminToken: adminToken
@@ -72,7 +76,7 @@ const loginAuth = async (req, res) => {
                         message: 'Attempted login successful',
                         date: new Date(),
                         loggedIn: true,
-                        adminToken: adminToken
+                        adminToken: clientSideToken
                   });
             } else {
                   res.json({
@@ -89,19 +93,32 @@ const loginAuth = async (req, res) => {
 };
 
 const checkAuthStatus = async (req, res) => {
-      const tokenPath = path.join(__dirname, '../data/token.json');
-      const grabServerToken = fs.readFileSync(tokenPath, 'utf-8');
-      const clientToken = req.body.clientToken;
-      const adminToken = JSON.parse(grabServerToken);
-      let tokens = {
-            clientToken: clientToken,
-            adminToken: adminToken.adminToken
-      };
+      try {
+            const tokenPath = path.join(__dirname, '../data/token.json');
+            const grabServerToken = fs.readFileSync(tokenPath, 'utf-8');
 
-      console.log(tokens.clientToken)
-      console.log(tokens.adminToken)
+            const clientToken = req.body.clientToken;
+            console.log('clientToken checking for auth status: ' + clientToken)
+            const adminTokenHash = JSON.parse(grabServerToken).adminToken;
+            console.log('adminToken checking for auth status: ' + adminTokenHash)
 
-      res.json(tokens)
+            if (!clientToken || !adminTokenHash) {
+                  return res.status(400).json({ status: false, message: 'Invalid tokens' });
+            }
+
+            // Compare the hashed client token with the admin token hash
+            let compare = await bcrypt.compare(adminTokenHash, clientToken);
+
+            if (compare == false) {
+                  return res.json({ status: false, message: 'Authentication failed' });
+            } else if (compare == true) {
+                  return res.json({ status: true, message: 'Authentication successful' });
+            }
+      } catch (error) {
+            console.error('Error checking auth status:', error);
+            return res.status(500).json({ status: false, message: 'Internal server error' });
+      }
 };
+
 
 module.exports = { createAdmin, loginAuth, checkAuthStatus };
