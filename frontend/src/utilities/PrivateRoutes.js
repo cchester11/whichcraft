@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import axios from "axios";
 
-export default function PrivateRoutes(props) {
+export default function PrivateRoutes() {
       const [auth, setAuth] = useState({ token: false });
       const navigate = useNavigate();
       const clientToken = localStorage.getItem("clientToken");
@@ -17,9 +17,12 @@ export default function PrivateRoutes(props) {
                                           clientToken: clientToken,
                                     }
                               );
-                              const status = response.data;
-                              console.log(status)
-                              setAuth({ token: true });
+
+                              const status = response.data.status;
+
+                              if(status == true) {
+                                    setAuth({ token: true });
+                              }
                         } catch (error) {
                               console.error("Error checking auth status: ", error);
                               navigate("/admin");
@@ -28,7 +31,7 @@ export default function PrivateRoutes(props) {
                         navigate("/admin");
                   }
             };
-
+      
             checkAuthStatus();
       }, [clientToken, navigate]);
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function AdminEntry(props) {
+export default function AdminEntry() {
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
 
@@ -29,7 +29,7 @@ export default function AdminEntry(props) {
             })
 
             const authStatus = response.data.loggedIn;
-            const clientToken = response.data.adminToken
+            const clientToken = response.data.adminToken;
 
             // if login request is good the response sends a loggedIn property of true and a token
             // store encrypted token in local storage
@@ -37,9 +37,9 @@ export default function AdminEntry(props) {
             if(authStatus === true) {
                   localStorage.setItem('clientToken', clientToken)
 
-                  props.setAuthStatus(authStatus);
                   navigate('/workshop')
             } else {
+                  window.alert('Invalid login attempt');
                   document.location.reload()
             }
       };

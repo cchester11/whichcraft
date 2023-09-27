@@ -6,14 +6,12 @@ import AdminWorkshop from './components/AdminWorkshop';
 import PrivateRoutes from './utilities/PrivateRoutes';
 
 function App() {
-  const [authStatus, setAuthStatus] = useState(false);
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/admin' element={<AdminLogin setAuthStatus = { setAuthStatus } />} />
-        <Route element={<PrivateRoutes authStatus =  { authStatus } />}>
+        <Route path='/admin' element={<AdminLogin />} />
+        <Route element={<PrivateRoutes />}>
           <Route path='/workshop' element={<AdminWorkshop />} />
         </Route>
       </Routes>
