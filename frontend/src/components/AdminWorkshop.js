@@ -14,7 +14,7 @@ export default function AdminWorkshop () {
       return (
             <div>
                   <h1>Admin Workshop</h1>
-                  <button className="btn btn-large btn-primary" onClick={logout()}>Logout</button>
+                  <button className="btn btn-large btn-primary" onClick={() => { logout() }}>Logout</button>
             </div>
       )
 }
