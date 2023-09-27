@@ -20,7 +20,7 @@ export default function PrivateRoutes() {
 
                               const status = response.data.status;
 
-                              if(status == true) {
+                              if(status === true) {
                                     setAuth({ token: true });
                               }
                         } catch (error) {
