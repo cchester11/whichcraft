@@ -2,14 +2,12 @@ import React from "react";
 import '../stylesheets/main.css';
 
 export default function AdminWorkshop () {
-      // onClick function for logout button
+      // still need to send a request to server
+      // render logic below if match property comes back as true
       const logout = async () => {
-            console.log('called logout function')
+            localStorage.removeItem('clientToken')
+            document.location.reload()
       }
-      // sends a request to an endpoint on the server that will destroy the server token
-      // sends back a response
-      // empty local storage
-      // redirect to home page 
 
       return (
             <div>
