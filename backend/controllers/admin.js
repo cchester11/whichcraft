@@ -144,7 +144,8 @@ const destroyAuth = async (req, res) => {
                   })
             } else {
                   res.status(400).json({
-                        message: "Tokens do not match. Invalid request."
+                        message: "Tokens do not match. Invalid request.",
+                        match: false
                   })
             }
       } catch (error) {
