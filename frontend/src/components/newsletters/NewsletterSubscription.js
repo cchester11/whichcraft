@@ -1,6 +1,6 @@
 import React from "react";
-import MailchimpForm from "./MailchimpForm";
-import '../stylesheets/main.css';
+import MailchimpForm from "../../utilities/MailchimpForm";
+import '../../stylesheets/main.css';
 
 export default function NewsletterSubscription() {
       return (

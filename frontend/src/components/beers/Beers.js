@@ -1,5 +1,5 @@
 import React from "react";
-import '../stylesheets/main.css';
+import '../../stylesheets/main.css';
 import BeersHeader from "./BeersHeader";
 import BeersHero from "./BeersHero";
 import BeersList from "./BeersList";

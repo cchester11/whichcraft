@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
-import AdminLogin from './components/AdminLogin';
-import AdminWorkshop from './components/AdminWorkshop';
+import AdminLogin from './components/admin/AdminLogin';
+import AdminWorkshop from './components/admin/AdminWorkshop';
 import PrivateRoutes from './utilities/PrivateRoutes';
 
 function App() {

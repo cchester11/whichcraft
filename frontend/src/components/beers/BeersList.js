@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../stylesheets/main.css';
+import '../../stylesheets/main.css';
 import axios from "axios";
 
 export default function BeersList() {

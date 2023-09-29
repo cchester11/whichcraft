@@ -1,5 +1,5 @@
 import React from "react";
-import '../stylesheets/main.css';
+import '../../stylesheets/main.css';
 import AdminEntry from "./AdminEntry";
 import AdminHeader from "./AdminHeader";
 

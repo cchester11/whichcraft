@@ -1,5 +1,5 @@
 import React from "react";
-import '../stylesheets/main.css';
+import '../../stylesheets/main.css';
 import NewsletterSubscription from "./NewsletterSubscription";
 import NewsLettersHeader from "./NewsLettersHeader";
 import NewsLetterNavButtons from "./NewsLetterNavButtons";
