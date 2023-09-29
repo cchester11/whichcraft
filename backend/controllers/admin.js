@@ -137,7 +137,10 @@ const destroyAuth = async (req, res) => {
 
             if(compare == true) {
                   // delete serverside token
+                  delete adminToken
 
+                  fs.writeFileSync(tokenPath, JSON.stringify('{}'), 'utf-8')
+                  
                   res.status(201).json({
                         message: "Successful request. Token destroyed.",
                         match: true
