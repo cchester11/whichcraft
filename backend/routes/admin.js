@@ -4,6 +4,6 @@ const { createAdmin, loginAuth, checkAuthStatus, destroyAuth } = require('../con
 router.post('/createadmin', createAdmin);
 router.post('/login', loginAuth);
 router.post('/authstatus', checkAuthStatus);
-router.delete('/destroyauth', destroyAuth);
+router.post('/destroyauth', destroyAuth);
 
 module.exports = router;
