@@ -13,6 +13,8 @@ function checkHeading (param) {
 }
 
 function checkAllProperties (param) {
+      // run a check that determines the newsletter is composed of multiple properties
+
       Object.entries(param).map(([property, value]) => {
             console.log({
                   property: property,
@@ -20,6 +22,7 @@ function checkAllProperties (param) {
             })
 
             if(property === 'wine-item-1' && property === 'wine-item-2') {
+                  // if fail happens in this conditional block
                   console.log('check failed at wine check')
 
                   if(typeof value.paragraph1.text !== 'string' || typeof value.paragraph2.text !== 'string') {
