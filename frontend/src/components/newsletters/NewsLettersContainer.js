@@ -34,6 +34,10 @@ export default function NewsLettersContainer() {
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
+                                    /**
+                                     * Check property's "order" value
+                                     * If "order" value does not equal previous "order" value ++ than return an error
+                                     */
                                     <div key={property}>
                                           {value.element === "heading" &&
                                                 <div className="container-fluid d-flex justify-content-center">
