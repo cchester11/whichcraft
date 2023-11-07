@@ -31,13 +31,16 @@ export default function NewsLettersContainer() {
             <div className="container-fluid newsletter-master ml-3 mr-3">
                   {/* grab newsletters state and run map function to grab each large newsletter object */}
                   {newsletters.map((newsletter, index) => (
+                        /**
+                         * Check property's "order" value
+                         * Push to order array
+                         * Check that array is sorted 
+                         * If "order" value does not equal previous "order" value ++ than return an error
+                        */
+                        
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
-                                    /**
-                                     * Check property's "order" value
-                                     * If "order" value does not equal previous "order" value ++ than return an error
-                                     */
                                     <div key={property}>
                                           {value.element === "heading" &&
                                                 <div className="container-fluid d-flex justify-content-center">
@@ -60,13 +63,13 @@ export default function NewsLettersContainer() {
                                                       <li className="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.text}</li>
                                                 </ul>
                                           }
-                                          {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" && 
+                                          {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" &&
                                                 <ul className="list-group list-group-flush">
                                                       <span className="container mt-2"></span>
                                                       <li className="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.paragraph1.text}</li>
                                                 </ul>
                                           }
-                                          {property.startsWith("wine-item") && value.paragraph2.element === "paragraph" && 
+                                          {property.startsWith("wine-item") && value.paragraph2.element === "paragraph" &&
                                                 <ul className="list-group list-group-flush">
                                                       <span className="container mt-2"></span>
                                                       <li className="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.paragraph2.text}</li>
