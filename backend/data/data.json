@@ -108,7 +108,10 @@
       "food": [],
       "newsLetters": [
             {
-                  "heading": { "element": "heading", "text": "Hocus Pocus" },
+                  "heading": { 
+                        "element": "heading", 
+                        "text": "Hocus Pocus" 
+                  },
                   "paragraph-1": {
                         "element": "paragraph",
                         "text": "Pair a Plain, Rosemary, or Cinnamon Raisin bagel with a cream cheese or chive schmear for a tasty breakfast on-the-go, or  grab our new White Cheddar and Prosciutto Grilled Cheese! We're slinging these bad boys all day from 8am until the hour before closing time."
@@ -237,7 +240,10 @@
                   }
             },
             {
-                  "heading": { "element": "heading", "text": "Summer Time!" },
+                  "heading": { 
+                        "element": "heading", 
+                        "text": "Summer Time!" 
+                  },
                   "paragraph-1": {
                         "element": "paragraph",
                         "text": "This month we've whipped up a refreshing strawberry yerba matte for your summer morning refresher. Stop by between 11am and 1pm to recieve a half off price!"
@@ -302,7 +308,10 @@
                   }
             },
             {
-                  "heading": { "element": "heading", "text": "Winter Time!" },
+                  "heading": { 
+                        "element": "heading", 
+                        "text": "Winter Time!" 
+                  },
                   "paragraph-1": {
                         "element": "paragraph",
                         "text": "This month we've whipped up a refreshing strawberry yerba matte for your summer morning refresher. Stop by between 11am and 1pm to recieve a half off price!"
@@ -367,7 +376,10 @@
                   }
             },
             {
-                  "heading": { "element": "heading", "text": "Test Article" },
+                  "heading": { 
+                        "element": "heading", 
+                        "text": "Test Article" 
+                  },
                   "paragraph-1": {
                         "element": "paragraph",
                         "text": "This month we've whipped up a refreshing strawberry yerba matte for your summer morning refresher. Stop by between 11am and 1pm to recieve a half off price!"
