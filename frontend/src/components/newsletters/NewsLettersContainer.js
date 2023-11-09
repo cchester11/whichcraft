@@ -26,18 +26,19 @@ export default function NewsLettersContainer() {
             grabNewsLetters()
       }, [])
 
+      /**
+            * Check property's "order" value
+            * Push to order array
+            * Check that array is sorted 
+            * If "order" value does not equal previous "order" value ++ than return an error
+      */
+      
+
       return (
             // master container for all newsletters
             <div className="container-fluid newsletter-master ml-3 mr-3">
                   {/* grab newsletters state and run map function to grab each large newsletter object */}
                   {newsletters.map((newsletter, index) => (
-                        /**
-                         * Check property's "order" value
-                         * Push to order array
-                         * Check that array is sorted 
-                         * If "order" value does not equal previous "order" value ++ than return an error
-                        */
-                        
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (

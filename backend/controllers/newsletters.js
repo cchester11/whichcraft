@@ -33,7 +33,7 @@ function addNewsLetter(req, res) {
             newsLetters.push(newsLetter)
 
             fs.writeFile(newsLetterPath, JSON.stringify(data), () => {
-                  console.log(`Newsletter successfully sent to stroage.`)
+                  console.log(`Newsletter successfully sent to storage.`)
             })
 
             res.json({
