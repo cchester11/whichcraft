@@ -108,10 +108,18 @@
       "food": [],
       "newsLetters": [
             {
+                  "image": {
+                        "element": "image",
+                        "image": "/images/newsletter-header.png"
+                  },
                   "heading": {
                         "order": 1,
                         "element": "heading",
                         "text": "Hocus Pocus"
+                  },
+                  "image-2": {
+                        "element": "image",
+                        "image": "images/newsletter-img-2.png"
                   },
                   "paragraph-1": {
                         "order": 2,
@@ -122,6 +130,10 @@
                         "order": 3,
                         "element": "paragraph",
                         "text": "Happy Hour starts at 4 and last for the entire duration of the game. Look for the Longhorns logo on the draft board to take $3 off!"
+                  },
+                  "image-3": {
+                        "element": "image",
+                        "image": "/images/newsletter-img-3.png"
                   },
                   "heading-2": {
                         "order": 4,

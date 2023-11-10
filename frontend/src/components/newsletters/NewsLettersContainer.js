@@ -42,6 +42,11 @@ export default function NewsLettersContainer() {
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
                                     <div key={property}>
+                                          {value.element === "image" &&
+                                                <div className="container-fluid d-flex justify-content-center mt-3">
+                                                      <img src={process.env.PUBLIC_URL + value.image} alt={value.element} />
+                                                </div>
+                                          }
                                           {value.element === "heading" &&
                                                 <div className="container-fluid d-flex justify-content-center">
                                                       <h1 className="newsletter-title m-4">{value.text}</h1>
