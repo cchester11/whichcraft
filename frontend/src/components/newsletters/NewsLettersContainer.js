@@ -32,7 +32,6 @@ export default function NewsLettersContainer() {
             * Check that array is sorted 
             * If "order" value does not equal previous "order" value ++ than return an error
       */
-      
 
       return (
             // master container for all newsletters
