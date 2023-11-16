@@ -23,16 +23,18 @@ export default function AdminWorkshop() {
       }
 
       return (
-            <div>
+            <div className="container-fluid workshop-container">
                   <h1>Admin Workshop</h1>
-                  <select class="form-select" aria-label="Default select example">
+                  <select className="form-select" aria-label="Default select example">
                         <option selected>Choose a modification option</option>
                         <option value="1">Delete a beer tap</option>
                         <option value="2">Add a beer tap</option>
                         <option value="3">Delete a newsletter</option>
                         <option value="4">Add a newsletter</option>
                   </select>
-                  <button className="btn btn-large btn-primary" onClick={() => { logout() }}>Logout</button>
+                  <div className="d-flex justify-content-start logout-button-container">
+                        <button className="btn btn-large btn-primary" onClick={() => { logout() }}>Logout</button>
+                  </div>
             </div>
       )
 }

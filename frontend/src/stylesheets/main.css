@@ -158,6 +158,15 @@ body {
       margin: 10%;
 }
 
+/* admin workshop settings */
+.logout-button-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px; /* Add padding if needed */
+}
+
 /* footer settings */
 footer {
       padding-block: 2%;
