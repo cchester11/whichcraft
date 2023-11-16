@@ -111,7 +111,7 @@
                   "image": {
                         "element": "image",
                         "image": "/images/newsletter-header.png",
-                        "resize": false
+                        "resize": true
                   },
                   "heading": {
                         "order": 1,
@@ -121,7 +121,7 @@
                   "image-2": {
                         "element": "image",
                         "image": "images/newsletter-img-2.png",
-                        "resize": false
+                        "resize": true
                   },
                   "paragraph-1": {
                         "order": 2,
