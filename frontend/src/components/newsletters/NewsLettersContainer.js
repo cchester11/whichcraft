@@ -1,5 +1,8 @@
+// react hooks and functionality
 import React, { useState, useEffect } from "react";
+// import hard coded css
 import '../../stylesheets/main.css';
+// axios library used to send request to the server
 import axios from 'axios';
 
 export default function NewsLettersContainer() {
@@ -8,6 +11,13 @@ export default function NewsLettersContainer() {
       // state containing resized images
       const [resizedImages, setResizedImages] = useState({});
 
+      /**
+       * Resize images
+       * @param {string} imageSrc - The source of the URL image
+       * @param {number} maxWidth - The max width for the resized image
+       * @param {number} maxHeight - the max height for the resized image
+       * @returns {Promise<string>} - A promise that resolves with data URL of the resized image
+       */
       const resizeImage = (imageSrc, maxWidth, maxHeight) => {
             return new Promise((resolve) => {
                   // here we initiate an image constructor
