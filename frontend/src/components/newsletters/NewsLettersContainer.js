@@ -4,15 +4,84 @@ import axios from 'axios';
 
 export default function NewsLettersContainer() {
       // state for the entire newletter json object storing all newsletter data
-      const [newsletters, setNewsLetters] = useState([])
+      const [newsletters, setNewsLetters] = useState([]);
+      // state containing resized images
+      const [resizedImages, setResizedImages] = useState({});
 
-      async function grabNewsLetters() {
+      const resizeImage = (imageSrc, maxWidth, maxHeight) => {
+            return new Promise((resolve) => {
+                  // here we initiate an image constructor
+                  const img = new Image();
+
+                  // apply the address of the image to the context of the constructor
+                  img.src = imageSrc;
+
+                  // when the image is rendering by in the browser the below logic will run
+                  img.onload = () => {
+                        let width = img.width;
+                        let height =img.height;
+
+                        // resizing logic
+                        if(width > height) {
+                              if(width > maxWidth) { 
+                                    height *= maxWidth / width;
+                                    width = maxWidth;
+                              }
+                        } else {
+                              if(height > maxHeight) { 
+                                    width *= maxHeight / height;
+                                    height = maxHeight;
+                              }
+                        }
+
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+
+                        // apply resized width and height to the canvas
+                        canvas.width = width;
+                        canvas.height = height;
+
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        // there could be a path issue here if the purpose of the parameter is to declare path
+                        // the images are all located in root/frontend/public/images
+                        const resizedImage = canvas.toDataURL('image/png');
+
+                        // I assume we return the resizedImage in the resolve method below?
+                        resolve(resizedImage);
+                  };
+            })
+      };
+
+      const grabNewsLetters = async () => {
             try {
+                  // retrieve newsletter objects
                   const response = await axios.get("http://localhost:3001/newsletters/allnewsletters")
                   let newsLetterObs = response.data.data.newsLetters
                   console.log('request sent')
 
+                  // apply newsletter obs to newsletter state
                   setNewsLetters(newsLetterObs)
+
+                  // variable in which our resizedImage will be stored
+                  let resizedImagesObj = {};
+
+                  //access each newsletter nested object
+                  for(const newsletter of newsLetterObs) {
+                        // process each property/value of each newsletter obj
+                        for (const [property, value] of Object.entries(newsletter)) {
+                              if(value.element === 'image' && value.resize) {
+                                    // resize the image
+                                    const resizedImage = await resizeImage(process.env.PUBLIC_URL + value.image, 900, 900);
+
+                                    // place the resizedImage as a nested object in our resizedImagesObj variable
+                                    resizedImagesObj[property] = resizedImage;
+                              }
+                        }
+                  }
+
+                  // set resizedImages state
+                  setResizedImages(resizedImagesObj);
 
                   return;
             } catch (error) {
@@ -24,7 +93,7 @@ export default function NewsLettersContainer() {
 
       useEffect(() => {
             grabNewsLetters()
-      }, [])
+      })
 
       /**
             * Check property's "order" value
@@ -42,7 +111,13 @@ export default function NewsLettersContainer() {
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
                                     <div key={property}>
-                                          {value.element === "image" &&
+                                          {/* apply the resize function here if  */}
+                                          {value.element === "image" && value.resize && resizedImages[property] &&
+                                                <div className="container-fluid d-flex justify-content-center mt-3">
+                                                      <img src={resizedImages[property]} alt={value.element} />
+                                                </div>
+                                          }
+                                          {value.element === "image" && !value.resize &&
                                                 <div className="container-fluid d-flex justify-content-center mt-3">
                                                       <img src={process.env.PUBLIC_URL + value.image} alt={value.element} />
                                                 </div>
