@@ -22,6 +22,11 @@ export default function AdminWorkshop() {
             }
       }
 
+      // submit logic below. The number associated with each option in the select element will correspond to a route which the admin will be redirected to
+      const submitHandler = () => {
+            console.log('submit handler')
+      }
+
       return (
             <div className="container-fluid workshop-container">
                   <h1>Admin Workshop</h1>
@@ -32,6 +37,7 @@ export default function AdminWorkshop() {
                         <option value="3">Delete a newsletter</option>
                         <option value="4">Add a newsletter</option>
                   </select>
+                  <button className="btn btn-large btn-primary" onClick={() => { submitHandler() }}>Submit</button>
                   <div className="d-flex justify-content-start logout-button-container">
                         <button className="btn btn-large btn-primary" onClick={() => { logout() }}>Logout</button>
                   </div>
