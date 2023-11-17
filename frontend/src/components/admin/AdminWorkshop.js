@@ -1,26 +1,9 @@
 import React from "react";
-import axios from "axios";
+import logout from "../../utilities/logout";
 import '../../stylesheets/main.css';
 
 export default function AdminWorkshop() {
       const clientToken = localStorage.getItem('clientToken');
-      // still need to send a request to server
-      // render logic below if match property comes back as true
-      const logout = async () => {
-            const response = await axios.post('http://localhost:3001/admin/destroyauth', {
-                  clientToken: clientToken
-            })
-
-            const match = response.data.match;
-
-            if (match === true) {
-                  localStorage.removeItem('clientToken')
-                  document.location.reload()
-            } else {
-                  window.alert('You are not logged in')
-                  document.location.reload()
-            }
-      }
 
       // submit logic below. The number associated with each option in the select element will correspond to a route which the admin will be redirected to
       const submitHandler = () => {
@@ -42,7 +25,7 @@ export default function AdminWorkshop() {
                   </select>
                   <button className="btn btn-large btn-primary" onClick={() => { submitHandler() }}>Submit</button>
                   <div className="d-flex justify-content-start logout-button-container">
-                        <button className="btn btn-large btn-primary" onClick={() => { logout() }}>Logout</button>
+                        <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
             </div>
       )
