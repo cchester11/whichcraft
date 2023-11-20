@@ -11,6 +11,11 @@ export default function DeleteNewsletter () {
       return (
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Newsletter</h1>
+                  <div className="mb-3">
+                        <label for="deleteNewsletterForm" class="form-label">Delete Newsletter</label>
+                        <input class="form-control form-control-sm" id="deleteNewsletterForm" type="text" placeholder="Ex: Hocus Pocus" aria-label="delete newsletter control form"></input>
+                        <button className="btn btn-large btn-primary">Submit</button>
+                  </div>
             </div>
       );
 };
