@@ -53,7 +53,7 @@ export default function TapsList() {
                                                 className="card-subtitle mb-2 text-body-secondary tap-style"
                                           >
                                                 <img
-                                                      src="images/stout-tap.png"
+                                                      src="images/regular-tap.png"
                                                       height="40px"
                                                       width="30px"
                                                       alt=""

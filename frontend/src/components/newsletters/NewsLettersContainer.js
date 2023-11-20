@@ -18,6 +18,7 @@ export default function NewsLettersContainer() {
                   // retrieve newsletter objects
                   const response = await axios.get("http://localhost:3001/newsletters/allnewsletters")
                   let newsLetterObs = response.data.data.newsLetters
+
                   console.log('request sent')
 
                   // apply newsletter obs to newsletter state
@@ -53,7 +54,7 @@ export default function NewsLettersContainer() {
 
       useEffect(() => {
             grabNewsLetters()
-      })
+      }, [])
 
       /**
             * Check property's "order" value
