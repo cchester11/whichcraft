@@ -5,7 +5,7 @@ export default function Nav () {
       return (
             <nav className="navbar navbar-expand-lg navbar-custom mb-5">
                   <div className="container-fluid">
-                        <a className="navbar-brand">
+                        <a href="/" className="navbar-brand">
                               <img
                                     className="header-img"
                                     src="https://www.whichcraft.com/wp-content/uploads/2022/06/WhichCraftLogoATX.png"
@@ -69,7 +69,7 @@ export default function Nav () {
                                     <li className="nav-item dropdown">
                                           <a
                                                 className="nav-link dropdown-toggle"
-                                                href="#"
+                                                href="/"
                                                 role="button"
                                                 data-bs-toggle="dropdown"
                                                 aria-expanded="false"
@@ -86,27 +86,27 @@ export default function Nav () {
                                                       <a
                                                             className="dropdown-item"
                                                             href="#newsLetterNav"
-                                                            >Newsletter</a
+                                                            >Newsletters</a
                                                       >
                                                 </li>
                                                 <li>
                                                       <a
                                                             className="dropdown-item"
                                                             href="#ontap"
-                                                            >tap Menu</a
+                                                            >Taps</a
                                                       >
                                                 </li>
                                                 <li>
                                                       <a
                                                             className="dropdown-item"
-                                                            href="#"
+                                                            href="/"
                                                             >Food Menu</a
                                                       >
                                                 </li>
                                                 <li>
                                                       <a
                                                             className="dropdown-item"
-                                                            href="#"
+                                                            href="/"
                                                             >About</a
                                                       >
                                                 </li>
