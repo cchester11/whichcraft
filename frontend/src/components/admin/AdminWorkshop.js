@@ -10,12 +10,6 @@ export default function AdminWorkshop() {
 
       // submit logic below. The number associated with each option in the select element will correspond to a route which the admin will be redirected to
       const submitHandler = () => {
-            const selectMenu = document.getElementById('selectMenu');
-
-            setOptionSelection(selectMenu.value);
-
-            console.log(optionSelection);
-
             switch (optionSelection) {
                   default: 
                         history('/workshop');
@@ -38,7 +32,13 @@ export default function AdminWorkshop() {
       return (
             <div className="container-fluid workshop-container">
                   <h1>Admin Workshop</h1>
-                  <select className="form-select" aria-label="Default select example" id="selectMenu">
+                  <select 
+                  className="form-select" 
+                  aria-label="Default select example" 
+                  id="selectMenu"
+                  value={optionSelection}
+                  onChange={(event) => setOptionSelection(event.target.value)}
+                  >
                         <option selected>Choose a modification option</option>
                         <option value="1">Delete a beer tap</option>
                         <option value="2">Add a beer tap</option>
