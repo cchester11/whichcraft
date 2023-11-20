@@ -11,6 +11,11 @@ export default function Deletetap () {
       return (
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Tap</h1>
+                  <div className="mb-3">
+                        <label for="deleteTapForm" class="form-label">Delete Tap</label>
+                        <input class="form-control form-control-sm" id="deleteTapForm" type="text" placeholder="Ex: Blue Owl Cherry Blossom" aria-label="delete beer control form"></input>
+                        <button className="btn btn-large btn-primary">Submit</button>
+                  </div>
             </div>
       );
 };
