@@ -2,31 +2,31 @@ const data = require('../data/data.json');
 const fs = require('fs');
 const path = require('path');
 
-// get request all beers
-function getAllBeers(req, res) {
-      res.json(data.beer)
+// get request all taps
+function getAlltaps(req, res) {
+      res.json(data.tap)
 }
 
-// post request single beer
-function seedBeerController(req, res) {
-      let beerPath = path.join(__dirname, '../data/data.json');
-      let beerBody = req.body
-      let beerProperties = []
+// post request single tap
+function seedtapController(req, res) {
+      let tapPath = path.join(__dirname, '../data/data.json');
+      let tapBody = req.body
+      let tapProperties = []
 
       try {
-            if (beerBody) {
-                  Object.entries(beerBody).map(([property, value]) => {
-                        beerProperties.push(property)
+            if (tapBody) {
+                  Object.entries(tapBody).map(([property, value]) => {
+                        tapProperties.push(property)
                         if (typeof value !== 'string') {
                               return 'A string is required as the value type for this input.'
                         }
                   })
 
-                  console.log(beerProperties)
+                  console.log(tapProperties)
 
-                  data.beer.push(beerBody)
+                  data.tap.push(tapBody)
 
-                  fs.writeFile(beerPath, JSON.stringify(data), () => {
+                  fs.writeFile(tapPath, JSON.stringify(data), () => {
                         console.log(`${data} sent to json storage`)
                   })
 
@@ -44,25 +44,25 @@ function seedBeerController(req, res) {
       }
 }
 
-// delete request single beer
-function deleteBeer(req, res) {
-      let beerTitle;
+// delete request single tap
+function deletetap(req, res) {
+      let tapTitle;
       let match = false;
       const filePath = path.join(__dirname, '../data/data.json');
       let jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      let beers = jsonData.beer;
+      let taps = jsonData.tap;
 
       try {
             if (req.body) {
                   console.log(req.body);
 
-                  Object.entries(beers).map(([property, value]) => {
+                  Object.entries(taps).map(([property, value]) => {
                         if (value.title === req.body.title) {
                               console.log(value.title);
-                              beerTitle = value.title;
+                              tapTitle = value.title;
 
                               // Set the element to null instead of deleting it
-                              jsonData.beer[property] = null;
+                              jsonData.tap[property] = null;
 
                               match = true;
                         }
@@ -70,20 +70,20 @@ function deleteBeer(req, res) {
 
                   if (match) {
                         // Filter out the null elements and create a new array
-                        const updatedBeers = jsonData.beer.filter((beer) => beer !== null);
+                        const updatedtaps = jsonData.tap.filter((tap) => tap !== null);
 
-                        jsonData.beer = updatedBeers;
+                        jsonData.tap = updatedtaps;
 
                         fs.writeFile(filePath, JSON.stringify(jsonData), () => {
                               console.log('Updated data');
                         });
 
                         res.json({
-                              message: `The body has been logged. Good request. Title ${beerTitle} has been deleted.`
+                              message: `The body has been logged. Good request. Title ${tapTitle} has been deleted.`
                         });
                   } else {
                         res.json({
-                              message: "No beer in the database with a matching title"
+                              message: "No tap in the database with a matching title"
                         });
                   }
             } else {
@@ -96,4 +96,4 @@ function deleteBeer(req, res) {
       }
 }
 
-module.exports = { getAllBeers, seedBeerController, deleteBeer };
+module.exports = { getAlltaps, seedtapController, deletetap };

@@ -15,10 +15,10 @@ export default function AdminWorkshop() {
                         history('/workshop');
                         break;
                   case "1":
-                        history('/workshop/deletebeer');
+                        history('/workshop/deletetap');
                         break;
                   case "2":
-                        history('/workshop/createbeer');
+                        history('/workshop/createtap');
                         break;
                   case "3":
                         history('/workshop/deletenewsletter');
@@ -40,8 +40,8 @@ export default function AdminWorkshop() {
                   onChange={(event) => setOptionSelection(event.target.value)}
                   >
                         <option value="">Choose a modification option</option>
-                        <option value="1">Delete a beer tap</option>
-                        <option value="2">Add a beer tap</option>
+                        <option value="1">Delete a tap</option>
+                        <option value="2">Add a tap</option>
                         <option value="3">Delete a newsletter</option>
                         <option value="4">Add a newsletter</option>
                   </select>

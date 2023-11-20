@@ -73,8 +73,8 @@ body {
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
 }
 
-/* beer page settings */
-.beer-menu {
+/* tap page settings */
+.tap-menu {
       background-color: var(--secondary-color);
 }
 .card {
@@ -87,29 +87,29 @@ body {
 .hero-image {
       margin-top: 3%;
 }
-.beer-menu-header {
+.tap-menu-header {
       border-bottom: 1px solid var(--tertiary-color);
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
       width: fit-content;
 }
-.beer-title {
+.tap-title {
       border-bottom: 1px solid var(--tertiary-color);
       text-transform: uppercase;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
-.beer-style {
+.tap-style {
       font-style: italic;
       text-transform: uppercase;
 }
-.beer-description {
+.tap-description {
 }
-.beer-facts {
+.tap-facts {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 }
-.beer-fact {
+.tap-fact {
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
       background-color: var(--secondary-color);

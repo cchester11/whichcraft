@@ -1,11 +1,11 @@
 {
-      "beer": [
+      "tap": [
             {
                   "title": "belching beaver brewing branded & barreled mexican chocolate cake",
                   "style": "Imperial Stout",
                   "abv": "14.25%",
                   "IBU": "12",
-                  "beerNumber": "#24",
+                  "tapNumber": "#24",
                   "AdditionalNotes": "Super delicious cinnamon vibes"
             },
             {
@@ -13,15 +13,15 @@
                   "style": "Pilsner",
                   "abv": "10%",
                   "IBU": "9",
-                  "beerNumber": "#23",
-                  "AdditionalNotes": "This beer is made with honey and wild flower."
+                  "tapNumber": "#23",
+                  "AdditionalNotes": "This tap is made with honey and wild flower."
             },
             {
                   "title": "zilker cowboy candy",
                   "style": "Pale Ale American",
                   "abv": "5%",
                   "IBU": "11",
-                  "beerNumber": "#13",
+                  "tapNumber": "#13",
                   "AdditionalNotes": "Expect lots of fruity flavors"
             },
             {
@@ -29,7 +29,7 @@
                   "style": "Porter American",
                   "abv": "5.5%",
                   "IBU": "n/a",
-                  "beerNumber": "#3",
+                  "tapNumber": "#3",
                   "AdditionalNotes": "Smooth with enjoyable flavors of chocolate"
             },
             {
@@ -37,7 +37,7 @@
                   "style": "American IPA",
                   "abv": "7.2%",
                   "IBU": "55",
-                  "beerNumber": "#11",
+                  "tapNumber": "#11",
                   "AdditionalNotes": "Bitter citrus to sweet"
             },
             {
@@ -45,7 +45,7 @@
                   "style": "Strong Ale",
                   "abv": "9%",
                   "IBU": "n/a",
-                  "beerNumber": "#16",
+                  "tapNumber": "#16",
                   "AdditionalNotes": "Four malts and four hops in the malty strong ale"
             },
             {
@@ -53,7 +53,7 @@
                   "style": "Sour Ale",
                   "abv": "5%",
                   "IBU": "12",
-                  "beerNumber": "#5",
+                  "tapNumber": "#5",
                   "AdditionalNotes": "Spirit Animal offers a light and tart addition to a wonderful tasting ale"
             },
             {
@@ -61,7 +61,7 @@
                   "style": "Sour Ale",
                   "abv": "5%",
                   "IBU": "12",
-                  "beerNumber": "#5",
+                  "tapNumber": "#5",
                   "AdditionalNotes": "Little Boss offers a light and tart addition to a wonderful tasting ale"
             },
             {
@@ -69,7 +69,7 @@
                   "style": "Pilsner",
                   "abv": "5%",
                   "IBU": "25",
-                  "beerNumber": "#5",
+                  "tapNumber": "#5",
                   "AdditionalNotes": "Meanwhile Pilsner offers a sharp and crisp quality with notes of apple."
             },
             {
@@ -77,7 +77,7 @@
                   "style": "IPA American",
                   "abv": "6%",
                   "IBU": "14",
-                  "beerNumber": "#17",
+                  "tapNumber": "#17",
                   "AdditionalNotes": "The Fire Eagle is ABP's premiere IPA with bitter taste and an American body."
             },
             {
@@ -85,7 +85,7 @@
                   "style": "Pilsner",
                   "abv": "5%",
                   "IBU": "4",
-                  "beerNumber": "#7",
+                  "tapNumber": "#7",
                   "AdditionalNotes": "ABP's easy going, very crisp and qualified pilsner."
             },
             {
@@ -93,15 +93,15 @@
                   "style": "Dark Lager",
                   "abv": "5%",
                   "IBU": "4",
-                  "beerNumber": "#19",
-                  "AdditionalNotes": "Don't let the dark color of this beer fool you. It's very smooth and ready for any hot day."
+                  "tapNumber": "#19",
+                  "AdditionalNotes": "Don't let the dark color of this tap fool you. It's very smooth and ready for any hot day."
             },
             {
                   "title": "Blue Owl Cherry Bomb",
                   "style": "Stout",
                   "abv": "8%",
                   "IBU": "n/a",
-                  "beerNumber": "#24",
+                  "tapNumber": "#24",
                   "AdditionalNotes": "The Cherry Bomb is my favorite stout. It's packed with a sweet chocolatey and cherry flavor while it still holds a robustly bold body of a stout."
             }
       ],
@@ -119,29 +119,29 @@
                   },
                   "heading-2": {
                         "element": "sub-heading",
-                        "text": "New Beers this Week"
+                        "text": "New taps this Week"
                   },
-                  "returning-beer-1": {
+                  "returning-tap-1": {
                         "element": "list",
                         "text": "Saloon Door Kemah Suprema - American light lager, crisp and refreshing."
                   },
-                  "returning-beer-2": {
+                  "returning-tap-2": {
                         "element": "list",
                         "text": "4.7% Bear King Monkey Bridge Hefe - This style has a distinct banana character with hints of clove, a dry finish, full mouth feel, and high carbonation."
                   },
-                  "returning-beer-3": {
+                  "returning-tap-3": {
                         "element": "list",
                         "text": "5.8% Belching Beaver No Worries IPA - Strata, Galaxy, Mosiac, Citra, and Amarillo hops all lend their characteristics to this delightful West Coast IPA."
                   },
-                  "returning-beer-4": {
+                  "returning-tap-4": {
                         "element": "list",
                         "text": "6.2% BrewDog USA Hellcat IPA - BrewDog USA partners with Iron Maiden to create a fiesty India Pale Lager, citrus-forward with an especially complex balance of malts and hops."
                   },
-                  "returning-beer-5": {
+                  "returning-tap-5": {
                         "element": "list",
                         "text": "6% Pinthouse Island Kitty - A truly tropical IPA with a full body, some underlying hop character, and notes of juicy pineapple, tropical fruit, coconut, and nutmeg."
                   },
-                  "returning-beer-6": {
+                  "returning-tap-6": {
                         "element": "list",
                         "text": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
                   },
@@ -171,15 +171,15 @@
                   },
                   "heading-4": {
                         "element": "sub-heading",
-                        "text": "New Beers This Week"
+                        "text": "New taps This Week"
                   },
-                  "news-beer-1": {
+                  "news-tap-1": {
                         "element": "list",
                         "text": "Saloon Door Kemah Suprema - Walser Alpine Lager owes its inspiration to the crisp mountain lagers of the Swiss Appenzell. Rich golden in color with a delicately balanced profile of German Pilser malt, two varieties of Munich malt, and Spelt. Hopped with choice Hersbrucker, Tettnanger & Hallertau Tradition - meadow herbs and subtle spicy floral elements. 4.8% ABV"
                   },
-                  "new-beer-2": {
+                  "new-tap-2": {
                         "element": "list",
-                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
+                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored tap with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
             {
@@ -197,19 +197,19 @@
                   },
                   "heading-2": {
                         "element": "sub-heading",
-                        "text": "New and Returning Beers This Week"
+                        "text": "New and Returning taps This Week"
                   },
-                  "returning-beer-1": {
+                  "returning-tap-1": {
                         "element": "list",
                         "text": "Texas Keeper Cider Noir - Cider Noir is made from 100% Northern Spy apples double fermented with extra dark belgian candi, pecans and orange peel. Belgian candi, made from beet and date sugar, is a classic component of Dubbel and Trippel Ales. Dark fruit and toasted bread notes from the candi combine with ripe pear from the Spy. A hint of pecan and orange round out this stout cider. 11.1% ABV"
                   },
-                  "returning-beer-2": {
+                  "returning-tap-2": {
                         "element": "list",
                         "text": "Martin House Cookies & Cream - Cookie Dough Stout 6.2% ABV & Rich Cream Ale."
                   },
-                  "returning-beer-3": {
+                  "returning-tap-3": {
                         "element": "list",
-                        "text": "Founders Frootwood - They took a crisp, light-bodied cherry ale and hid it away in oak barrels that have held both bourbon and maple syrup. After a lengthy stint, it emerged a changed beer, blanketed in notes of warm vanilla and earthy sweetness. The wood proves itself the star of this beer, adding depth and taming the tart cherry while the maple imposes a velvety texture that lingers for not a moment too long. 8% ABV"
+                        "text": "Founders Frootwood - They took a crisp, light-bodied cherry ale and hid it away in oak barrels that have held both bourbon and maple syrup. After a lengthy stint, it emerged a changed tap, blanketed in notes of warm vanilla and earthy sweetness. The wood proves itself the star of this tap, adding depth and taming the tart cherry while the maple imposes a velvety texture that lingers for not a moment too long. 8% ABV"
                   },
                   "heading-3": {
                         "element": "sub-heading",
@@ -244,33 +244,33 @@
                   },
                   "paragraph-2": {
                         "element": "paragraph",
-                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of beer from our award winning selection."
+                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of tap from our award winning selection."
                   },
                   "heading-2": {
                         "element": "sub-heading",
-                        "text": "New Beers This Week"
+                        "text": "New taps This Week"
                   },
-                  "beer-1": {
+                  "tap-1": {
                         "element": "list",
                         "text": "Saloon Door Kemah Suprema - American light lager, crisp and refreshing."
                   },
-                  "beer-2": {
+                  "tap-2": {
                         "element": "list",
                         "text": "4.7% Bear King Monkey Bridge Hefe - This style has a distinct banana character with hints of clove, a dry finish, full mouth feel, and high carbonation."
                   },
-                  "beer-3": {
+                  "tap-3": {
                         "element": "list",
                         "text": "5.8% Belching Beaver No Worries IPA - Strata, Galaxy, Mosiac, Citra, and Amarillo hops all lend their characteristics to this delightful West Coast IPA."
                   },
-                  "beer-4": {
+                  "tap-4": {
                         "element": "list",
                         "text": "6.2% BrewDog USA Hellcat IPA - BrewDog USA partners with Iron Maiden to create a fiesty India Pale Lager, citrus-forward with an especially complex balance of malts and hops."
                   },
-                  "beer-5": {
+                  "tap-5": {
                         "element": "list",
                         "text": "6% Pinthouse Island Kitty - A truly tropical IPA with a full body, some underlying hop character, and notes of juicy pineapple, tropical fruit, coconut, and nutmeg."
                   },
-                  "beer-6": {
+                  "tap-6": {
                         "element": "list",
                         "text": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
                   },
@@ -290,7 +290,7 @@
                   },
                   "heading-4": {
                         "element": "sub-heading",
-                        "text": "Returning Beers This Week"
+                        "text": "Returning taps This Week"
                   },
                   "returning-1": {
                         "element": "list",
@@ -298,7 +298,7 @@
                   },
                   "returning-2": {
                         "element": "list",
-                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
+                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored tap with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
             {
@@ -309,33 +309,33 @@
                   },
                   "paragraph-2": {
                         "element": "paragraph",
-                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of beer from our award winning selection."
+                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of tap from our award winning selection."
                   },
                   "heading-2": {
                         "element": "sub-heading",
-                        "text": "New Beers This Week"
+                        "text": "New taps This Week"
                   },
-                  "beer-1": {
+                  "tap-1": {
                         "element": "list",
                         "text": "Saloon Door Kemah Suprema - American light lager, crisp and refreshing."
                   },
-                  "beer-2": {
+                  "tap-2": {
                         "element": "list",
                         "text": "4.7% Bear King Monkey Bridge Hefe - This style has a distinct banana character with hints of clove, a dry finish, full mouth feel, and high carbonation."
                   },
-                  "beer-3": {
+                  "tap-3": {
                         "element": "list",
                         "text": "5.8% Belching Beaver No Worries IPA - Strata, Galaxy, Mosiac, Citra, and Amarillo hops all lend their characteristics to this delightful West Coast IPA."
                   },
-                  "beer-4": {
+                  "tap-4": {
                         "element": "list",
                         "text": "6.2% BrewDog USA Hellcat IPA - BrewDog USA partners with Iron Maiden to create a fiesty India Pale Lager, citrus-forward with an especially complex balance of malts and hops."
                   },
-                  "beer-5": {
+                  "tap-5": {
                         "element": "list",
                         "text": "6% Pinthouse Island Kitty - A truly tropical IPA with a full body, some underlying hop character, and notes of juicy pineapple, tropical fruit, coconut, and nutmeg."
                   },
-                  "beer-6": {
+                  "tap-6": {
                         "element": "list",
                         "text": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
                   },
@@ -355,7 +355,7 @@
                   },
                   "heading-4": {
                         "element": "sub-heading",
-                        "text": "Returning Beers This Week"
+                        "text": "Returning taps This Week"
                   },
                   "returning-1": {
                         "element": "list",
@@ -363,7 +363,7 @@
                   },
                   "returning-2": {
                         "element": "list",
-                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
+                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored tap with a pleasant candied hazelnut finish. 5.1% ABV"
                   }
             },
             {
@@ -374,33 +374,33 @@
                   },
                   "paragraph-2": {
                         "element": "paragraph",
-                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of beer from our award winning selection."
+                        "text": "Furthermore, we're introducing Blues Night this week at 7m on Tuesday. We will have a live in house musician with us, so come in and enjoy some blues aesthetic and your choice of tap from our award winning selection."
                   },
                   "heading-2": {
                         "element": "sub-heading",
-                        "text": "New Beers This Week"
+                        "text": "New taps This Week"
                   },
-                  "beer-1": {
+                  "tap-1": {
                         "element": "list",
                         "text": "Saloon Door Kemah Suprema - American light lager, crisp and refreshing."
                   },
-                  "beer-2": {
+                  "tap-2": {
                         "element": "list",
                         "text": "4.7% Bear King Monkey Bridge Hefe - This style has a distinct banana character with hints of clove, a dry finish, full mouth feel, and high carbonation."
                   },
-                  "beer-3": {
+                  "tap-3": {
                         "element": "list",
                         "text": "5.8% Belching Beaver No Worries IPA - Strata, Galaxy, Mosiac, Citra, and Amarillo hops all lend their characteristics to this delightful West Coast IPA."
                   },
-                  "beer-4": {
+                  "tap-4": {
                         "element": "list",
                         "text": "6.2% BrewDog USA Hellcat IPA - BrewDog USA partners with Iron Maiden to create a fiesty India Pale Lager, citrus-forward with an especially complex balance of malts and hops."
                   },
-                  "beer-5": {
+                  "tap-5": {
                         "element": "list",
                         "text": "6% Pinthouse Island Kitty - A truly tropical IPA with a full body, some underlying hop character, and notes of juicy pineapple, tropical fruit, coconut, and nutmeg."
                   },
-                  "beer-6": {
+                  "tap-6": {
                         "element": "list",
                         "text": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
                   },
@@ -420,7 +420,7 @@
                   },
                   "heading-4": {
                         "element": "sub-heading",
-                        "text": "Returning Beers This Week"
+                        "text": "Returning taps This Week"
                   },
                   "returning-1": {
                         "element": "list",
@@ -428,11 +428,11 @@
                   },
                   "returning-2": {
                         "element": "list",
-                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
+                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored tap with a pleasant candied hazelnut finish. 5.1% ABV"
                   },
                   "returning-3": {
                         "element": "list",
-                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored beer with a pleasant candied hazelnut finish. 5.1% ABV"
+                        "text": "Brewtorium Sidewalk Piper - Tradition meets legend in this malt-forward medium-bodied ale. Rich flavors of toffee and maple coalesce into a deep amber colored tap with a pleasant candied hazelnut finish. 5.1% ABV"
                   },
                   "returning-4": {
                         "element": "list",

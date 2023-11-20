@@ -7,7 +7,7 @@ export default function NewsletterSubscription() {
             <div id="mc_embed_shell">
                   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
                         <div id="mc_embed_signup">
-                              <form action="https://WhichCraftBeerStore.us3.list-manage.com/subscribe/post?u=95437aa3de50f93eeb7f90adc&amp;id=38b77e0567&amp;f_id=00dac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
+                              <form action="https://WhichCrafttapstore.us3.list-manage.com/subscribe/post?u=95437aa3de50f93eeb7f90adc&amp;id=38b77e0567&amp;f_id=00dac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
                                     <div id="mc_embed_signup_scroll"><h2>Subscribe To Our Newsletter</h2>
                                           <div className="mc-field-group">
                                                 <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span>

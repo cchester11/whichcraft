@@ -4,8 +4,8 @@ import Main from './components/Main';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminWorkshop from './components/admin/AdminWorkshop';
 import PrivateRoutes from './utilities/PrivateRoutes';
-import CreateBeer from './components/admin/workshopComponents/CreateBeer';
-import DeleteBeer from './components/admin/workshopComponents/DeleteBeer';
+import Createtap from './components/admin/workshopComponents/Createtap';
+import Deletetap from './components/admin/workshopComponents/Deletetap';
 import CreateNewsletter from './components/admin/workshopComponents/CreateNewsletter';
 import DeleteNewsletter from './components/admin/workshopComponents/DeleteNewsletter';
 
@@ -17,8 +17,8 @@ function App() {
         <Route path='/admin' element={<AdminLogin />} />
         <Route element={<PrivateRoutes />}>
           <Route path='/workshop' element={<AdminWorkshop />} />
-          <Route path='/workshop/createbeer' element={<CreateBeer />} />
-          <Route path='/workshop/deletebeer' element={<DeleteBeer/>} />
+          <Route path='/workshop/createtap' element={<Createtap />} />
+          <Route path='/workshop/deletetap' element={<Deletetap/>} />
           <Route path='/workshop/createnewsletter' element={<CreateNewsletter />} />
           <Route path='/workshop/deletenewsletter' element={<DeleteNewsletter />} />
         </Route>

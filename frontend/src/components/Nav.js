@@ -93,7 +93,7 @@ export default function Nav () {
                                                       <a
                                                             className="dropdown-item"
                                                             href="#ontap"
-                                                            >Beer Menu</a
+                                                            >tap Menu</a
                                                       >
                                                 </li>
                                                 <li>

@@ -2,89 +2,89 @@ import React, { useState, useEffect } from "react";
 import '../../stylesheets/main.css';
 import axios from "axios";
 
-export default function BeersList() {
+export default function TapsList() {
       // global variable to house the response
-      const [beers, setBeers] = useState([]);
+      const [taps, settaps] = useState([]);
 
-      async function getBeers() {
+      async function gettaps() {
             try {
-                  const response = await axios.get('http://localhost:3001/beers/allbeers');
-                  let beerObs = response.data
+                  const response = await axios.get('http://localhost:3001/taps/alltaps');
+                  let tapObs = response.data
 
                   let entries = []
 
-                  for (let i = 0; i < beerObs.length; i++) {
-                        let curr = beerObs[i]
+                  for (let i = 0; i < tapObs.length; i++) {
+                        let curr = tapObs[i]
 
                         entries.push([
                               curr.title,
                               curr.style,
                               curr.abv,
                               curr.IBU,
-                              curr.beerNumber,
+                              curr.tapNumber,
                               curr.AdditionalNotes
                         ])
                   }
 
-                  setBeers(entries)
+                  settaps(entries)
             } catch (error) {
                   console.error(error);
             }
       }
 
       useEffect(() => {
-            getBeers()
+            gettaps()
       }, [])
 
       useEffect(() => {
-            console.log("beers: ", beers)
-      }, [beers])
+            console.log("taps: ", taps)
+      }, [taps])
 
       return (
-            <div className="container-fluid text-center beer-menu">
+            <div className="container-fluid text-center tap-menu">
                   <div className="row d-flex justify-content-center">
-                        {beers.map((beer, index) => (
-                              <div className="card m-2" key={index} value={beer} style={{ width: "18rem" }}>
+                        {taps.map((tap, index) => (
+                              <div className="card m-2" key={index} value={tap} style={{ width: "18rem" }}>
                                     <div className="card-body">
-                                          <h5 className="card-title beer-title">
-                                                {beer[0]}
+                                          <h5 className="card-title tap-title">
+                                                {tap[0]}
                                           </h5>
                                           <h6
-                                                className="card-subtitle mb-2 text-body-secondary beer-style"
+                                                className="card-subtitle mb-2 text-body-secondary tap-style"
                                           >
                                                 <img
-                                                      src="images/stout-beer.png"
+                                                      src="images/stout-tap.png"
                                                       height="40px"
                                                       width="30px"
                                                       alt=""
                                                 />
-                                                {beer[1]}
+                                                {tap[1]}
                                           </h6>
                                           <div
-                                                className="container beer-facts mt-3 mb-3"
+                                                className="container tap-facts mt-3 mb-3"
                                           >
                                                 <ul className="list-group list-group-flush">
                                                       <li
-                                                            className="list-group-item fw-lighter beer-fact"
+                                                            className="list-group-item fw-lighter tap-fact"
                                                       >
-                                                            ABV: {beer[2]}
+                                                            ABV: {tap[2]}
                                                       </li>
                                                       <li
-                                                            className="list-group-item fw-lighter beer-fact"
+                                                            className="list-group-item fw-lighter tap-fact"
                                                       >
-                                                            IBU: {beer[3]}
+                                                            IBU: {tap[3]}
                                                       </li>
                                                       <li
-                                                            className="list-group-item fw-lighter beer-fact"
+                                                            className="list-group-item fw-lighter tap-fact"
                                                       >
-                                                            Tap Number: {beer[4]}
+                                                            Tap Number: {tap[4]}
                                                       </li>
                                                 </ul>
                                           </div>
                                           <p
-                                                className="card-text fw-lighter beer-description"
+                                                className="card-text fw-lighter tap-description"
                                           >
-                                                {beer[5]}
+                                                {tap[5]}
                                           </p>
                                           <a href="/" className="btn btn-warning"
                                           >Untappd</a>

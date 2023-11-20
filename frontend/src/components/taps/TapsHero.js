@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../../stylesheets/main.css';
 import resizeImage from "../../utilities/resizeImage";
 
-export default function BeersHero() {
+export default function TapsHero() {
       const heroImgPath = "images/taps-large.jpeg";
       const [resizedHero, setResizedHero] = useState(null);
 
