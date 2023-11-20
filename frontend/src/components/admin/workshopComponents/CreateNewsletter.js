@@ -12,6 +12,8 @@ import React from "react";
 
 export default function CreateNewsletter () {
       return (
-            <div>Create Newsletter</div>
+            <div>
+                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Newsletter</h1>
+            </div>
       );
 };

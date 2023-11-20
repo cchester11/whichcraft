@@ -10,6 +10,8 @@ import React from "react";
 
 export default function Createtap () {
       return (
-            <div>Create tap</div>
+            <div>
+                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Tap</h1>
+            </div>
       );
 };

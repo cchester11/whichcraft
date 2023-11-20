@@ -9,6 +9,8 @@ import React from "react";
 
 export default function DeleteNewsletter () {
       return (
-            <div>Delete Newsletter</div>
+            <div>
+                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Newsletter</h1>
+            </div>
       );
 };
