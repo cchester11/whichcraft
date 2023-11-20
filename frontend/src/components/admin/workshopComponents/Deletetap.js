@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // This component needs:
 // 1. A form
@@ -8,6 +8,13 @@ import React from "react";
 // 2. A submit handler that will send a request to the delete tap api endpoint 
 
 export default function Deletetap () {
+      const [tapToDelete, setTapToDelete] = useState("");
+
+      const submitHandler = () => {
+            // I need to save the value the admin places in the input below to the tapToDelete state
+            // then I need to send an axios request to /taps/deletetap
+      };
+
       return (
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Tap</h1>
