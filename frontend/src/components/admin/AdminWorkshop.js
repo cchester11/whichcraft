@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logout from "../../utilities/logout";
 import '../../stylesheets/main.css';
 
 export default function AdminWorkshop() {
+      const [optionSelection, setOptionSelection] = useState("");
+      const history = useNavigate();
       const clientToken = localStorage.getItem('clientToken');
 
       // submit logic below. The number associated with each option in the select element will correspond to a route which the admin will be redirected to
       const submitHandler = () => {
-            let selectMenu = document.getElementById('selectMenu'); // Use getElementById
-            let optionSelection = selectMenu.value;
+            const selectMenu = document.getElementById('selectMenu');
+
+            setOptionSelection(selectMenu.value);
 
             console.log(optionSelection);
+
+            switch (optionSelection) {
+                  default: 
+                        history('/workshop');
+                        break;
+                  case "1":
+                        history('/workshop/deletebeer');
+                        break;
+                  case "2":
+                        history('/workshop/createbeer');
+                        break;
+                  case "3":
+                        history('/workshop/deletenewsletter');
+                        break;
+                  case "4":
+                        history('/workshop/createnewsletter');
+                        break;
+            };
       }
 
       return (
