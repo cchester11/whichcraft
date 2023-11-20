@@ -39,7 +39,7 @@ export default function AdminWorkshop() {
                   value={optionSelection}
                   onChange={(event) => setOptionSelection(event.target.value)}
                   >
-                        <option selected>Choose a modification option</option>
+                        <option value="">Choose a modification option</option>
                         <option value="1">Delete a beer tap</option>
                         <option value="2">Add a beer tap</option>
                         <option value="3">Delete a newsletter</option>
