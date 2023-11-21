@@ -14,16 +14,17 @@ function getAllTapTitles(req, res) {
 
       // read the json data
       Object.entries(data.tap).map(([property, value]) => {
-            if(property === title) {
-                  
+            if(value.title) {
+                  tapTitles.push(value.title)
             }
       })
-      // loop through the nested tap object
-
-      // push each title found in the nested object to the declared array
 
       // return the array in the response parameter
-}
+      res.json({
+            message: "All tap titles",
+            data: tapTitles
+      })
+};
 
 // post request single tap
 function seedtapController(req, res) {
@@ -116,4 +117,4 @@ function deletetap(req, res) {
       }
 };
 
-module.exports = { getAlltaps, seedtapController, deletetap };
+module.exports = { getAlltaps, getAllTapTitles, seedtapController, deletetap };
