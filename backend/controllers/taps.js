@@ -54,7 +54,7 @@ function deletetap(req, res) {
 
       try {
             if (req.body) {
-                  console.log(req.body);
+                  console.log("body: " + req.body);
 
                   Object.entries(taps).map(([property, value]) => {
                         if (value.title === req.body.title) {
@@ -65,6 +65,8 @@ function deletetap(req, res) {
                               jsonData.tap[property] = null;
 
                               match = true;
+                        } else {
+                              console.log('no match: ' + req.body.title)
                         }
                   });
 

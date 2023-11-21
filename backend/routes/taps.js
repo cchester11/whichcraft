@@ -3,6 +3,6 @@ const { getAlltaps, seedtapController, deletetap } = require('../controllers/tap
 
 router.get('/alltaps', getAlltaps)
 router.post('/seedtap', seedtapController)
-router.delete('/deletetap', deletetap)
+router.post('/deletetap', deletetap)
 
 module.exports = router;
