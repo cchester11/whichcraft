@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 // This component needs:
@@ -17,6 +17,20 @@ import axios from "axios";
 
 export default function Deletetap () {
       const [tapToDelete, setTapToDelete] = useState("");
+      const [tapTitles, setTapTitles] = useState([]);
+
+      const grabTapTitles = async () => {
+            // make call to my api to grab all tap titles
+            const response = await axios.get("http://localhost:3001/taps/alltaptitles");
+
+            // when logging the response, the array of tap titles is nested in response.data.data as an array
+            console.log(response)
+            // should be an array containing 13 strings
+            setTapTitles(response.data.data)
+
+            //tapTitles array has no state in this log. The array is empty
+            console.log(tapTitles);
+      }
 
       const submitHandler = async () => {
             try {
@@ -37,6 +51,11 @@ export default function Deletetap () {
                   alert("Error: " + error)
             }
       };
+
+      // here is the useEffect that launches the axios call and function above
+      useEffect(() => {
+            grabTapTitles()
+      }, [])
 
       return (
             <div>
