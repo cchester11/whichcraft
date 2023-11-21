@@ -5,6 +5,24 @@ const path = require('path');
 // get request all taps
 function getAlltaps(req, res) {
       res.json(data.tap)
+};
+
+// get titles of every tap
+function getAllTapTitles(req, res) {
+      // declare an array that will store all titles
+      let tapTitles = [];
+
+      // read the json data
+      Object.entries(data.tap).map(([property, value]) => {
+            if(property === title) {
+                  
+            }
+      })
+      // loop through the nested tap object
+
+      // push each title found in the nested object to the declared array
+
+      // return the array in the response parameter
 }
 
 // post request single tap
@@ -42,7 +60,7 @@ function seedtapController(req, res) {
       } catch (error) {
             throw new Error(error)
       }
-}
+};
 
 // delete request single tap
 function deletetap(req, res) {
@@ -96,6 +114,6 @@ function deletetap(req, res) {
       } catch (error) {
             throw new Error(error);
       }
-}
+};
 
 module.exports = { getAlltaps, seedtapController, deletetap };
