@@ -50,7 +50,7 @@ export default function Deletetap () {
       // here is the useEffect that launches the axios call and function above
       useEffect(() => {
             grabTapTitles()
-      }, [])
+      }, []);
 
       return (
             <div>
