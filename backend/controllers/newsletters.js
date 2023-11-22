@@ -24,11 +24,21 @@ function getAllNewsLetters(req, res) {
 // get all newsletter titles
 function getAllNewsletterTitles(req, res) {
       let letterTitles = [];
-
-      Object.entries(data.newsLetters).map(([property, value]) => {
-            console.log("property: " + property)
-            console.log("value: " + value)
-      })
+      try {
+            Object.entries(data.newsLetters).map(([property, value]) => {
+                  console.log("property: " + property)
+                  console.log("value: " + value)
+            })
+      
+            res.json({
+                  message: "All Newsletter Titles",
+                  data: letterTitles
+            })
+      } catch (error) {
+            res.status(400).json({
+                  error: error.message
+            })
+      }
 };
 
 // post request to add new newsletter
@@ -117,4 +127,4 @@ function deleteNewsLetter(req, res) {
       }
 }
 
-module.exports = { getAllNewsLetters, addNewsLetter, deleteNewsLetter };
+module.exports = { getAllNewsLetters, getAllNewsletterTitles, addNewsLetter, deleteNewsLetter };
