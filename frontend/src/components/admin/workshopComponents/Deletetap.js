@@ -20,16 +20,12 @@ export default function Deletetap () {
       const [tapTitles, setTapTitles] = useState([]);
 
       const grabTapTitles = async () => {
-            // make call to my api to grab all tap titles
-            const response = await axios.get("http://localhost:3001/taps/alltaptitles");
-
-            // when logging the response, the array of tap titles is nested in response.data.data as an array
-            console.log(response)
-            // should be an array containing 13 strings
-            setTapTitles(response.data.data)
-
-            //tapTitles array has no state in this log. The array is empty
-            console.log(tapTitles);
+            try {
+                  const response = await axios.get("http://localhost:3001/taps/alltaptitles");
+                  setTapTitles(response.data.data)
+            } catch (error) {
+                  window.alert('Error: ' + error)
+            }
       }
 
       const submitHandler = async () => {
@@ -44,7 +40,6 @@ export default function Deletetap () {
                   });
 
                   window.alert(response.data.message)
-                  console.log(response);
 
                   setTapToDelete("");
             } catch (error) {
@@ -75,6 +70,9 @@ export default function Deletetap () {
                         </input>
                         <datalist id="titleList">
                               {/* map through all titles from json here */}
+                              {tapTitles.map((title, index) => (
+                                    <option key={index} value={title}></option>
+                              ))}
                         </datalist>
                         <button className="btn btn-large btn-primary" onClick={submitHandler}>Submit</button>
                   </div>
