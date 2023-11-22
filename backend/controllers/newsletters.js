@@ -26,9 +26,10 @@ function getAllNewsletterTitles(req, res) {
       let letterTitles = [];
       try {
             Object.entries(data.newsLetters).map(([property, value]) => {
-                  console.log("property: " + property)
-                  console.log("value: " + value)
-            })
+                  if(value.heading) {
+                        letterTitles.push(value.heading.text)
+                  }
+            });
       
             res.json({
                   message: "All Newsletter Titles",
@@ -37,8 +38,8 @@ function getAllNewsletterTitles(req, res) {
       } catch (error) {
             res.status(400).json({
                   error: error.message
-            })
-      }
+            });
+      };
 };
 
 // post request to add new newsletter
