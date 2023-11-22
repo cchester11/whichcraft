@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import WorkshopModal from "./modals/Modal";
 
 // This component needs:
 // 1. A form
@@ -11,6 +12,7 @@ import axios from "axios";
 export default function DeleteNewsletter() {
       const [letterToDelete, setLetterToDelete] = useState("");
       const [letterTitles, setLetterTitles] = useState([]);
+      const [showModal, setShowModal] = useState(false);
 
       const grabLetterTitles = async () => {
             try {
@@ -28,9 +30,13 @@ export default function DeleteNewsletter() {
                         return;
                   }
 
-                  const response = await axios.post("http://localhost:3001/newsletters/deletenewsletter")
+                  const response = await axios.post("http://localhost:3001/newsletters/deletenewsletter", {
+                        title: letterToDelete
+                  })
 
                   window.alert(response.data.message)
+
+                  setShowModal(true);
 
                   setLetterToDelete("");
             } catch (error) {
@@ -41,7 +47,7 @@ export default function DeleteNewsletter() {
       useEffect(() => {
             grabLetterTitles()
       }, []);
-      
+
       return (
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Newsletter</h1>
@@ -66,6 +72,8 @@ export default function DeleteNewsletter() {
                         </datalist>
                         <button className="btn btn-large btn-primary" onClick={submitHandler}>Submit</button>
                   </div>
+
+                  {showModal && <WorkshopModal />}
             </div>
       );
 };

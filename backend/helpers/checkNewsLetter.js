@@ -38,7 +38,7 @@ function checkAllProperties (param) {
                   return;
             }
 
-            if (value.element !== 'heading' && value.element !== 'sub-heading' && value.element !== 'list' && value.element !== 'paragraph' && value.element !== 'order') {
+            if (value.element !== 'heading' && value.element !== 'sub-heading' && value.element !== 'list' && value.element !== 'paragraph' && value.element !== 'order' && value.element !== 'image') {
                   if(value.paragraph1) {
                         return;
                   }

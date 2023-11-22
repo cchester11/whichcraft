@@ -4,6 +4,6 @@ const { addNewsLetter, getAllNewsLetters, getAllNewsletterTitles, deleteNewsLett
 router.post('/addnewsletter', addNewsLetter);
 router.get('/allnewsletters', getAllNewsLetters);
 router.get('/allnewslettertitles', getAllNewsletterTitles);
-router.delete('/deletenewsletter', deleteNewsLetter);
+router.post('/deletenewsletter', deleteNewsLetter);
 
 module.exports = router;
