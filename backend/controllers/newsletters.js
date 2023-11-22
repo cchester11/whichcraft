@@ -21,6 +21,16 @@ function getAllNewsLetters(req, res) {
       })
 };
 
+// get all newsletter titles
+function getAllNewsletterTitles(req, res) {
+      let letterTitles = [];
+
+      Object.entries(data.newsLetters).map(([property, value]) => {
+            console.log("property: " + property)
+            console.log("value: " + value)
+      })
+};
+
 // post request to add new newsletter
 function addNewsLetter(req, res) {
       try {
