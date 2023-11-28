@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WorkshopModal from "./modals/Modal";
+// import WorkshopModal from "./modals/Modal";
 
 // This component needs:
 // 1. A form
@@ -12,7 +12,6 @@ import WorkshopModal from "./modals/Modal";
 export default function DeleteNewsletter() {
       const [letterToDelete, setLetterToDelete] = useState("");
       const [letterTitles, setLetterTitles] = useState([]);
-      const [showModal, setShowModal] = useState(false);
 
       const grabLetterTitles = async () => {
             try {
@@ -34,9 +33,7 @@ export default function DeleteNewsletter() {
                         title: letterToDelete
                   })
 
-                  window.alert(response.data.message)
-
-                  setShowModal(true);
+                  console.log(response.data.message)
 
                   setLetterToDelete("");
             } catch (error) {
@@ -50,6 +47,19 @@ export default function DeleteNewsletter() {
 
       return (
             <div>
+                  <div className="modal"  id="successModal" tabIndex="-1">
+                        <div className="modal-dialog">
+                              <div className="modal-content">
+                                    <div className="modal-header">
+                                          <h5 className="modal-title">Success!</h5>
+                                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                          <p>Newsletter successfully deleted.</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Newsletter</h1>
                   <div className="mb-3">
                         <label htmlFor="deleteLetterForm" className="form-label">Delete Newsletter</label>
@@ -70,10 +80,10 @@ export default function DeleteNewsletter() {
                                     <option key={index} value={title}></option>
                               ))}
                         </datalist>
-                        <button className="btn btn-large btn-primary" onClick={submitHandler}>Submit</button>
+                        <button className="btn btn-large btn-primary" data-bs-toggle="modal" data-bs-target='#successModal'  onClick={submitHandler}>
+                              Submit
+                        </button>
                   </div>
-
-                  {showModal && <WorkshopModal />}
             </div>
       );
 };
