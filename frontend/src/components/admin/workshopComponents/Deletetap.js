@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import logout from "../../../utilities/logout";
+import WorkshopModal from "./modals/Modal";
 
 // This component needs:
 // 1. A form
@@ -21,6 +22,9 @@ export default function Deletetap () {
 
       const [tapToDelete, setTapToDelete] = useState("");
       const [tapTitles, setTapTitles] = useState([]);
+      const [successModal, setSuccessModal] = useState(false);
+      const [modalHeaderState, setModalHeaderState] = useState("");
+      const [modalBodyState, setModalBodyState] = useState("");
 
       const grabTapTitles = async () => {
             try {
@@ -29,7 +33,11 @@ export default function Deletetap () {
             } catch (error) {
                   window.alert('Error: ' + error)
             }
-      }
+      };
+
+      const toggleSuccessModal = () => {
+            setSuccessModal(false);
+      };
 
       const submitHandler = async () => {
             try {
@@ -45,8 +53,11 @@ export default function Deletetap () {
                   window.alert(response.data.message)
 
                   setTapToDelete("");
+                  setModalHeaderState("Success!");
+                  setModalBodyState("Beer Deleted!");
             } catch (error) {
-                  alert("Error: " + error)
+                  setModalHeaderState("Error")
+                  setModalBodyState(error)
             }
       };
 
@@ -82,6 +93,7 @@ export default function Deletetap () {
                   <div className="d-flex justify-content-start logout-button-container">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
+                  < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} headerState={modalHeaderState} bodyState={modalBodyState} />
             </div>
       );
 };

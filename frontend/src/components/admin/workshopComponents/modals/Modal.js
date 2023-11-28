@@ -7,11 +7,11 @@ export default function WorkshopModal (props) {
                   <Modal show={props.isOpen}>
                         <Modal.Header>
                               <Modal.Title>
-                                    Success!
+                                    {props.headerState}
                               </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                              Newsletter Deleted!
+                              {props.bodyState}
                         </Modal.Body>
                         <Modal.Footer>
                               <Button variant="primary" onClick={props.toggle}>X</Button>

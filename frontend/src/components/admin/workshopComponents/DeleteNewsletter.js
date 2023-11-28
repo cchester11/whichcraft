@@ -16,6 +16,8 @@ export default function DeleteNewsletter() {
       const [letterToDelete, setLetterToDelete] = useState("");
       const [letterTitles, setLetterTitles] = useState([]);
       const [successModal, setSuccessModal] = useState(false);
+      const [modalHeaderState, setModalHeaderState] = useState("");
+      const [modalBodyState, setModalBodyState] = useState("");
 
       const grabLetterTitles = async () => {
             try {
@@ -35,19 +37,22 @@ export default function DeleteNewsletter() {
                   if (letterToDelete.trim() === "") {
                         alert("Please enter a tap name");
                         return;
-                  }
+                  };
 
                   const response = await axios.post("http://localhost:3001/newsletters/deletenewsletter", {
                         title: letterToDelete
-                  })
+                  });
 
-                  console.log(response.data.message)
+                  console.log(response.data.message);
 
                   setSuccessModal(true);
+                  setModalHeaderState("Success!");
+                  setModalBodyState("Newsletter Deleted!");
 
                   setLetterToDelete("");
             } catch (error) {
-                  window.alert("Error: " + error)
+                  setModalHeaderState("Error!")
+                  setModalBodyState(error)
             }
       };
 
@@ -84,7 +89,7 @@ export default function DeleteNewsletter() {
                   <div className="d-flex justify-content-start logout-button-container">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
-                  < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} />
+                  < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} headerState={modalHeaderState} bodyState={modalBodyState} />
             </div>
       );
 };
