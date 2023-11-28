@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import logout from "../../../utilities/logout";
 
 // This component needs:
 // 1. A form
@@ -16,6 +17,8 @@ import axios from "axios";
 //          4. Loop through that array to place options in the datalist element
 
 export default function Deletetap () {
+      const clientToken = localStorage.getItem('clientToken');
+
       const [tapToDelete, setTapToDelete] = useState("");
       const [tapTitles, setTapTitles] = useState([]);
 
@@ -75,6 +78,9 @@ export default function Deletetap () {
                               ))}
                         </datalist>
                         <button className="btn btn-large btn-primary" onClick={submitHandler}>Submit</button>
+                  </div>
+                  <div className="d-flex justify-content-start logout-button-container">
+                        <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
             </div>
       );

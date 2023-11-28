@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WorkshopModal from "./modals/Modal";
+import logout from "../../../utilities/logout";
 
 // This component needs:
 // 1. A form
@@ -10,6 +11,8 @@ import WorkshopModal from "./modals/Modal";
 // 2. A submit handler that sends a request to the delete newsletter api
 
 export default function DeleteNewsletter() {
+      const clientToken = localStorage.getItem('clientToken');
+
       const [letterToDelete, setLetterToDelete] = useState("");
       const [letterTitles, setLetterTitles] = useState([]);
       const [successModal, setSuccessModal] = useState(false);
@@ -77,6 +80,9 @@ export default function DeleteNewsletter() {
                         <button className="btn btn-large btn-primary" onClick={submitHandler}>
                               Submit
                         </button>
+                  </div>
+                  <div className="d-flex justify-content-start logout-button-container">
+                        <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
                   < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} />
             </div>
