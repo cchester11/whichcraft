@@ -36,6 +36,9 @@ function seedtapController(req, res) {
             if (tapBody) {
                   Object.entries(tapBody).map(([property, value]) => {
                         // place logic here to return an error if the beer is currently stored in the json already under the same title
+                        if(property === 'title') {
+                              // object entries of data.tap and check titles
+                        }
 
                         if (typeof value !== 'string') {
                               return 'A string is required as the value type for this input.'
