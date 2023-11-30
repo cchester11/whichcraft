@@ -12,18 +12,6 @@ export default function AdminEntry() {
 
       const navigate = useNavigate();
 
-      const handleUsername = (event) => {
-            const inputVal = event.target.value
-
-            setUsername(inputVal)
-      };
-
-      const handlePassword = (event) => {
-            const inputVal = event.target.value;
-
-            setPassword(inputVal)
-      };
-
       const toggleSuccessModal = () => {
             setUsername('');
             setPassword('');
@@ -60,11 +48,25 @@ export default function AdminEntry() {
             <div className="container d-flex flex-column" style={{ width:'40%' }}>
                   <div className="mb-3">
                         <label htmlFor="username_login" className="form-label">Username</label>
-                        <input type="text" className="form-control" id="username_login" placeholder="username" onChange={handleUsername}/>
+                        <input 
+                              type="text" 
+                              className="form-control" 
+                              id="username_login" 
+                              placeholder="username"
+                              value={username} 
+                              onChange={(event) => setUsername(event.target.value)}
+                        />
                   </div>
                   <div className="mb-3">
                         <label htmlFor="password_login" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="password_login" placeholder="password" onChange={handlePassword}/>
+                        <input 
+                              type="password" 
+                              className="form-control" 
+                              id="password_login" 
+                              placeholder="password" 
+                              value={password}
+                              onChange={(event) => setPassword(event.target.value)}
+                        />
                   </div>
                   <button type="submit" className="btn btn-large btn-primary" onClick={() => {
                         handleLogin(username, password)
