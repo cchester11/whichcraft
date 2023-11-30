@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import $ from 'jquery';
 
 export default function MailchimpForm() {
       useEffect(() => {
             // Mailchimp script
-            window.fnames = new Array();
-            window.ftypes = new Array();
+            window.fnames = [];
+            window.ftypes = [];
             let fnames = window.fnames;
             let ftypes = window.ftypes;
             fnames[0] = 'EMAIL';
@@ -19,6 +19,7 @@ export default function MailchimpForm() {
 
             // Initialize Mailchimp
             const $mcj = $.noConflict(true);
+            console.log($mcj)
       }, []);
 
       return null;

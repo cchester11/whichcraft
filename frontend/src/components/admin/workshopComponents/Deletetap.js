@@ -50,9 +50,10 @@ export default function Deletetap () {
                         title: tapToDelete
                   });
 
-                  window.alert(response.data.message)
+                  console.log(response.data.message);
 
                   setTapToDelete("");
+                  setSuccessModal(true);
                   setModalHeaderState("Success!");
                   setModalBodyState("Beer Deleted!");
             } catch (error) {
