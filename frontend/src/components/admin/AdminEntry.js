@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import WorkshopModal from "./workshopComponents/modals/Modal";
 
 export default function AdminEntry() {
       const [username, setUsername] = useState('')
       const [password, setPassword] = useState('')
+      const [successModal, setSuccessModal] = useState(false);
+      const [modalHeaderState, setModalHeaderState] = useState('');
+      const [modalBodyState, setModalBodyState] = useState('');
 
       const navigate = useNavigate();
 
@@ -20,13 +24,20 @@ export default function AdminEntry() {
             setPassword(inputVal)
       };
 
+      const toggleSuccessModal = () => {
+            setUsername('');
+            setPassword('');
+
+            setSuccessModal(false);
+      };
+
       const handleLogin = async (username, password) => {
             // send a request to the login endpoint
             // endpoint checks for a good match and sends back a response
             const response = await axios.post('http://localhost:3001/admin/login', {
                   username: username,
                   password: password
-            })
+            });
 
             const authStatus = response.data.loggedIn;
             const clientToken = response.data.adminToken;
@@ -35,12 +46,13 @@ export default function AdminEntry() {
             // store encrypted token in local storage
             // set authStatus to true to access workshop
             if(authStatus === true) {
-                  localStorage.setItem('clientToken', clientToken)
+                  localStorage.setItem('clientToken', clientToken);
 
-                  navigate('/workshop')
+                  navigate('/workshop');
             } else {
-                  window.alert('Invalid login attempt');
-                  document.location.reload()
+                  setModalHeaderState("Error");
+                  setModalBodyState("Invalid Login Attempt");
+                  setSuccessModal(true);
             }
       };
 
@@ -57,6 +69,7 @@ export default function AdminEntry() {
                   <button type="submit" className="btn btn-large btn-primary" onClick={() => {
                         handleLogin(username, password)
                   }}>Login</button>
+                  < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} headerState={modalHeaderState} bodyState={modalBodyState}  />
             </div>
       )
 };
