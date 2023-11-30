@@ -34,12 +34,16 @@ function seedtapController(req, res) {
 
       try {
             if (tapBody) {
-                  Object.entries(tapBody).map(([property, value]) => {
-                        // place logic here to return an error if the beer is currently stored in the json already under the same title
-                        if(property === 'title') {
-                              // object entries of data.tap and check titles
-                        }
+                  const tapExist = Object.values(data.tap).some((tap) => tap.title === tapBody.title);
 
+                  if(tapExist) {
+                        res.json({
+                              header: "Error",
+                              message: "This tap already exist"
+                        })
+                  }
+
+                  Object.entries(tapBody).map(([property, value]) => {
                         if (typeof value !== 'string') {
                               return 'A string is required as the value type for this input.'
                         }
@@ -50,7 +54,7 @@ function seedtapController(req, res) {
                   data.tap.push(tapBody)
 
                   fs.writeFile(tapPath, JSON.stringify(data), () => {
-                        console.log(`${data} sent to json storage`)
+                        console.log(`data sent to json storage`)
                   })
 
                   res.json({
