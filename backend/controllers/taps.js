@@ -35,13 +35,14 @@ function seedtapController(req, res) {
       try {
             if (tapBody) {
                   Object.entries(tapBody).map(([property, value]) => {
-                        tapProperties.push(property)
+                        // place logic here to return an error if the beer is currently stored in the json already under the same title
+
                         if (typeof value !== 'string') {
                               return 'A string is required as the value type for this input.'
                         }
-                  })
 
-                  console.log(tapProperties)
+                        tapProperties.push(property)
+                  })
 
                   data.tap.push(tapBody)
 
