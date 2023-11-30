@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logout from "../../../utilities/logout";
 import WorkshopModal from "./modals/Modal";
+import axios from "axios";
 
 // this component needs:
 // 1. Form
@@ -35,20 +36,20 @@ export default function Createtap () {
                         return
                   }
 
-                  let data = {
+                  const response = await axios.post("http://localhost:3001/taps/seedtap", {
                         title: tapTitle,
                         style: tapStyle,
                         abv: tapAbv,
-                        ibu: tapIbu,
-                        number: tapNumber,
-                        notes: tapNotes
-                  }
-                  
-                  console.log(data)
+                        IBU: tapIbu,
+                        tapNumber: tapNumber,
+                        AdditionalNotes: tapNotes
+                  })
+
+                  console.log(response.data.message)
 
                   setSuccessModal(true);
-                  setModalHeaderState("Success")
-                  setModalBodyState("The beer you've selected has been added")
+                  setModalHeaderState(response.data.header)
+                  setModalBodyState(response.data.message)
 
                   setTapTitle("");
                   setTapStyle("");

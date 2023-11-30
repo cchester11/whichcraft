@@ -58,16 +58,20 @@ function seedtapController(req, res) {
                   })
 
                   res.json({
-                        message: "Successful request",
-                        data: req.body
+                        header: "Success",
+                        message: "Your tap has been stored",
                   })
             } else {
                   res.json({
-                        error: "No body included in your request"
+                        header: "Error",
+                        message: "No body included in your request"
                   })
             }
       } catch (error) {
-            throw new Error(error)
+            res.json({
+                  header: "Error",
+                  message: error
+            })
       }
 };
 
