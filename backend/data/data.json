@@ -97,20 +97,20 @@
                   "AdditionalNotes": "The Cherry Bomb is my favorite stout. It's packed with a sweet chocolatey and cherry flavor while it still holds a robustly bold body of a stout."
             },
             {
-                  "title": "wise acre tiny bomb",
-                  "style": "Pilsner",
-                  "abv": "10%",
-                  "IBU": "9",
-                  "tapNumber": "#23",
-                  "AdditionalNotes": "This tap is made with honey and wild flower."
-            },
-            {
                   "title": "Blue Owl Imperial Vanilla Stout",
                   "style": "Stout",
                   "abv": "8%",
                   "IBU": "10",
                   "tapNumber": "#23",
                   "AdditionalNotes": "This is a full bodied stout with vanilla and chocolate flavors accompanied by a smooth finish."
+            },
+            {
+                  "title": "wise acre tiny bomb",
+                  "style": "pilsner",
+                  "abv": "5%",
+                  "IBU": "12",
+                  "tapNumber": "#11",
+                  "AdditionalNotes": "This is a sharp, light pilsner that still packs a punch."
             }
       ],
       "food": [],
