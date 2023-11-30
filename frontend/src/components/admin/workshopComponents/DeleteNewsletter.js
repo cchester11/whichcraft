@@ -35,7 +35,9 @@ export default function DeleteNewsletter() {
       const submitHandler = async () => {
             try {
                   if (letterToDelete.trim() === "") {
-                        alert("Please enter a tap name");
+                        setSuccessModal(true);
+                        setModalHeaderState("Error");
+                        setModalBodyState("Please enter a tap name");
                         return;
                   };
 
