@@ -105,12 +105,12 @@
                   "AdditionalNotes": "This is a full bodied stout with vanilla and chocolate flavors accompanied by a smooth finish."
             },
             {
-                  "title": "wise acre tiny bomb",
-                  "style": "pilsner",
+                  "title": "Wise Acre Tiny Bomb",
+                  "style": "Pilsner",
                   "abv": "5%",
-                  "IBU": "12",
-                  "tapNumber": "#11",
-                  "AdditionalNotes": "This is a sharp, light pilsner that still packs a punch."
+                  "IBU": "10",
+                  "tapNumber": "#9",
+                  "AdditionalNotes": "This is a light and flavorful pilsner with a strong punch."
             }
       ],
       "food": [],
