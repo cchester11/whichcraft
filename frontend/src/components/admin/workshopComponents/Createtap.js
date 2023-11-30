@@ -10,7 +10,12 @@ import logout from "../../../utilities/logout";
 // 2. Submit handler which will use axios and send tap data to create tap api endpoint
 
 export default function Createtap () {
-      const clientToken = localStorage.getItem('clientToken');
+      const clientToken = localStorage.getItem('clientToken'); 
+      // add state here for all the beer elements
+
+      // submit handler that will send the elements to the endpoint
+
+      // toggle modal handler
 
       return (
             <div>
