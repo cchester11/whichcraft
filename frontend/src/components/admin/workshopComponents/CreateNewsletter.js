@@ -11,12 +11,14 @@ import React from "react";
 // 3. A way to send images to the images directory and map the images url to stored state for transfer to the json
 
 export default function CreateNewsletter() {
-      <div>
-            <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Newsletter</h1>
-            <div className="mb-3">
-                  <label htmlFor="addNewsletterForm" className="form-label">Add Newsletter</label>
-                  <input className="form-control form-control-sm" id="addNewsletterForm" type="text" placeholder="Ex: Hocus Pocus" aria-label="add newsletter control form"></input>
-                  <button className="btn btn-large btn-primary">Submit</button>
+      return (
+            <div>
+                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Newsletter</h1>
+                  <div className="m-4">
+                        <label htmlFor="addNewsletterForm" className="form-label">Add Newsletter</label>
+                        <input className="form-control form-control-sm" id="addNewsletterForm" type="text" placeholder="Ex: Hocus Pocus" aria-label="add newsletter control form"></input>
+                        <button className="btn btn-large btn-primary">Submit</button>
+                  </div>
             </div>
-      </div>
+      )
 };

@@ -63,7 +63,7 @@ export default function DeleteNewsletter() {
       return (
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Delete Newsletter</h1>
-                  <div className="mb-3">
+                  <div className="m-4">
                         <label htmlFor="deleteLetterForm" className="form-label">Delete Newsletter</label>
                         <input
                               className="form-control form-control-sm"
@@ -86,7 +86,7 @@ export default function DeleteNewsletter() {
                               Submit
                         </button>
                   </div>
-                  <div className="d-flex justify-content-start logout-button-container">
+                  <div className="d-flex justify-content-start logout-button-container m-3">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
                   < WorkshopModal isOpen={successModal} toggle={toggleSuccessModal} headerState={modalHeaderState} bodyState={modalBodyState} />
