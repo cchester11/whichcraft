@@ -46,8 +46,8 @@ export default function DeleteNewsletter() {
                   console.log(response.data.message);
 
                   setSuccessModal(true);
-                  setModalHeaderState("Success!");
-                  setModalBodyState("Newsletter Deleted!");
+                  setModalHeaderState(response.data.header);
+                  setModalBodyState(response.data.message);
 
                   setLetterToDelete("");
             } catch (error) {

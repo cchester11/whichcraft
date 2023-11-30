@@ -109,15 +109,18 @@ function deleteNewsLetter(req, res) {
 
                         //send back a message if all good
                         res.json({
-                              message: "Successful delete request"
+                              header: "Success",
+                              message: `${newsletter_title} has been deleted`
                         })
                   } else {
                         res.json({
+                              header: "Error",
                               message: "Could not find a matching title."
                         })
                   }
             } else {
                   res.json({
+                        header: "Error",
                         message: `There was no data found in the request sent -- empty body`
                   })
             }
