@@ -49,6 +49,13 @@ export default function Createtap () {
                   setSuccessModal(true);
                   setModalHeaderState("Success")
                   setModalBodyState("The beer you've selected has been added")
+
+                  setTapTitle("");
+                  setTapStyle("");
+                  setTapAbv("");
+                  setTapIbu("");
+                  setTapNumber("");
+                  setTapNotes("");
             } catch (error) {
                   setSuccessModal(true)
                   setModalHeaderState("Error")
