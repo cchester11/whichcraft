@@ -100,10 +100,12 @@ function deletetap(req, res) {
                         });
 
                         res.json({
-                              message: `The body has been logged. Good request. Title ${tapTitle} has been deleted.`
+                              header: "Success",
+                              message: `Tap ${tapTitle} has been deleted.`
                         });
                   } else {
                         res.json({
+                              header: "Error",
                               message: "No tap in the database with a matching title"
                         });
                   }

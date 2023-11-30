@@ -54,8 +54,8 @@ export default function Deletetap () {
 
                   setTapToDelete("");
                   setSuccessModal(true);
-                  setModalHeaderState("Success!");
-                  setModalBodyState("Beer Deleted!");
+                  setModalHeaderState(response.data.header);
+                  setModalBodyState(response.data.message);
             } catch (error) {
                   setModalHeaderState("Error")
                   setModalBodyState(error)
