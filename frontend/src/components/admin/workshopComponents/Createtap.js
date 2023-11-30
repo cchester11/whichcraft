@@ -16,9 +16,20 @@ export default function Createtap () {
             <div>
                   <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Tap</h1>
                   <div className="m-4">
-                        <label htmlFor="addTapForm" className="form-label">Add Tap</label>
-                        <input className="form-control form-control-sm" id="addTapForm" type="text" placeholder="Ex: Vista Dark Skies" aria-label="add tap control form"></input>
-                        <button className="btn btn-large btn-primary">Submit</button>
+                        <label htmlFor="addTapTitle" className="form-label">Tap Title</label>
+                        <input className="form-control form-control-sm mb-3" id="addTapTitle" type="text" placeholder="Ex: Vista Dark Skies" aria-label="add title control form"></input>
+                        <label htmlFor="addTapStyle" className="form-label">Tap Style</label>
+                        <input className="form-control form-control-sm mb-3" id="addTapStyle" type="text" placeholder="Ex: Dark Lager" aria-label="add style control form"></input>
+                        <label htmlFor="addTapAbv" className="form-label">ABV</label>
+                        <input className="form-control form-control-sm mb-3" id="addTapAbv" type="text" placeholder="Ex: 8%" aria-label="add tap control form"></input>
+                        <label htmlFor="addTapIbu" className="form-label">IBU</label>
+                        <input className="form-control form-control-sm" id="addTapIbu" type="text" placeholder="Ex: 24" aria-label="add tap control form"></input>
+                        <label htmlFor="addTapNumber" className="form-label">Tap Number</label>
+                        <input className="form-control form-control-sm" id="addTapNumber" type="text" placeholder="Ex: #13" aria-label="add tap control form"></input>
+                        <label htmlFor="addTapNotes" className="form-label">Additional Notes</label>
+                        <textarea className="form-control" rows="3" id="addTapNotes" type="text" placeholder="Ex: This is a light and interesting lager barrel aged in Still Austin whiskey barrels." aria-label="add tap control form"></textarea>
+
+                        <button className="btn btn-large btn-primary mt-3 mb-3">Submit</button>
                   </div>
                   <div className="d-flex justify-content-start logout-button-container m-3">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
