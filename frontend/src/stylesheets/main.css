@@ -49,6 +49,7 @@ body {
       padding-block: 1%;
       color: white;
       border-bottom: 1px solid black;
+      z-index: 1000;
 }
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
