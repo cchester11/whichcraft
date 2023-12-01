@@ -3,7 +3,7 @@ import '../../stylesheets/main.css';
 import resizeImage from "../../utilities/resizeImage";
 
 export default function TapsHero() {
-      const heroImgPath = "images/taps-large.jpeg";
+      const heroImgPath = "images/hero-image-22.jpeg";
       const [resizedHero, setResizedHero] = useState(null);
 
       const resizeHero = async () => {
