@@ -19,7 +19,7 @@ export default function NewsLettersContainer() {
                   const response = await axios.get("http://localhost:3001/newsletters/allnewsletters")
                   let newsLetterObs = response.data.data.newsLetters
 
-                  console.log('request sent')
+                  console.log('request sent for newsletters')
 
                   // apply newsletter obs to newsletter state
                   setNewsLetters(newsLetterObs)

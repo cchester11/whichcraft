@@ -34,11 +34,7 @@ export default function TapsList() {
 
       useEffect(() => {
             gettaps()
-      }, [])
-
-      useEffect(() => {
-            console.log("taps: ", taps)
-      }, [taps])
+      }, []);
 
       return (
             <div className="container-fluid text-center tap-menu">
