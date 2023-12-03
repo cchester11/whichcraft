@@ -82,7 +82,7 @@ export default function TapsList() {
                                           >
                                                 {tap[5]}
                                           </p>
-                                          <a href="/" className="btn btn-warning"
+                                          <a href="/" className="btn btn-outline-warning btn-sm"
                                           >Untappd</a>
                                     </div>
                               </div>
