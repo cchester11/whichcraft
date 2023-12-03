@@ -20,11 +20,13 @@ export default function TapsHero() {
       }, []); // Empty dependency array to run once on mount
 
       return (
-            <img
-                  src={resizedHero || heroImgPath}
-                  height="88%"
-                  alt=""
-                  className="container-fluid d-flex justify-content-center hero-image"
-            />
+            <div className="hero-container">
+                  <img
+                        src={resizedHero || heroImgPath}
+                        height="88%"
+                        alt=""
+                        className="d-flex justify-content-center hero-image"
+                  />
+            </div>
       );
 }
