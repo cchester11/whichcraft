@@ -3,10 +3,6 @@ import '../../stylesheets/main.css';
 
 export default function NewsLetterNavButtons() {
       return (
-            // <nav
-            //       className="d-flex justify-content-end mt-1 nav-buttons-master align-items-center"
-            //       id="newsLetterNav"
-            // >
             <div>
                   <nav id="newsLetterNav" class="navbar  newsletters-navbar px-3 mb-3 d-flex justify-content-end mt-1 nav-buttons-master align-items-center">
                         <ul class="nav nav-pills">
