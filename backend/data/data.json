@@ -242,6 +242,11 @@
                         "element": "paragraph",
                         "text": "Happy Hour starts at 4 and last for the entire duration of the game. Look for the Longhorns logo on the draft board to take $3 off!"
                   },
+                  "beers-stack": {
+                        "element": "image",
+                        "image": "/images/image-10.png",
+                        "resize": true
+                  },
                   "heading-2": {
                         "order": 4,
                         "element": "sub-heading",
@@ -276,6 +281,11 @@
                         "order": 10,
                         "element": "list",
                         "text": "6.5% Vista Hive Mind - This honey ale was brewed with wild yeast and 150 lbs of Central Texas Honey donated by 25 Central Texas beekeepers."
+                  },
+                  "new-wines-december": {
+                        "element": "image",
+                        "image": "/images/newsletter-img-3.png",
+                        "resize": true
                   },
                   "heading-3": {
                         "order": 11,

@@ -40,7 +40,7 @@ export default function TapsList() {
             <div className="container-fluid text-center tap-menu">
                   <div className="row d-flex justify-content-center">
                         {taps.map((tap, index) => (
-                              <div className="card m-2" key={index} value={tap} style={{ width: "18rem" }}>
+                              <div className="card m-4" key={index} value={tap} style={{ width: "18rem" }}>
                                     <div className="card-body">
                                           <h5 className="card-title tap-title">
                                                 {tap[0]}
