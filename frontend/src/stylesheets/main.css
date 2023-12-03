@@ -55,6 +55,18 @@ body {
       content: none !important;
 }
 
+/* hero settings */
+.hero-container-master {
+      overflow: hidden;
+}
+.hero-container {
+      width: 100%;
+      margin-top: 0;
+}
+.hero-image {
+      width: 100%;
+}
+
 /* navbar settings */
 .newsletter-master {
       margin-top: 100px;
@@ -85,9 +97,6 @@ body {
       background-color: var(--secondary-color);
       color: var(--enhance-color);
       margin-bottom: 3%;
-}
-.hero-image {
-      margin-top: 3%;
 }
 .tap-menu-header {
       border-bottom: 1px solid var(--tertiary-color);

@@ -3,7 +3,7 @@ import '../stylesheets/main.css'
 
 export default function Nav () {
       return (
-            <nav className="navbar navbar-expand-lg navbar-custom mb-5">
+            <nav className="navbar navbar-expand-lg navbar-custom">
                   <div className="container-fluid">
                         <a href="/" className="navbar-brand">
                               <img
