@@ -127,8 +127,8 @@ body {
 }
 
 /* newsletter page settings */
-.nav-buttons-master {
-      margin-right: 5%;
+.newsletters-navbar {
+      background-color: var(--enhance-color);
 }
 .newsletter-nav-header { 
       height: fit-content;
