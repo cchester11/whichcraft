@@ -57,6 +57,8 @@ body {
 }
 .nav-button {
       background-color: var(--secondary-color);
+      border: none; /* Remove the border */
+      padding: 0.5rem 1rem; /* Add some padding for better appearance */
 }
 
 /* hero settings */
