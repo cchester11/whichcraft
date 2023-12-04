@@ -32,7 +32,7 @@ export default function Nav() {
                               <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav ms-auto">
                                           <div className="dropdown nav-item">
-                                                <button className="btn btn-primary border-0 dropdown-toggle nav-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button className="btn border-0 dropdown-toggle nav-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                       Newsletters
                                                 </button>
                                                 <ul className="dropdown-menu">
@@ -40,15 +40,15 @@ export default function Nav() {
                                                       <li><a className="dropdown-item" href="#entry-2">Merry Christmas</a></li>
                                                 </ul>
                                           </div>
-                                          <li className="nav-item">
+                                          <button className="nav-item nav-button border-0 btn">
                                                 <a className="nav-link" href="#ontap">Taps</a>
-                                          </li>
-                                          <li className="nav-item">
+                                          </button>
+                                          <button className="nav-item nav-button border-0 btn">
                                                 <a className="nav-link" href="/">Food Menu</a>
-                                          </li>
-                                          <li className="nav-item">
+                                          </button>
+                                          <button className="nav-item nav-button border-0 btn">
                                                 <a className="nav-link" href="/">About</a>
-                                          </li>
+                                          </button>
                                     </ul>
                               </div>
                         </div>
