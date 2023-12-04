@@ -55,6 +55,9 @@ body {
 .navbar-custom .dropdown-toggle::after {
       content: none !important;
 }
+.nav-button {
+      background-color: var(--secondary-color);
+}
 
 /* hero settings */
 .hero-container-master {

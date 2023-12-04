@@ -31,9 +31,15 @@ export default function Nav() {
                               </button>
                               <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav ms-auto">
-                                          <li className="nav-item">
-                                                <a className="nav-link" href="#newsLetterNav">Newsletters</a>
-                                          </li>
+                                          <div className="dropdown nav-item">
+                                                <button className="btn btn-primary border-0 dropdown-toggle nav-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      Newsletters
+                                                </button>
+                                                <ul className="dropdown-menu">
+                                                      <li><a className="dropdown-item" href="#entry-1">Hocus Pocus</a></li>
+                                                      <li><a className="dropdown-item" href="#entry-2">Merry Christmas</a></li>
+                                                </ul>
+                                          </div>
                                           <li className="nav-item">
                                                 <a className="nav-link" href="#ontap">Taps</a>
                                           </li>
