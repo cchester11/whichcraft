@@ -30,7 +30,7 @@ export default function Nav() {
                                     <span className="navbar-toggler-icon"></span>
                               </button>
                               <div className="collapse navbar-collapse" id="navbarNav">
-                                    <ul className="navbar-nav ms-auto">
+                                    <ul className="navbar-nav ms-auto d-flex align-items-center">
                                           <div className="dropdown nav-item">
                                                 <button className="btn border-0 dropdown-toggle nav-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                       Newsletters
