@@ -130,6 +130,9 @@ body {
 /* newsletter page settings */
 .newsletters-navbar {
       background-color: var(--enhance-color);
+      width: fit-content;
+      z-index: 1000;
+      position: sticky;
 }
 .newsletter-nav-header { 
       height: fit-content;
