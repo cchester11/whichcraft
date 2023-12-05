@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState} from "react";
+import AddTitle from "./addNewsletterForms/AddTitle";
 import logout from "../../../utilities/logout";
 
 // This component needs:
@@ -14,14 +15,20 @@ import logout from "../../../utilities/logout";
 export default function CreateNewsletter() {
       const clientToken = localStorage.getItem('clientToken');
 
+      const [currentForm, setCurrentForm] = useState("AddTitle");
+
+      const renderForm = () => {
+            switch(currentForm) {
+                  case "AddTitle": 
+                        return < AddTitle setCurrentForm = { setCurrentForm } />;
+                  default:
+                        return < AddTitle setCurrentForm = { setCurrentForm } />;
+            }
+      }
+
       return (
             <div>
-                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">Add Newsletter</h1>
-                  <div className="m-4">
-                        <label htmlFor="addNewsletterForm" className="form-label">Add Newsletter</label>
-                        <input className="form-control form-control-sm" id="addNewsletterForm" type="text" placeholder="Ex: Hocus Pocus" aria-label="add newsletter control form"></input>
-                        <button className="btn btn-large btn-primary">Submit</button>
-                  </div>
+                  {renderForm()}
                   <div className="d-flex justify-content-start logout-button-container m-3">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
