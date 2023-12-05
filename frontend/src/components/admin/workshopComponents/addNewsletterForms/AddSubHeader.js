@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AddSubHeader () {
+export default function AddSubHeader (props) {
       const [subheader, setSubheader] = useState("");
 
       return (
