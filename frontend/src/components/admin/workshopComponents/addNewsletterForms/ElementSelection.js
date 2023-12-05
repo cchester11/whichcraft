@@ -1,14 +1,26 @@
 import React from "react";
 
-export default function ElementSelection() {
+export default function ElementSelection(props) {
       return (
             <div>
-                  <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                  </select>
+                  <h1 className="container-fluid d-flex justify-content-center tap-menu-header mt-5">What would you like to add next?</h1>
+                  <div className="m-4">
+                        <select className="form-select" aria-label="Default select example">
+                              <option defaultValue={null}>Select an element</option>
+                              <option value="1">Image</option>
+                              <option value="2">Sub-header</option>
+                              <option value="3">Paragraph</option>
+                              <option value="4">List Item</option>
+                        </select>
+                        <button 
+                              className="btn btn-large btn-primary"
+                              onClick={() => {
+                                    props.setCurrentForm("AddTitle")
+                              }}
+                        >
+                              Submit
+                        </button>
+                  </div>
             </div>
       )
 };

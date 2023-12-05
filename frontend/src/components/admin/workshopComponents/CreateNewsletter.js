@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import AddTitle from "./addNewsletterForms/AddTitle";
 import logout from "../../../utilities/logout";
 import ElementSelection from "./addNewsletterForms/ElementSelection";
@@ -17,8 +17,9 @@ export default function CreateNewsletter() {
       const clientToken = localStorage.getItem('clientToken');
 
       const [currentForm, setCurrentForm] = useState("AddTitle");
+      const [newsLetterOb] = useState([]);
 
-      let newsLetterOb = [];
+      useEffect(() => {console.log(newsLetterOb)}, [newsLetterOb])
 
       const renderForm = () => {
             switch(currentForm) {
