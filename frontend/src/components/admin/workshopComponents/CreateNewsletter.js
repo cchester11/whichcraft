@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import AddTitle from "./addNewsletterForms/AddTitle";
 import logout from "../../../utilities/logout";
+import ElementSelection from "./addNewsletterForms/ElementSelection";
 
 // This component needs:
 // 1. A dynamic form
@@ -23,6 +24,8 @@ export default function CreateNewsletter() {
             switch(currentForm) {
                   case "AddTitle": 
                         return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
+                  case "ElementSelection":
+                        return < ElementSelection setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />
                   default:
                         return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
             }
