@@ -20,7 +20,7 @@ export default function CreateNewsletter() {
       const [currentForm, setCurrentForm] = useState("AddTitle");
       const [newsLetterOb] = useState([]);
 
-      useEffect(() => {console.log(newsLetterOb)}, [newsLetterOb])
+      console.log(newsLetterOb)
 
       const renderForm = () => {
             switch(currentForm) {
