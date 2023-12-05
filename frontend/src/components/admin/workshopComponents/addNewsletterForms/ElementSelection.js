@@ -15,7 +15,7 @@ export default function ElementSelection(props) {
                         <button 
                               className="btn btn-large btn-primary"
                               onClick={() => {
-                                    props.setCurrentForm("AddTitle")
+                                    props.setCurrentForm()
                               }}
                         >
                               Submit

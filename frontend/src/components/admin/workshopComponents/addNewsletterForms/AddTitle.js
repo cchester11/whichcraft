@@ -21,7 +21,12 @@ export default function AddTitle (props) {
                         <button 
                               className="btn btn-large btn-primary"
                               onClick={() => {
-                                    props.newsLetterOb.push({title: newsletterTitle})
+                                    props.newsLetterOb.push({
+                                          title: {
+                                                element: "heading",
+                                                text: newsletterTitle
+                                          }
+                                    })
                                     props.setCurrentForm("ElementSelection")
                               }}
                         >
