@@ -17,12 +17,14 @@ export default function CreateNewsletter() {
 
       const [currentForm, setCurrentForm] = useState("AddTitle");
 
+      let newsLetterOb = [];
+
       const renderForm = () => {
             switch(currentForm) {
                   case "AddTitle": 
-                        return < AddTitle setCurrentForm = { setCurrentForm } />;
+                        return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
                   default:
-                        return < AddTitle setCurrentForm = { setCurrentForm } />;
+                        return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
             }
       }
 
