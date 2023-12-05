@@ -3,6 +3,7 @@ import AddTitle from "./addNewsletterForms/AddTitle";
 import logout from "../../../utilities/logout";
 import ElementSelection from "./addNewsletterForms/ElementSelection";
 import AddSubHeader from "./addNewsletterForms/AddSubHeader";
+import AddParagraph from "./addNewsletterForms/AddParagraph";
 
 // This component needs:
 // 1. A dynamic form
@@ -27,9 +28,11 @@ export default function CreateNewsletter() {
                   case "AddTitle": 
                         return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
                   case "ElementSelection":
-                        return < ElementSelection setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />
+                        return < ElementSelection setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
                   case "2":
-                        return < AddSubHeader setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />
+                        return < AddSubHeader setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
+                  case "3":
+                        return < AddParagraph setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
                   default:
                         return < AddTitle setCurrentForm = { setCurrentForm } newsLetterOb = { newsLetterOb } />;
             }
