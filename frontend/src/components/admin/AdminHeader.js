@@ -3,7 +3,7 @@ import '../../stylesheets/main.css';
 
 export default function AdminHeader () {
       return (
-            <nav className="navbar navbar-expand-lg navbar-custom bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg navbar-custom">
                   <img
                                     className="header-img"
                                     src="https://www.whichcraft.com/wp-content/uploads/2022/06/WhichCraftLogoATX.png"
