@@ -45,7 +45,7 @@ export default function AdminWorkshop() {
                         <option value="3">Delete a newsletter</option>
                         <option value="4">Add a newsletter</option>
                   </select>
-                  <button className="btn btn-large btn-primary" onClick={() => { submitHandler() }}>Submit</button>
+                  <button className="btn btn-large btn-primary m-3" onClick={() => { submitHandler() }}>Submit</button>
                   <div className="d-flex justify-content-start logout-button-container">
                         <button className="btn btn-large btn-primary" onClick={() => { logout(clientToken) }}>Logout</button>
                   </div>
