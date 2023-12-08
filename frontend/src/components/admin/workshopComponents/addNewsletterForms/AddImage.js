@@ -23,9 +23,9 @@ export default function AddImage (props) {
                               onClick={() => {
                                     /* dont forget to define image name*/
                                     props.newsLetterOb.push({
-                                          imagename: {
+                                          imageItem: {
                                                 element: "image",
-                                                image: `images/${imagename}.png`,
+                                                image: `images/${imageItem}.png`,
                                                 resize: true
                                           }
                                     })

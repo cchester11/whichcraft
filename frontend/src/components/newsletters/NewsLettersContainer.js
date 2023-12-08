@@ -101,7 +101,7 @@ export default function NewsLettersContainer() {
                                           {value.element === "list" &&
                                                 <ul className="list-group list-group-flush">
                                                       <span className="container mt-2"></span>
-                                                      <li className="p-3 border border-start-0 rounded-end list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.text}</li>
+                                                      <li className="p-3 list-group-item mt-2 fw-lighter rounded-start news-letter-item">{value.text}</li>
                                                 </ul>
                                           }
                                           {property.startsWith("wine-item") && value.paragraph1.element === "paragraph" &&
