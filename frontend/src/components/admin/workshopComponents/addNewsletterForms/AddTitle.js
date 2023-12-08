@@ -19,7 +19,7 @@ export default function AddTitle (props) {
                         >
                         </input>
                         <button 
-                              className="btn btn-large btn-primary"
+                              className="btn btn-large btn-primary m-3"
                               onClick={() => {
                                     props.newsLetterOb.push({
                                           title: {

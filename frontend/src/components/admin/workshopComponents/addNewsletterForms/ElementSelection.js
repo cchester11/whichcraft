@@ -25,7 +25,7 @@ export default function ElementSelection(props) {
                               <option value="4">List Item</option>
                         </select>
                         <button
-                              className="btn btn-large btn-primary"
+                              className="btn btn-large btn-primary m-3"
                               onClick={() => {
                                     props.setCurrentForm(selectedOption);
                               }}

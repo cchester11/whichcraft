@@ -19,7 +19,7 @@ export default function AddSubHeader (props) {
                         >
                         </input>
                         <button 
-                              className="btn btn-large btn-primary"
+                              className="btn btn-large btn-primary m-3"
                               onClick={() => {
                                     props.newsLetterOb.push({
                                           subheading: {
