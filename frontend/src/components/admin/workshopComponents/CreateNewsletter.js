@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import AddTitle from "./addNewsletterForms/AddTitle";
 import logout from "../../../utilities/logout";
 import ElementSelection from "./addNewsletterForms/ElementSelection";
