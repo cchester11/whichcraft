@@ -23,12 +23,13 @@ export default function Createtap () {
       const [tapAbv, setTapAbv] = useState("");
       const [tapIbu, setTapIbu] = useState("");
       const [tapNumber, setTapNumber] = useState("");
+      const [tapCategory, setTapCategory] = useState("");
       const [tapNotes, setTapNotes] = useState("");
 
       // submit handler that will send the elements to the endpoint
       const submitHandler = async () => {
             try {
-                  if(tapTitle.trim() === "" || tapStyle.trim() === "" || tapAbv.trim() === "" || tapIbu.trim() === "" || tapNumber.trim() === "" || tapNotes.trim() === "") {
+                  if(tapTitle.trim() === "" || tapStyle.trim() === "" || tapAbv.trim() === "" || tapIbu.trim() === "" || tapNumber.trim() === "" || tapNotes.trim() === "" || tapCategory.trim() === "") {
                         setSuccessModal(true);
                         setModalHeaderState("Error");
                         setModalBodyState("There are blanks fields in your request");
@@ -42,6 +43,7 @@ export default function Createtap () {
                         abv: tapAbv,
                         IBU: tapIbu,
                         tapNumber: tapNumber,
+                        tapCategory: tapCategory,
                         AdditionalNotes: tapNotes
                   })
 
@@ -127,6 +129,17 @@ export default function Createtap () {
                               aria-label="add tap control form"
                               value={tapNumber}
                               onChange={(event) => setTapNumber(event.target.value)}
+                        >
+                        </input>
+                        <label htmlFor="addTapCategory" className="form-label">Tap Category</label>
+                        <input 
+                              className="form-control form-control-sm" 
+                              id="addTapCategory" 
+                              type="text" 
+                              placeholder="Ex: Hip-Hops" 
+                              aria-label="add tap control form"
+                              value={tapCategory}
+                              onChange={(event) => setTapCategory(event.target.value)}
                         >
                         </input>
                         <label htmlFor="addTapNotes" className="form-label">Additional Notes</label>
