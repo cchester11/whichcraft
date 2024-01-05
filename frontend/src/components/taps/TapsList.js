@@ -22,6 +22,7 @@ export default function TapsList() {
                               curr.abv,
                               curr.IBU,
                               curr.tapNumber,
+                              curr.tapCategory,
                               curr.AdditionalNotes
                         ])
                   }
@@ -35,6 +36,15 @@ export default function TapsList() {
       useEffect(() => {
             gettaps()
       }, []);
+
+      const tapsByCategory = taps.reduce((acc, tap) => {
+            const category = tap[5] || "Other";
+            acc[category] = acc[category] || []
+            acc[category].push(tap)
+            return acc
+      }, {})
+
+      console.log(tapsByCategory)
 
       return (
             <div className="container-fluid text-center tap-menu">
@@ -80,8 +90,9 @@ export default function TapsList() {
                                           <p
                                                 className="card-text fw-lighter tap-description"
                                           >
-                                                {tap[5]}
+                                                {tap[6]}
                                           </p>
+                                          <p>{tap[5]}</p>
                                           <a href="/" className="btn btn-outline-warning btn-sm"
                                           >Untappd</a>
                                     </div>
