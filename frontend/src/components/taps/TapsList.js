@@ -39,8 +39,11 @@ export default function TapsList() {
 
       const tapsByCategory = taps.reduce((acc, tap) => {
             const category = tap[5] || "Other";
-            acc[category] = acc[category] || []
+
+            acc[category] = acc[category] || [];
+
             acc[category].push(tap)
+
             return acc
       }, {})
 
