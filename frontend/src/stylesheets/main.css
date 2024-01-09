@@ -103,6 +103,7 @@ body {
       background-color: var(--secondary-color);
       color: var(--enhance-color);
       margin-bottom: 3%;
+      padding: 5px;
 }
 .tap-menu-header {
       border-bottom: 1px solid var(--tertiary-color);
@@ -130,6 +131,10 @@ body {
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
       background-color: var(--secondary-color);
+}
+.list-group-item {
+      background-color: var(--secondary-color);
+      color: white;
 }
 
 /* newsletter page settings */
