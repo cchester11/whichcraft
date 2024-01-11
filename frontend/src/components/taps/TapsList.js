@@ -79,9 +79,9 @@ export default function TapsList() {
                                                                   </div>
                                                                   <div>
                                                                         <ul className="list-group list-group-flush m-2">
-                                                                              <li className="list-group-item" key={`${category}-${tap[2]}`}>ABV: {tap[2]}</li>
-                                                                              <li className="list-group-item" key={`${category}-${tap[3]}`}>IBU: {tap[3]}</li>
-                                                                              <li className="list-group-item" key={`${category}-${tap[4]}`}>Tap Number: {tap[4]}</li>
+                                                                              <li className="list-group-item taps-list-group-item" key={`${category}-${tap[2]}`}>ABV: {tap[2]}</li>
+                                                                              <li className="list-group-item taps-list-group-item" key={`${category}-${tap[3]}`}>IBU: {tap[3]}</li>
+                                                                              <li className="list-group-item taps-list-group-item" key={`${category}-${tap[4]}`}>Tap Number: {tap[4]}</li>
                                                                         </ul>
                                                                   </div>
                                                             </div>

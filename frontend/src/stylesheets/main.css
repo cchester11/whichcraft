@@ -137,7 +137,7 @@ body {
       width: fit-content;
       background-color: darkseagreen;
 }
-.list-group-item {
+.taps-list-group-item {
       background-color: darkseagreen;
       color: white;
 }
@@ -179,6 +179,9 @@ body {
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
 .news-letter-item {
+}
+.newsletter-list-group-item {
+      background: lightyellow;
 }
 .per-newsletter {
 }
