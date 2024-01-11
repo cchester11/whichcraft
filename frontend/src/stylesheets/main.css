@@ -139,8 +139,9 @@ body {
 
 /* accordion settings */
 /* moccasin */
-.accordion-button {
+.accordion-button.collapsed {
       background-color: moccasin;
+      opacity: 80%;
 }
 .accordion-button:not(.collapsed) {
       background-color: moccasin;
