@@ -138,12 +138,14 @@ body {
 }
 
 /* accordion settings */
-.accordion-button {
+/* accordion settings */
+.accordion-button:not(.collapsed) {
       background-color: sandybrown;
 }
 .accordion-body {
       background-color: darkseagreen;
 }
+
 
 /* newsletter page settings */
 .newsletters-navbar {
