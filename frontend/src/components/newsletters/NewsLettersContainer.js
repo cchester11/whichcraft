@@ -69,17 +69,17 @@ export default function NewsLettersContainer() {
                   {/* grab newsletters state and run map function to grab each large newsletter object */}
                   {newsletters.map((newsletter, index) => (
                         // container that will hold each large newsletter object
-                        <div id={`entry-${index + 1}`} key={index} className="container per-newsletter mt-5 d-flex flex-column justify-content-center">
+                        <div id={`entry-${index + 1}`} key={index} className="container per-newsletter d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
                                     <div key={property}>
                                           {/* apply the resize function here if  */}
                                           {value.element === "image" && value.resize && resizedImages[property] &&
-                                                <div className="container-fluid d-flex justify-content-center mt-3">
+                                                <div className="container-fluid d-flex justify-content-center">
                                                       <img src={resizedImages[property]} alt={value.element} />
                                                 </div>
                                           }
                                           {value.element === "image" && !value.resize &&
-                                                <div className="container-fluid d-flex justify-content-center mt-3">
+                                                <div className="container-fluid d-flex justify-content-center">
                                                       <img src={process.env.PUBLIC_URL + value.image} alt={value.element} />
                                                 </div>
                                           }

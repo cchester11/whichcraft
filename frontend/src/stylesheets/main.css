@@ -34,7 +34,7 @@ body {
       flex-direction: column;
       /* background-image: linear-gradient(to bottom left, var(--enhance-color), var(--secondary-color)); */
       /* background-color: var(--primary-color); */
-      background-color: var(--enhance-color);
+      background-color: moccasin;
 }
 
 /* header settings */
@@ -75,7 +75,12 @@ body {
 
 /* navbar settings */
 .newsletter-master {
-      margin-top: 100px;
+      background: lightyellow;
+}
+.newsletter-menu-header {
+      background: lightyellow;
+      margin-bottom: 0;
+      padding-bottom: 2%;
 }
 .header-img {
       margin-left: 20px;
@@ -174,18 +179,14 @@ body {
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
 .news-letter-item {
-      background-color: var(--enhance-color);
 }
 .per-newsletter {
-      border-top: solid 2px var(--tertiary-color);
 }
 .section-background-1 {
       padding-block: 2%;
-      background-color: var(--secondary-color);
 }
 .section-background-2 {
       padding-block: 2%;
-      background-color: white;
 }
 .newsletter-section {
       font-weight: bolder;
