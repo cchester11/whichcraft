@@ -138,9 +138,12 @@ body {
 }
 
 /* accordion settings */
-/* accordion settings */
+/* moccasin */
+.accordion-button {
+      background-color: moccasin;
+}
 .accordion-button:not(.collapsed) {
-      background-color: sandybrown;
+      background-color: moccasin;
 }
 .accordion-body {
       background-color: darkseagreen;
