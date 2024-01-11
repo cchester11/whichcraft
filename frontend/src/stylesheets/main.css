@@ -100,7 +100,7 @@ body {
 .card {
       border: none;
       /* background-image: linear-gradient(to bottom left, var(--tertiary-color), var(--secondary-color)); */
-      background-color: var(--secondary-color);
+      background-color: darkseagreen;
       color: var(--enhance-color);
       margin-bottom: 3%;
       padding: 5px;
@@ -130,11 +130,19 @@ body {
 .tap-fact {
       border-bottom: 1px solid var(--tertiary-color);
       width: fit-content;
-      background-color: var(--secondary-color);
+      background-color: darkseagreen;
 }
 .list-group-item {
-      background-color: var(--secondary-color);
+      background-color: darkseagreen;
       color: white;
+}
+
+/* accordion settings */
+.accordion-button {
+      background-color: sandybrown;
+}
+.accordion-body {
+      background-color: darkseagreen;
 }
 
 /* newsletter page settings */

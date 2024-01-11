@@ -62,9 +62,9 @@ export default function TapsList() {
                               <div className="accordion-collapse collapse" id={`collapse${index}`} data-bs-parent="taps-accordion">
                                     <div className="accordion-body">
                                           {/* we've already extracted the tapsInCategory so we don't need to employ the Object logic. We can just employ the map method directly */}
-                                          <div className="hstack gap-5">
+                                          <div className="vstack gap-5">
                                                 {tapsInCategory.map((tap, index) => (
-                                                      <div className="card overflow-x-scroll" id={index}>
+                                                      <div className="card overflow-x-scroll" id={index} key={`${category}-${index}`}>
                                                             <div className="card-body d-flex flex-row">
                                                                   <div>
                                                                         <h5 className="card-title border-bottom">
@@ -79,9 +79,9 @@ export default function TapsList() {
                                                                   </div>
                                                                   <div>
                                                                         <ul className="list-group list-group-flush m-2">
-                                                                              <li className="list-group-item">ABV: {tap[2]}</li>
-                                                                              <li className="list-group-item">IBU: {tap[3]}</li>
-                                                                              <li className="list-group-item">Tap Number: {tap[4]}</li>
+                                                                              <li className="list-group-item" key={`${category}-${tap[2]}`}>ABV: {tap[2]}</li>
+                                                                              <li className="list-group-item" key={`${category}-${tap[3]}`}>IBU: {tap[3]}</li>
+                                                                              <li className="list-group-item" key={`${category}-${tap[4]}`}>Tap Number: {tap[4]}</li>
                                                                         </ul>
                                                                   </div>
                                                             </div>
