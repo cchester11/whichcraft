@@ -71,7 +71,7 @@ export default function NewsLettersContainer() {
                         // container that will hold each large newsletter object
                         <div id={`entry-${index + 1}`} key={index} className="container per-newsletter d-flex flex-column justify-content-center">
                               {Object.entries(newsletter).map(([property, value]) => (
-                                    <div key={property}>
+                                    <div key={property} className="individual-newsletter">
                                           {/* apply the resize function here if  */}
                                           {value.element === "image" && value.resize && resizedImages[property] &&
                                                 <div className="container-fluid d-flex justify-content-center">
