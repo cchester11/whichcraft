@@ -5,6 +5,9 @@
       --secondary-color: #3C84AB;
       --tertiary-color: #85CDFD;
       --enhance-color: #DEFCF9;
+      --lincoln-color: #478778;
+      --pastel-color: #C1E1C1;
+      --viridian-color: #40826D;
 }
 /* cool second place */
 /* :root {
@@ -34,7 +37,7 @@ body {
       flex-direction: column;
       /* background-image: linear-gradient(to bottom left, var(--enhance-color), var(--secondary-color)); */
       /* background-color: var(--primary-color); */
-      background-color: moccasin;
+      background-color: var(--viridian-color);
 }
 
 /* header settings */
@@ -42,8 +45,8 @@ body {
       position: sticky;
       top: 0;
       width: 100%;
-      background-color: var(--secondary-color);
-      /* background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--enhance-color)); */
+      background-color: var(--lincoln-color);
+      background-image: linear-gradient(to bottom right, var(--lincoln-color), var(--viridian-color));
       /* background-image: url('./images/woodboard-header-bg.jpeg'); */
       display: flex;
       justify-content: flex-end;
@@ -56,7 +59,7 @@ body {
       content: none !important;
 }
 .nav-button {
-      background-color: var(--secondary-color);
+      background-color: var(--lincoln-color);
       border: none; /* Remove the border */
       padding: 0.5rem 1rem; /* Add some padding for better appearance */
 }
@@ -75,10 +78,10 @@ body {
 
 /* navbar settings */
 .newsletter-master {
-      background: lightyellow;
+      background: var(--pastel-color);
 }
 .newsletter-menu-header {
-      background: lightyellow;
+      background: var(--pastel-color);
       margin-bottom: 0;
       padding-bottom: 2%;
 }
@@ -111,12 +114,12 @@ body {
       padding: 5px;
 }
 .tap-menu-header {
-      border-bottom: 1px solid var(--tertiary-color);
+      border-bottom: 1px solid var(--lincoln-color);
       text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
       width: fit-content;
 }
 .tap-title {
-      border-bottom: 1px solid var(--tertiary-color);
+      border-bottom: 1px solid var(--lincoln-color);
       text-transform: uppercase;
       text-shadow: 1px 3px 3px rgba(46,91,173,0.6);
 }
@@ -145,11 +148,11 @@ body {
 /* accordion settings */
 /* moccasin */
 .accordion-button.collapsed {
-      background-color: moccasin;
+      background-color: var(--viridian-color);
       opacity: 80%;
 }
 .accordion-button:not(.collapsed) {
-      background-color: moccasin;
+      background-color: var(--viridian-color);
 }
 .accordion-body {
       background-color: darkseagreen;
@@ -181,7 +184,7 @@ body {
 .news-letter-item {
 }
 .newsletter-list-group-item {
-      background: lightyellow;
+      background: var(--pastel-color);
 }
 .per-newsletter {
 }
@@ -212,10 +215,9 @@ body {
 /* footer settings */
 footer {
       padding-block: 2%;
-      background-color: var(--secondary-color);
       margin-top: auto;
       /* background-image: linear-gradient(to bottom right, #e2e25e, #71712f); */
-      background-image: linear-gradient(to bottom right, var(--secondary-color), var(--tertiary-color));
+      background-image: linear-gradient(to bottom right, var(--lincoln-color), var(--viridian-color));
 }
 
 /*Filter styles*/
