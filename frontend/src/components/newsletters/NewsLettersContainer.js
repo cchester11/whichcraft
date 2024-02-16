@@ -88,6 +88,11 @@ export default function NewsLettersContainer() {
                                                       <h1 className="newsletter-title m-4">{value.text}</h1>
                                                 </div>
                                           }
+                                          {value.published &&
+                                                <div className="container-fluid d-flex justify-content-center">
+                                                      <h1 className="newsletter-title m-4">{value.published}</h1>
+                                                </div>
+                                          }
                                           {value.element === "paragraph" &&
                                                 <div className="container newsletter-section d-flex justify-content-center mt-5">
                                                       <p>{value.text}</p>

@@ -149,6 +149,7 @@
                         "element": "heading",
                         "text": "Hocus Pocus"
                   },
+                  "date": { "published": "10/15/2023" },
                   "image-2": {
                         "element": "image",
                         "image": "images/newsletter-img-2.png",
@@ -255,6 +256,7 @@
                         "element": "heading",
                         "text": "Merry Christmas"
                   },
+                  "date": { "published": "12/14/2023" },
                   "paragraph-1": {
                         "order": 2,
                         "element": "paragraph",
@@ -359,8 +361,9 @@
                   "heading": {
                         "order": 1,
                         "element": "heading",
-                        "text": "Merrydudemas"
+                        "text": "Beers de Rouch"
                   },
+                  "date": { "published": "02/02/2024" },
                   "beers-stack": {
                         "element": "image",
                         "image": "/images/image-10.png",

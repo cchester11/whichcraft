@@ -57,8 +57,21 @@ function checkAllProperties(param) {
                   return;
             }
 
+            if (property === 'date') {
+                  if (!value.published || typeof value.published !== 'string') {
+                        console.log('check failed at date property')
+                        throw new Error('Date property must have a "published" field with a value in string format');
+                  }
+                  const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+                  if (!dateRegex.test(value.published)) {
+                        console.log('check failed at date property')
+                        throw new Error('Published date must be in the format "MM/DD/YYYY"');
+                  }
+            }
+
             if (
                   value.element !== 'heading' &&
+                  value.element !== 'published' &&
                   value.element !== 'sub-heading' &&
                   value.element !== 'list' &&
                   value.element !== 'paragraph' &&
@@ -71,9 +84,19 @@ function checkAllProperties(param) {
                   if (value.paragraph2) {
                         return;
                   }
+                  if (value.published) {
+                        const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+                        if (!dateRegex.test(value.published)) {
+                              console.log('check failed at date property')
+                              throw new Error('Published date must be in the format "MM/DD/YYYY"');
+                        }
 
+                        return;
+                  }
+                  // if fail happens in this conditional block
                   console.log('check failed at element check');
                   console.log(value);
+
                   throw new Error(
                         'You have attempted to provide an entry with a property other than those listed as choice.'
                   );
@@ -84,6 +107,7 @@ function checkAllProperties(param) {
                   (value.paragraph1 && typeof value.paragraph1.text !== 'string') ||
                   (value.paragraph2 && typeof value.paragraph2.text !== 'string')
             ) {
+                  // if fail happens in this conditional block
                   console.log(
                         'check failed at checking text property for string data type'
                   );
