@@ -172,7 +172,7 @@
                   "heading-2": {
                         "order": 4,
                         "element": "sub-heading",
-                        "text": "New taps this Week"
+                        "text": "Returning taps this Week"
                   },
                   "returning-tap-1": {
                         "order": 5,
@@ -273,7 +273,7 @@
                   "heading-2": {
                         "order": 4,
                         "element": "sub-heading",
-                        "text": "New taps this Week"
+                        "text": "Returning taps this Week"
                   },
                   "returning-tap-1": {
                         "order": 5,
@@ -379,7 +379,7 @@
                   "heading-2": {
                         "order": 4,
                         "element": "sub-heading",
-                        "text": "New taps this Week"
+                        "text": "Returning taps this Week"
                   },
                   "returning-tap-1": {
                         "order": 5,
